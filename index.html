@@ -5,12 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My document</title>
 </head>
-<body>
+<header>
+    <nav class="navbar">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">skills</a>
+        
+    </nav>
+<body class="Home">
     <h1>CHEVVA VINAY KUMAR</h1>
     <img src="profile_1.png" height="100px" width="100px">
     <br>
     <a href="7569972931">7569972931</a>  |   <a href="chvinayk5@gmail.com">chvinayk5@gmail.com</a>
+</header>
 
+<main class="skills">
     <div>
         <ul>
             <h1>Technical Skills</h1>
@@ -31,7 +40,7 @@
         <a href="portfolio.com" target="_blank">portfolio</a>
     </div>
 
-    <div>
+    <div class="About">
         <h1>EDUCATION</h1>
         <h3>DEGREE:-Bachelor of technology in electronics and communication</h3>
         <p>B.V Raju institute of technology</p>
@@ -96,24 +105,52 @@
                 <td>4</td>
             </tr>
         </table>
+        </div>
         <br>
         <hr>
         <div>
             <h2>sign in</h2>
             <form>
                 <label><b>User name:</b></label>
-                <input type = "text" placeholder="Enter your username"><br>
+                <input type = "text" placeholder="Enter your username">
+                 <select>
+                    <option>select your gender</option>
+                    <option>Male</option>
+                    <option>Female</option>
+                </select>
+                <br>
                 <br>
                 <label><b>Password:</b></label>
-                    <input type ="password" placeholder="Enter your password">
+                <input type ="password" placeholder="Enter your password">
                 <label><b>Email:</b></label>
                 <input type="email" placeholder="@gmail.com">
                 <br>
                 <br>
                 <button type ="submit">Submitt</button>
+                <button type ="reset">reset</button>
             </form>
-
         </div>
-    </div>
+        <ul type="square">
+            <h2>Hobbies</h2>
+            <li>playing cricket</li>
+            <li>reading novels</li>
+            <li>playing video games</li>
+            <li>Riding</li>
+        </ul>
+         <ol  type="I">
+            <h2>Hobbies</h2>
+            <li>playing cricket</li>
+            <li>reading novels</li>
+            <li>playing video games</li>
+            <li>Riding</li>
+         </ol>
+         <div>
+            <h1>My favourite location</h1>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7296.103384293254!2d73.92062990535473!3d15.10125503494481!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbe4bfd44daf1e5%3A0x6678f36253fe7b44!2sCabo%20de%20Rama%20Beach!5e0!3m2!1sen!2sin!4v1779441116061!5m2!1sen!2sin" width="200px" height="200px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+         </div>
+</main>
+<fotter>
+    <p>&copy;&lt;Copyright-2026 &gt;</p>
+</fotter>
 </body>
 </html>    
