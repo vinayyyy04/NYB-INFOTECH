@@ -49,9 +49,35 @@ let bigNumber = 1234567890123456789012345678901234567890n;
 let uniqueId = Symbol("id");
 
 
-console.log("Number:", age1);
-console.log("String:", name1);
-console.log("Boolean:", isLoggedIn, hascompleted);
-console.log("Null:", Value);
-console.log("BigInt:", bigNumber);
-console.log("Symbol:", uniqueId);
+console.log( age1);
+console.log( name1);
+console.log( isLoggedIn);
+console.log( Value);
+console.log( bigNumber);
+console.log( uniqueId);
+
+console.log( typeof(age1));
+console.log( typeof(name1));
+console.log( typeof(isLoggedIn,hascompleted));
+console.log( typeof(Value));
+console.log( typeof(bigNumber));
+console.log(typeof(uniqueId));
+
+
+
+
+let obj = {name:"vinay",age:22,male:true,number:7569972931};
+console.log(obj,typeof(obj));
+
+let arr =[22,243,44,"hello",true,false,null,[1,2,3,4,5,[9,7,65,]]];
+console.log(arr,typeof(arr));
+
+function salary(name,days){
+    let perday =1000;
+    console.log("monthly salary of ",name,"is",perday*days);
+    return(perday*days);
+}
+
+salary("vinay",22);
+salary("yashwanth",18);
+salary("sowmith",12);
