@@ -167,10 +167,21 @@ console.log(output);
 // template literals--a way to have embedded expressions
 
 let car  = {
-    item:"Thar Roxx",
-    price:2300000,
+    item:"Roxx",
+    price:1300000,
 
 };
 
 let details = `the cost of ${car.item} is ${car.price} rupees`;
 console.log(details);
+
+let result;
+
+if (log){
+    result= "hello,welcome"
+}else{
+    result="hi";
+}
+console.log(result)
+// let result = log? "welcome":"hi";
+
