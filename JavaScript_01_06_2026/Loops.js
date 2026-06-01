@@ -1,4 +1,4 @@
-//for loop
+//for loop--used when  you know how many times the loop should run.
 let sum = 0;
 let n = 19;
 
@@ -17,13 +17,13 @@ while (i <= 5){
 
 }
 
-// do-while loop--will execute the code block once,before checking the given condition is true, then will repeat the code as long as the condition is true
+// do-while -- executes the code at least once and then checks the condition.
 do {
     console.log("i =",i)
     i++;
 }while (i<= 10);
 
-//for-of loop
+//for-of loop--used to iterate over arrays and other iterable objects.
 
 let str = "vinay kumar";
 
@@ -34,7 +34,7 @@ for(let i of str){
 }
 console.log(" string size =",size)
 
-//for-in loop
+//for-in loop--used to iterate over object properties
 
 let data ={
     name: "vinay kumar",
