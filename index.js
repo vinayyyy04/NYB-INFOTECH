@@ -177,7 +177,7 @@ console.log(details);
 
 let result;
 
-if (log){
+if (log = true){
     result= "hello,welcome"
 }else{
     result="hi";
