@@ -9,6 +9,7 @@ console.log("sum =",sum);
 
 //while loop-can run the code as long as the given condition is true.
 
+
  i = 1;
 while (i <= 5){
     console.log("i =",i)
