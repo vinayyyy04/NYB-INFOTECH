@@ -81,7 +81,6 @@ function total(...numbers) {
 
 console.log("Total =", total(10, 20, 30, 40));
 
-
 function showArguments() {
     console.log(arguments);
 }

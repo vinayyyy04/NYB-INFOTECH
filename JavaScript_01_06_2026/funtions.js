@@ -7,7 +7,7 @@ function greetuser(vinay){
 
 greetuser("vinay");
 
-//function without parameters
+//function without parameters.
 
 function greet(){
     console.log("hello and welcome to nyb!");
@@ -43,7 +43,7 @@ function showArguments() {
 }
 showArguments("vinay",22,);
 
-//rest parameters--collect multiple arguements into an array
+//rest parameters--collect multiple arguements into an array.
 
 function sum1 (...numbers) {
     let total = 0;
@@ -54,3 +54,12 @@ function sum1 (...numbers) {
 }
 
 console.log(sum1(10,20,37,63));
+
+
+//function declarations-->it is known as using the function keyword and can be called before it is declared.
+
+function greets(name) {
+    return "hello" + name;
+}
+
+console.log(greets("vinay"));
