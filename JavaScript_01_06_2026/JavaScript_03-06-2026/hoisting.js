@@ -9,7 +9,6 @@ var a = 10;
 // let b = 20;
 
 // //hoisting with const
-
 // console.log(pi);
 // const pi = 3.14;
 
