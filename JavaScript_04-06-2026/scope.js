@@ -33,7 +33,7 @@ if(true){
 
 
  //scope accessibility--
- //global variables can be accessed anywhere
+ //global variables can be accessed anywhere.
 
  let companyy = "NYB";
 
@@ -44,7 +44,7 @@ function showCompany() {
 showCompany();
 console.log(companyy); 
 
-//functionscoped only accessed inside the function
+//functionscoped only accessed inside the function.
 function showMessage() {
     let message = "this is vinay";
     console.log(message);
@@ -59,4 +59,4 @@ if (true) {
     console.log(age);
 }
 
-// console.log(age); 
+// console.log(age);
