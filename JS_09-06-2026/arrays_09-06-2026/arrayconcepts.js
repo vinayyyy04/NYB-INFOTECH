@@ -129,4 +129,33 @@ marks.forEach(function(mark){
 });
 console.log(total);
 
+//comparison  of filter map reduce
+
+let orders = [
+    {item:"laptop",price:50000,delivered:true},
+    {item:"laptop",price:50000,delivered:true},
+    {item:"laptop",price:50000,delivered:true},
+];
+
+//map()
+let itemsNames = orders.map(order => order.item);
+console.log(itemsNames);
+
+//filter()
+
+let deliveredOrders = orders.filter(
+    order => order.delivered
+);
+
+console.log(deliveredOrders);
+
+//reduce()
+
+let totalAmount = orders.reduce(
+    (total,order) => total + order.price,
+    0
+);
+
+console.log(totalAmount);
+
 
