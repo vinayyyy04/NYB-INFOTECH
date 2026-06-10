@@ -1,4 +1,4 @@
-//some()--checks if atleast oone element satisfes the condition
+//some()--checks if atleast one element satisfes the condition
 
 let employees = [
     {name: "vinay",salary:15000},
