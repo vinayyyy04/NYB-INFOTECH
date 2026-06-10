@@ -55,7 +55,7 @@ for (let order of orders) {
     console.log(order.amount);
 }
 
-let settedOrders = [...orders].sort(
+let settledOrders = [...orders].sort(
     (a, b) => a.amount - b.amount
 );
 
