@@ -59,7 +59,7 @@ let settledOrders = [...orders].sort(
     (a, b) => a.amount - b.amount
 );
 
-console.log(sortedOrders);
+console.log(settledOrders);
 
 let arr = [...orders];
 

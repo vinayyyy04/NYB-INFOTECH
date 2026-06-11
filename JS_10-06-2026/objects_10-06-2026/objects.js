@@ -1,113 +1,116 @@
-// //built-in sort method--descending
+//built-in sort method--descending
 
-// let values = [20,50,40,10,30];
+let values = [20,50,40,10,30];
 
-// for (let i= 0; i < values.length -1;i++) {
-//     for (let i= 0; i > values.length -1;i++) {
-//         if (values[j] < values[j + 1]) {
-//         let temp = values[j];
-//         values[j] = values[j + 1];
-//         values[j + 1] = temp;
-//     }
-// }
-// }
-// console.log(values);
+ for (let i= 0; i < values.length -1; i++) {
 
-// //objectes{}--are stored in key values pairs,sperated by: ,and each key value pair is seperated by commos(,),keys will be of strings and values can be of any kind
+    for (let j= 0; j < values.length -1  -i; j++) {
 
-// //object litreal
-// let employee = {
-//     id:100,
-//     name:"vinay",
-//     role:"associate software engineer"
-// };
+        if (values[j] < values[j + 1]) {
+        let temp = values[j];
 
-// console.log (employee);
+        values[j] = values[j + 1];
+        values[j + 1] = temp;
+    }
+}
+}
+console.log(values);
 
-// //new object
+//objectes{}--are stored in key values pairs,sperated by: ,and each key value pair is seperated by commos(,),keys will be of strings and values can be of any kind
 
-// let newjoinie = new Object();
+//object litreal
+let employee = {
+    id:100,
+    name:"vinay",
+    role:"associate software engineer"
+};
 
-// employee.id=101;
-// employee.name ="yashwanth";
-// employee.role = "HR manager";
+console.log (employee);
 
-// console.log(employee);
+//new object
 
-// //access object properties
+let newjoinie = new Object();
 
-// console.log(employee.name);//dotted accessing 
-// console.log(employee["role"]);//square bracket accessing
+employee.id=101;
+employee.name ="yashwanth";
+employee.role = "HR manager";
 
-// //update object properties 
+console.log(employee);
 
-// employee.department = "finance";
-// console.log(employee);
+//access object properties
 
-// //add new properties 
+console.log(employee.name);//dotted accessing 
+console.log(employee["role"]);//square bracket accessing
 
-// employee.salary = 50000;
-// employee.city = "hyderabad";
+//update object properties 
 
-// console.log(employee);
+employee.department = "finance";
+console.log(employee);
 
-// //delete properties
+//add new properties 
 
-// delete employee.role;
-// console.log (employee);
+employee.salary = 50000;
+employee.city = "hyderabad";
 
-// //objects with methods
+console.log(employee);
 
-// let employees = {
-//     name:"vinay",
-//     role:"ASE",
+//delete properties
 
-//     displayDetails() {
-//         console.log(`employees:${this.name},role: ${this.role}}`);
-//     }
-// };
+delete employee.role;
+console.log (employee);
 
-// employees.displayDetails();
+//objects with methods
 
-// //Real-life example for object manipulation
+let employees = {
+    name:"vinay",
+    role:"ASE",
 
-// let student = {
-//     rollNo: 53,
-//     name: "keerthy",
-//     course: "Java",
-//     feesPaid: true,
+    displayDetails() {
+        console.log(`employees:${this.name},role: ${this.role}}`);
+    }
+};
 
-//     payFees() {
-//         this.feesPaid = true;
-//         console.log(`${this.name} has paid the fees.`);
-//     }
-// };
+employees.displayDetails();
 
-// console.log(student.name);   
+//Real-life example for object manipulation
 
-// student.course = "Java full stack";  
+let student = {
+    rollNo: 53,
+    name: "keerthy",
+    course: "Java",
+    feesPaid: true,
 
-// student.city = "hyderabad";      
+    payFees() {
+        this.feesPaid = true;
+        console.log(`${this.name} has paid the fees.`);
+    }
+};
 
-// delete student.rollNo;         
+console.log(student.name);   
 
-// student.payFees();             
+student.course = "Java full stack";  
 
-// console.log(student);
+student.city = "hyderabad";      
+
+delete student.rollNo;         
+
+student.payFees();             
+
+console.log(student);
 
 
-// //assigned for next day
+//assigned for next day
 
-// //constucter function
+//constucter function
 
-// function employeee (id,name,role) {
-//     this.id = id;
-//     this.name = name;
-//     this.role = role;
-// }
+function employeee (id,name,role) {
+    this.id = id;
+    this.name = name;
+    this.role = role;
+}
 
-// let emp1 = new employeee(102,"keerthy","HR");
-// console.log(emp1);
+let emp1 = new employeee(102,"keerthy","HR");
+console.log(emp1);
 
 
 
