@@ -12,8 +12,7 @@ let task = taskInput.value.trim();
             alert("Please enter a task");
    return;
 }
-
-        // Create list item
+// Create list item
 let li = document.createElement("li");
 
 // Task text
