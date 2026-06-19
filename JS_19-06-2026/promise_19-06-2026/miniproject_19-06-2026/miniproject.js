@@ -39,25 +39,19 @@ bookBtn.addEventListener("click", () => {
     bookService(carName)
         .then((car) => {
 
-            // DOM Manipulation
-            const li = document.createElement("li");
+// DOM Manipulation
+    const li = document.createElement("li");
 
-            li.innerHTML = `
-                ${car} - Service In Progress
-                <button class="cancelBtn">Cancel</button>
-            `;
-
+            li.innerHTML = `${car} - Service In Progress<button class="cancelBtn">Cancel</button>`;
             serviceList.appendChild(li);
-
             carInput.value = "";
 
 // Callback Function
 
- sendNotification(`${car} service booked successfully`,
-                () => {
-                    console.log("Customer notified");
-                }
-            );
+ sendNotification(`${car} service booked successfully`, () => {
+    console.log("Customer notified");
+     }
+ );
 
  // Timer Function
 
