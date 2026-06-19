@@ -43,7 +43,7 @@ bookBtn.addEventListener("click", () => {
             const li = document.createElement("li");
 
             li.innerHTML = `
-                ${car} - Service In Progress 🔧
+                ${car} - Service In Progress
                 <button class="cancelBtn">Cancel</button>
             `;
 
