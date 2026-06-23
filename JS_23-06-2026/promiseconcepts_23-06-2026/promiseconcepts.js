@@ -149,7 +149,6 @@ let range = {
         console.log(num);
 }
 
-
 //generator function-- it is a special function that can pause and resume its execution using the yeild keyword.
 
 function* numbers(){
