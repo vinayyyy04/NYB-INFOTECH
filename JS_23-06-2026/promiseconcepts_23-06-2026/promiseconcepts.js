@@ -178,13 +178,3 @@ let page = pages();
 console.log(page.next().value);
 console.log(page.next().value);
 console.log(page.next().value);
-
-
-
-
-
-
-
-
-
-
