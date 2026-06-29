@@ -1,0 +1,61 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f2f2f2;   /* Background Color */
+}
+
+div {
+    width: 250px;
+    height: 30px;
+    margin: 20px auto;
+    padding: 20px;
+    line-height: 60px;
+    font-size: 20px;
+    color: white;
+}
+
+/* Border Styles */
+.solid {
+    border: 3px solid black;
+    background-color: steelblue;
+}
+
+.dashed {
+    border: 4px dashed black;
+    background-color: seagreen;
+}
+
+.dotted {
+    border: 5px dotted black;
+    background-color: crimson;
+}
+
+.double {
+    border: 6px double black;
+    background-color: mediumpurple;
+}
+
+.rounded {
+    border: 4px solid black;
+    border-radius: 20px;
+    background-color: darkorange;
+}
+
+/* Background Properties */
+.background-box {
+    width: 250px;
+    height: 50px;
+
+    background-color: lightgray; /* Background Color */
+
+    background-image: url("backgroud_image.jpg");
+
+    background-repeat: no-repeat;      /* no-repeat, repeat, repeat-x, repeat-y */
+
+    background-position: center;       /* top, bottom, left, right, center */
+
+    background-size: cover;            
+
+    border: 3px solid black;
+    border-radius: 15px;
+}

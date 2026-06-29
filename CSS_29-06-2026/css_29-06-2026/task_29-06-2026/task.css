@@ -1,0 +1,55 @@
+body{
+    background-color:#e8e8e8;
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position:center;
+    min-height:100vh;
+}
+
+
+*{
+ margin:0;
+ padding:0;
+ box-sizing:border-box;
+ font-family:Arial, sans-serif;
+}
+
+h1{
+color:white;
+}
+
+.car{
+  width:80%;
+  margin:20px auto;
+  padding:20px;
+  border:3px solid black;
+  border-radius:15px;
+  background-color:white;
+}
+
+#featured{
+    border:3px dotted black;
+    background-color:lightyellow;
+}
+
+h2,p{
+ margin:10px 0;
+}
+
+.car p{
+  color:#444;
+}
+
+nav > a{
+ color:white;
+ text-decoration:none;
+ margin:15px;
+}
+
+h2 + p{
+    font-style:italic;
+}
+
+h3 ~ p{
+  color:darkblue;
+}

@@ -59,7 +59,7 @@ console.error(error);
 // }
 
 
-//random jokegenerator.
+//random joke generator.
 
 async function getJoke() {
   const response = await fetch("https://official-joke-api.appspot.com/random_joke");

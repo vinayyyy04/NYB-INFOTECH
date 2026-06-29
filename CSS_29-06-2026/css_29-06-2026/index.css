@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(4, 45, 31);
+}
+
+.container{
+    width: 400px;
+    padding: 20px;
+    text-align: center;
+    background-color: whitesmoke;
+    border: 2px solid black;
+    border-radius: 10px;
+
+}
+
+h1{
+    color: #0077cc;
+
+}
+
+p{
+    color: #555;
+    font-size: 18px;
+
+}
+
+button{
+    background-color: #555;
+    color: whitesmoke;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(1, 15, 10);
+}
+
