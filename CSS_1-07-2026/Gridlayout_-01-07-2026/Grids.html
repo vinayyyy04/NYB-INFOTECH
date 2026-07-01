@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GRIDS</title>
+</head>
+<body>
+    <h1>Grids</h1>
+    <div class="container">
+        <div class="item">first item</div>
+        <div class="item">second item</div>
+        <div class="item">third item</div>
+        <div class="item">fourth item</div>
+        <div class="item">fifth item</div>
+        <div class="item">sixth item</div>
+    </div>
+    
+</body>
+
+<style>
+    .container{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);  
+        grid-template-rows:100px 100px 100px ;
+        justify-items: center;
+        align-items: center;
+        place-items: center;
+        
+
+    }
+    .item{
+        background: lightcoral;
+        padding: 20px;
+        border: 2px solid black;
+
+        grid-column: 1/3;
+        /* grid-row: 1/3 ; */
+    }
+</style>
+</html>

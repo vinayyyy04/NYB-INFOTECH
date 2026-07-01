@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Details</title>
+
+</head>
+<body>
+
+<div class="header">
+  <h1>Vinay's Portfolio</h1>
+</div>
+
+<div class="nav">
+  Home   About   Skills   Contact
+</div>
+
+<div class="container">
+
+  <div class="sidebar">
+    <h3>My Details</h3>
+    <p><b>Name:</b> Vinay</p>
+    <p><b>Course:</b> Full Stack Development</p>
+    <p><b>Goal:</b> To start a business</p>
+  </div>
+
+  <div class="main">
+    <h2>About Me</h2>
+    <p>Hello! I'm Vinay. I am learning HTML, CSS, JavaScript, and Full Stack Development.</p>
+
+    <div class="cards">
+      <div class="card">
+        <h3>HTML</h3>
+        <p>Completed the topic</p>
+      </div>
+
+      <div class="card">
+        <h3>CSS</h3>
+        <p>Learning the basics to core</p>
+      </div>
+
+      <div class="card">
+        <h3>JavaScript</h3>
+        <p>completed </p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="footer">
+  © 2026 Vinay | All Rights Reserved
+</div>
+
+</body>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial,sans-serif;
+    }
+
+    .header,.nav,.footer{
+      background:rgb(9, 9, 9);
+      text-align:center;
+      padding:15px;
+      color: whitesmoke;
+    }
+
+    .container{
+      display:flex;
+    }
+
+    .sidebar{
+      width:25%;
+      background:lightgray;
+      padding:20px;
+    }
+
+    .main{
+      width:75%;
+      padding:20px;
+    }
+
+    .cards{
+      display:flex;
+      gap:10px;
+      margin-top:20px;
+      height: 200px;
+    }
+
+    .card{
+      flex:1;
+      background:rgb(147, 79, 79);
+      padding:15px;
+      border:1px solid black;
+      text-align:center;
+    }
+
+    .footer{
+      margin-top:10px;
+    }
+  </style>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Movie Gallery</title>
+
+  <style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 20px;
+}
+
+body{
+ background:#ffff;
+ color:rgb(5, 5, 5);
+}
+
+h1{
+  text-align:center;
+  margin:20px;
+  font-size: 20px;
+}
+
+.TFImovies{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:15px;
+  padding:20px;
+}
+.movie:hover{
+    background-color: grey;
+}
+
+.movie{
+ background:#734444;
+ padding:50px;
+ text-align:center;
+ border-radius:8px;
+}
+
+/* Tablet */
+
+@media(max-width:768px){
+.TFImovies{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+
+/* Mobile */
+
+@media(max-width:480px){
+.TFImovies{
+    grid-template-columns:1fr;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<h1> Movie Gallery</h1>
+
+<div class="TFImovies">
+  <div class="movie">Salaar</div>
+  <div class="movie">Arjun reddy</div>
+  <div class="movie">E nagaraniki emaindhi</div>
+  <div class="movie">Kalki-2898</div>
+  <div class="movie">Pushpa</div>
+  <div class="movie">Bahubali</div>
+  <div class="movie">RRR</div>
+  <div class="movie">Pelli chupulu</div>
+</div>
+
+</body>
+</html>
