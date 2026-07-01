@@ -1,0 +1,120 @@
+
+body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        .box {
+            /* Content */
+            width: 250px;
+            height: 100px;
+            background-color: lightblue;
+
+            /* Padding */
+            padding: 20px;
+
+            /* Border */
+            border: 5px solid blue;
+
+/* Margin */
+margin: 40px;
+
+ text-align: center;
+ line-height: 100px;
+ font-size: 20px;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    background:#f2f2f2;
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    padding:30px;
+}
+
+/* Common Card Style */
+.card{
+    width:250px;
+    padding:20px;
+    border:5px solid #333;
+    background:white;
+    text-align:center;
+}
+
+/* Content-Box (Default) */
+.content-box{
+    box-sizing:content-box;
+}
+
+/* Border-Box */
+.border-box{
+    box-sizing:border-box;
+}
+
+
+
+button{
+    background:green;
+    color:white;
+    border:none;
+    padding:10px 20px;
+    cursor:pointer;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    background:#f4f4f4;
+    padding:20px;
+}
+
+/* First Notification */
+.notification1{
+    background:#d4edda;
+    border:2px solid green;
+    padding:20px;
+    margin-bottom:50px;
+}
+
+/* Second Notification */
+.notification2{
+    background:#f8d7da;
+    border:2px solid red;
+    padding:20px;
+    margin-top:30px;
+}
+
+
+ body{
+    font-family: Arial, sans-serif;
+    background-color:#f4f4f4;
+    padding:20px;
+}
+
+.container {
+    gap:20px;
+}
+
+/* .box{
+    width:220px;
+    height:80px;
+    border:3px solid;
+    padding:10px;
+    background-color:lightblue;
+} */
+
+ .visible{
+    overflow:visible;
+}
+
+.hidden{
+    overflow:hidden;
+}
+
+.scroll{
+    overflow:scroll;
+}
+
+.auto{
+    overflow:auto;
+}  

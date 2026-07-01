@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Webpage using Flexbox & Grid</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+
+}
+
+body{
+    background:#f4f4f4;
+}
+
+/* Header */
+header{
+    background:#333;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+/* Grid Layout */
+.container{
+    display:grid;
+    grid-template-columns:250px 1fr;
+    gap:20px;
+    padding:20px;
+}
+
+/* Sidebar */
+aside{
+    background:white;
+    padding:20px;
+    border-radius:10px;
+}
+
+aside ul{
+    list-style:none;
+}
+
+aside li{
+    padding:10px 0;
+    border-bottom:1px solid #ddd;
+}
+
+/* Main Section */
+main{
+    background:white;
+    padding:20px;
+    border-radius:10px;
+}
+
+main h2{
+    margin-bottom:20px;
+}
+
+/* Flexbox for Cards */
+.products{
+    display:flex;
+    flex-wrap:wrap;
+    gap:20px;
+}
+
+.card{
+    flex:1 1 220px;
+    background:#e8f4ff;
+    padding:20px;
+    border-radius:10px;
+    text-align:center;
+}
+
+.card img{
+    width:100%;
+    height:150px;
+    border-radius:10px;
+}
+
+button{
+    margin-top:10px;
+    padding:10px 20px;
+    background:green;
+    color:white;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:darkgreen;
+}
+
+/* Footer */
+footer{
+    background:#333;
+    color:white;
+    text-align:center;
+    padding:15px;
+    margin-top:20px;
+}
+
+/* Responsive Design */
+@media (max-width:768px){
+
+.container{
+    grid-template-columns:1fr;
+}
+
+.products{
+    justify-content:center;
+}
+
+}
+</style>
+
+</head>
+<body>
+
+<header>
+    <h1>Online Shopping center</h1>
+</header>
+
+<div class="container">
+
+    <!-- Sidebar
+    <aside>
+        <h3>Categories</h3>
+        <ul>
+            <li> Mobiles</li>
+            <li> Laptops</li>
+            <li> Watches</li>
+            <li> Headphones</li>
+            <li> Shoes</li>
+        </ul>
+    </aside> -->
+
+    <!-- Main Content -->
+    <main>
+
+        <h2>Featured Products</h2>
+
+        <div class="products">
+
+            <div class="card">
+                <h3>Laptop</h3>
+                <p>₹75,000</p>
+                <button>Buy Now</button>
+            </div>
+
+            <div class="card">
+                <h3>Smartphone</h3>
+                <p>₹35,000</p>
+                <button>Buy Now</button>
+            </div>
+
+            <div class="card">
+                <h3>Headphones</h3>
+                <p>₹2,500</p>
+                <button>Buy Now</button>
+            </div>
+
+        </div>
+
+    </main>
+
+</div>
+
+<footer>
+    © 2026 Online Shopping Store | All Rights Reserved
+</footer>
+
+</body>
+</html>
