@@ -1,0 +1,61 @@
+body{
+    font-family: Arial, sans-serif;
+    margin:20px;
+}
+.product{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding:20px;
+    border: 2px solid black;
+    max-width:800px;
+    margin: 20px auto;
+
+}
+
+.product img{
+    width:250px;
+}
+
+button {
+    padding: 10px 20px;
+    background:blue;
+    color:white;
+    border: none;
+    cursor: pointer;
+}
+
+/* mobile */
+@media  (max-width: 800px) {
+    .product {
+        flex-direction: column;
+        text-align: center;
+    }
+    .product img{
+        width: 100%;
+    }
+}
+
+/* laptop */
+
+@media (min-width:769px) and (max-width: 1024px) {
+    .product {
+        max-width: 700px;
+    }
+}
+
+/* tablet */
+
+@media (min-width:481px) and (max-width: 768px) {
+    .product img{
+        width: 180px;
+    }
+}
+
+/* desktop */
+@media (min-width:1025px)  {
+    .product {
+        max-width: 900px;
+    }
+}
+

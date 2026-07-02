@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Travel Website</title>
+
+</head>
+<body>
+
+<header>
+
+<div class="logo">Vtravels.co</div>
+
+<nav>
+
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">Destinations</a></li>
+<li><a href="#">Packages</a></li>
+<li><a href="#">Gallery</a></li>
+<li><a href="#">Contact</a></li>
+</ul>
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div class="hero-text">
+
+<h1>Explore The World</h1>
+
+<p>
+Discover amazing destinations, beautiful landscapes,
+and unforgettable adventures around the globe.
+</p>
+
+<button id="button">Book Now</button>
+
+</div>
+
+<div class="hero-image">
+
+<img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=900" alt="Beach">
+
+</div>
+
+</section>
+
+<h2 class="section-title">Popular Destinations</h2>
+
+<section class="cards">
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=600">
+
+<div class="card-content">
+
+<h3>Mountains</h3>
+
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque voluptatum eos voluptatem quis eius recusandae et quae saepe soluta dolores.</p>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=600">
+
+<div class="card-content">
+
+<h3>Lakes</h3>
+
+<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia praesentium suscipit odio minima aliquam! Reprehenderit numquam reiciendis alias quam. Iure saepe voluptates ab ut beatae ea quis neque sit dicta.</p>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1493558103817-58b2924bce98?w=600">
+
+<div class="card-content">
+
+<h3>Beaches</h3>
+
+<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit sit nam assumenda officiis. Earum animi atque vitae dolor suscipit magni consequuntur doloribus neque sed! Blanditiis nisi assumenda dolorem asperiores fuga vel, quidem, voluptatibus accusamus, et mollitia explicabo laudantium quos? Illum.</p>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<h3>© 2026 Vtravels.co | Responsive Website Practice</h3>
+
+</footer>
+
+</body>
+
+<style>
+    
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f5f5f5;
+}
+
+/* Header */
+
+header{
+    background:#222;
+    color:white;
+    padding:20px 60px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:30px;
+    font-weight:bold;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:25px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-size:18px;
+}
+
+nav:hover{
+    text-decoration:underline;
+}
+
+/* Hero */
+
+.hero{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:70px;
+    gap:50px;
+    background:white;
+}
+
+.hero-text{
+    flex:1;
+}
+
+.hero-text h1{
+    font-size:55px;
+    margin-bottom:20px;
+}
+
+.hero-text p{
+    font-size:20px;
+    line-height:1.8;
+    margin-bottom:25px;
+}
+
+button{
+    background:grey;
+    color:white;
+    border:none;
+    padding:15px 30px;
+    font-size:18px;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:black;
+}
+
+.hero-image{
+    flex:1;
+}
+
+.hero img{
+    width:100%;
+    border-radius:15px;
+}
+
+/* Cards */
+
+.section-title{
+    text-align:center;
+    margin:50px 0;
+    font-size:40px;
+}
+
+.cards{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+    padding:0 60px 60px;
+
+}
+
+.card{
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,.2);
+}
+
+.card img{
+    width:100%;
+}
+
+.card-content{
+    padding:20px;
+}
+
+.card h3{
+    margin-bottom:15px;
+}
+
+.card p{
+    line-height:1.6;
+}
+
+/* Footer */
+
+footer{
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+
+/* Tablet */
+
+@media(max-width:1025px){
+
+header{
+    padding:20px;
+}
+
+.hero{
+    flex-direction:column;
+    padding:40px;
+}
+
+.hero h1{
+    font-size:42px;
+}
+
+.cards{
+    grid-template-columns:repeat(2,1fr);
+    padding:20px;
+}
+
+}
+
+/* Mobile */
+
+@media(max-width:800px){
+
+header{
+    flex-direction:column;
+    gap:20px;
+}
+
+nav ul{
+    flex-direction:column;
+    align-items:center;
+}
+
+.hero{
+    padding:25px;
+}
+
+.hero h1{
+    font-size:32px;
+}
+
+.hero p{
+    font-size:17px;
+}
+
+.cards{
+    grid-template-columns:1fr;
+}
+
+.section-title{
+    font-size:30px;
+}
+
+button{
+    width:100%;
+}
+
+
+}
+
+/* Small Mobile */
+
+@media(max-width:500px){
+
+.logo{
+    font-size:24px;
+}
+
+.hero h1{
+    font-size:26px;
+}
+
+.hero p{
+    font-size:15px;
+}
+
+header{
+    padding:15px;
+}
+
+}
+</style>
+</html>

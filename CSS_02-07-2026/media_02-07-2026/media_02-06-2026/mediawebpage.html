@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+</head>
+<body>
+    <header>
+    <h1>Resume</h1>
+</header>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+</nav>
+
+<div class="container">
+    <h1>Chevva Vinay Kumar</h1><br><br>
+</div>
+
+<div class="container">
+    <aside>
+        <h2>PROJECTS</h2>
+        <p>project-1</p>
+        <p>project-2</p>
+        <p>project-3</p>
+        <p>project-4</p>
+        <p>project-5</p>
+    </aside>
+
+    <main>
+        <h2>About</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad unde distinctio suscipit ab, eos minima aut, blanditiis vitae error fugit ullam. Laborum mollitia nulla vitae animi, nihil porro magnam quos obcaecati fuga deleniti, praesentium, esse nesciunt sed molestias quam sapiente tempore non excepturi repudiandae ad sit impedit repellat aliquam totam. Rerum, delectus! Officiis, ea animi rem ipsa eaque quas itaque veniam? Deleniti sint eum enim sequi expedita odio consectetur!</p>
+    </main>
+</div>
+
+
+<footer>
+    <p>&copy; allrights reserved by vinayy</p>
+</footer>
+</body>
+
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header,footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background: #555;
+    padding: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+.container {
+    display: flex;
+}
+
+aside {
+    width: 25%;
+    background: #f4f4f4;
+    padding: 20px;
+}
+
+main {
+    width: 75%;
+    padding: 20px;
+}
+
+
+
+/* Mobile */
+
+@media (max-width: 480px) {
+nav {
+    flex-direction: column;
+    text-align: center;
+    }
+
+.container {
+    flex-direction: column;
+    }
+
+aside,main {
+  width: 100%;
+    }
+}
+
+/* Tablet */
+@media (min-width: 481px) and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    aside,
+    main {
+        width: 100%;
+    }
+}
+
+/* Laptop */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    aside {
+        width: 30%;
+    }
+
+    main {
+        width: 70%;
+    }
+}
+
+/* Desktop */
+
+@media (min-width: 1025px) {
+    aside {
+        width: 25%;
+    }
+
+    main {
+        width: 75%;
+    }
+}
+
+</style>
+</html>
