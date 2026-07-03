@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>employee Dashboard</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#f4f4f4;
+}
+
+/* Header - Flexbox */
+
+header{
+    background:#222;
+    color:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 40px;
+}
+
+nav{
+    display:flex;
+    gap:20px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+}
+
+nav a:hover{
+    color:rgb(219, 126, 32);
+}
+
+/* Main Layout - Flexbox */
+
+.container{
+    display:flex;
+    min-height:90vh;
+}
+
+/* Sidebar */
+
+.sidebar{
+    width:220px;
+    background:#222;
+    color:white;
+    padding:20px;
+}
+
+.sidebar ul{
+    list-style:none;
+}
+
+.sidebar li{
+    padding:15px;
+    margin-bottom:10px;
+    background:#222;
+    border-radius:5px;
+}
+.sidebar li:hover{
+    background:rgb(169, 99, 42);
+    cursor:pointer;
+}
+
+/* Main Content */
+
+.main{
+    display:flex;
+    flex-direction:column;
+    padding:50px;
+}
+
+/* Grid Cards */
+
+.dashboard{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.card{
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    text-align:center;
+    box-shadow:0 5px 10px rgba(0,0,0,.2);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+    background-color: #cc6346 !important;
+}
+
+.card h2{
+    color:#3498db;
+    margin-bottom:10px;
+}
+
+/* Footer */
+
+footer{
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+header{
+    flex-direction:column;
+    gap:15px;
+}
+
+nav{
+    flex-direction:column;
+    align-items:center;
+}
+
+.container{
+    flex-direction:column;
+}
+
+.sidebar{
+    width:100%;
+}
+
+
+.dashboard{
+    grid-template-columns:1fr;
+}
+
+}
+
+</style>
+
+</head>
+<body>
+
+<header>
+<h1>Employee Dashboard</h1>
+
+<nav>
+<a href="#">Home</a>
+<a href="#">Courses</a>
+<a href="#">Projects</a>
+<a href="#">Profile</a>
+</nav>
+</header>
+
+<div class="container">
+
+<div class="sidebar">
+
+<h2>Menu</h2>
+
+<ul>
+<li>Dashboard</li>
+<li>Tasks</li>
+<li>Performance</li>
+<li>assessments</li>
+<li>Settings</li>
+</ul>
+
+</div>
+
+<div class="main">
+
+<h2>Dashboard Overview</h2>
+
+<br>
+
+<div class="dashboard">
+
+<div class="card">
+<h2>8</h2>
+<p>Courses</p>
+</div>
+
+<div class="card">
+<h2>92%</h2>
+<p>performance</p>
+</div>
+
+<div class="card">
+<h2>4</h2>
+<p>Assessments</p>
+</div>
+
+<div class="card">
+    <h2>2</h2>
+<p>Leaves</p>
+</div>
+
+<div class="card">
+<h2>12</h2>
+<p>Projects</p>
+</div>
+
+<div class="card">
+<h2>3</h2>
+<p>Upcoming Projects</p>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<footer>
+<p>© 2026 Employee Dashboard</p>
+</footer>
+
+</body>
+</html>

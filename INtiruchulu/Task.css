@@ -1,0 +1,366 @@
+/* ==========================================
+   UNIVERSAL SELECTOR
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+/* ==========================================
+   BODY
+========================================== */
+
+body{
+    background:#f8f8f8;
+    color:#333;
+    line-height:1.6;
+}
+
+/* ==========================================
+   HEADER (Flexbox + Position + Z-index)
+========================================== */
+
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    background:#be572e;
+    color:white;
+
+    padding:20px 60px;
+
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    font-size:32px;
+    font-weight:bold;
+}
+
+/* ==========================================
+   NAVIGATION
+========================================== */
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:25px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-size:18px;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#FFD700;
+}
+
+/* ==========================================
+   HERO SECTION (Flexbox)
+========================================== */
+
+.hero{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:60px;
+    gap:40px;
+
+    background:linear-gradient(to right,#fff5e6,#ffe0b2);
+}
+
+.hero-text{
+    flex:1;
+}
+
+.hero-text h1{
+    font-size:50px;
+    color:#8B0000;
+    margin-bottom:20px;
+}
+
+.hero-text p{
+    font-size:20px;
+    margin-bottom:25px;
+}
+
+.hero-image{
+    flex:1;
+}
+
+.hero img{
+    width:100%;
+    border-radius:15px;
+    box-shadow:0 8px 20px rgba(0,0,0,.3);
+}
+
+/* ==========================================
+   BUTTON
+========================================== */
+
+button{
+    background:#8B0000;
+    color:white;
+
+    border:none;
+
+    padding:15px 30px;
+
+    font-size:18px;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+button:hover{
+    background:#b22222;
+    transform:scale(1.05);
+}
+
+/* ==========================================
+   TITLES
+========================================== */
+
+.title{
+    text-align:center;
+    font-size:40px;
+    margin:50px 0 30px;
+    color:#8B0000;
+}
+
+/* ==========================================
+   ABOUT SECTION (Flexbox)
+========================================== */
+
+.about{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:40px;
+
+    padding:50px;
+}
+
+.about img{
+    width:100%;
+    max-width:450px;
+    border-radius:15px;
+}
+
+.about div{
+    flex:1;
+}
+
+/* ==========================================
+   MENU (CSS GRID)
+========================================== */
+
+.menu-container{
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:25px;
+
+    padding:40px 60px;
+}
+
+.card{
+    background:white;
+
+    border-radius:15px;
+
+    overflow:hidden;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.2);
+
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.card h3{
+    margin:15px;
+}
+
+.card p{
+    margin:0 15px 20px;
+    color:#8B0000;
+    font-weight:bold;
+}
+
+/* ==========================================
+   GALLERY (GRID)
+========================================== */
+
+.gallery{
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:20px;
+
+    padding:40px 60px;
+}
+
+.gallery img{
+    width:100%;
+    border-radius:12px;
+    transition:.4s;
+}
+
+.gallery img:hover{
+    transform:scale(1.05);
+}
+
+/* ==========================================
+   CONTACT FORM
+========================================== */
+
+form{
+    max-width:600px;
+    margin:auto;
+
+    display:flex;
+    flex-direction:column;
+
+    gap:20px;
+
+    padding:20px;
+}
+
+input,
+textarea{
+    padding:15px;
+    border:2px solid #ccc;
+    border-radius:8px;
+    font-size:16px;
+}
+
+input:focus,
+textarea:focus{
+    border-color:#8B0000;
+    outline:none;
+}
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+footer{
+    background:#222;
+    color:white;
+
+    text-align:center;
+
+    padding:25px;
+
+    margin-top:40px;
+}
+
+.icons{
+    margin-top:15px;
+}
+
+.icons i{
+    font-size:24px;
+    margin:0 10px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.icons i:hover{
+    color:#FFD700;
+}
+
+/* ==========================================
+   MEDIA QUERIES
+========================================== */
+
+/* Tablet */
+
+@media(max-width:992px){
+
+.hero,
+.about{
+    flex-direction:column;
+    text-align:center;
+}
+
+.menu-container{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.gallery{
+    grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+header{
+    flex-direction:column;
+    gap:20px;
+    padding:20px;
+}
+
+nav ul{
+    flex-direction:column;
+    align-items:center;
+}
+
+.hero{
+    padding:30px;
+}
+
+.hero h1{
+    font-size:36px;
+}
+
+.menu-container{
+    grid-template-columns:1fr;
+    padding:20px;
+}
+
+.gallery{
+    grid-template-columns:1fr;
+    padding:20px;
+}
+
+.about{
+    padding:20px;
+}
+
+.title{
+    font-size:30px;
+}
+
+button{
+    width:100%;
+}
+
+}

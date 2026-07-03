@@ -1,0 +1,161 @@
+/* Universal Selector */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+/* Body */
+
+body{
+    background:#f4f4f4;
+}
+
+/* Header (Flexbox + Position + Z-index) */
+
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#20556c;
+    color:white;
+    padding:20px 40px;
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+}
+
+nav a:hover{
+    color:rgb(10, 10, 10);
+}
+
+/* Hero (Flexbox) */
+
+.hero{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:40px;
+    background:white;
+}
+
+.hero-text{
+    flex:1;
+}
+
+.hero-image{
+    flex:1;
+}
+
+.hero img{
+    width:100%;
+    border-radius:10px;
+    border:3px solid #1e3a8a;
+}
+
+/* Button */
+
+button{
+    margin-top:20px;
+    padding:10px 20px;
+    background:rgb(130, 75, 28);
+    color:white;
+    border:none;
+    cursor:pointer;
+    border-radius:5px;
+}
+
+button:hover{
+    background:#644274;
+}
+
+/* Section Title */
+
+.title{
+    text-align:center;
+    margin:40px;
+}
+
+/* Course Cards (Grid) */
+
+.courses{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+    padding:20px 40px;
+}
+
+.card{
+    background:white;
+    border:2px solid #cf9278;
+    padding:20px;
+    text-align:center;
+    border-radius:10px;
+}
+
+.card:hover{
+    background:#efb086;
+}
+
+/* Schedule */
+
+.schedule{
+    display:flex;
+    justify-content:space-around;
+    padding:30px;
+    background:white;
+    margin:20px;
+}
+
+/* Footer */
+
+footer{
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:30px;
+}
+
+/* Media Query */
+
+@media(max-width:768px){
+
+header{
+    flex-direction:column;
+}
+
+nav{
+    margin-top:15px;
+}
+
+nav a{
+    display:block;
+    margin:10px;
+}
+
+.hero{
+    flex-direction:column;
+    text-align:center;
+}
+
+.courses{
+    grid-template-columns:1fr;
+}
+
+.schedule{
+    flex-direction:column;
+    gap:15px;
+    text-align:center;
+}
+
+}

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume_vinay</title>
+</head>
+<body>
+
+
+<body>
+
+<header>
+
+<h1>My CSS Resume Page</h1>
+
+<nav>
+<a href="#ome">Home</a>
+<a href="#about">About</a>
+<a href="#project">Projects</a>
+<a href="#contact">Contact</a>
+</nav>
+
+</header>
+<section class="hero">
+<img  id="profile" src="profile_1.png" alt="Sample" height="250" width="250">
+<div>
+<h2>Hello, I'm Vinay</h2>
+<p>Learning HTML, CSS and JavaScript.</p>
+<br>
+<button>Hire Me</button>
+</div>
+
+
+</section>
+
+<section class="cards">
+
+<div class="card">
+<h3>HTML</h3>
+<p>Blueprint of th webpage</p>
+</div>
+
+<div class="card">
+<h3>CSS</h3>
+<p>Styling for the webpages.</p>
+</div>
+
+<div class="card">
+<h3>JavaScript</h3>
+<p>Make webpages interactive.</p>
+</div>
+
+</section>
+
+
+<footer>
+
+<p>© 2026 My Practice resume Webpage</p>
+
+</footer>
+
+    
+</body>
+
+<style>
+
+    /* Universal Selector */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+/* Body */
+body{
+    background:#f2f2f2;
+}
+
+/* Header */
+header{
+    background:rgb(52, 93, 93);
+    color:white;
+    text-align:center;
+    padding:20px;
+    position:sticky;
+    top:0;
+}
+
+/* Navigation - Flexbox */
+nav{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    margin-top:10px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+}
+
+nav a:hover{
+    text-decoration:underline;
+    color:black;
+
+}
+.profile{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-top:30px;
+}
+
+.profile img{
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+}
+
+/* hero section */
+
+.hero{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+    padding:40px;
+}
+
+/* Button */
+
+button{
+    background:#0077cc;
+    color:white;
+    padding:12px 20px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    background:rgb(2, 26, 2);
+}
+
+/* Grid */
+.cards{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+    padding:30px;
+}
+
+.card{
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 5px 10px gray;
+    text-align:center;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+@keyframes move{
+    from{
+        transform:translateX(-100px);
+    }
+    to{
+        transform:translateX(100px);
+    }
+}
+
+/* Footer */
+footer{
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+/* Media Query */
+@media(max-width:768px){
+
+.hero{
+    flex-direction:column;
+    text-align:center;
+}
+
+.cards{
+    grid-template-columns:1fr;
+}
+
+nav{
+    flex-direction:column;
+}
+
+}
+</style>
+</html>
