@@ -5,7 +5,7 @@ import Employee from "./Employee";
 function Company(){
     return(
         <>
-        <Employee name ="Vinay" />
+        <Employee name ="Vinay" age ={23} />
         </>
     )
 }
