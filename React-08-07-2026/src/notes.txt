@@ -1,0 +1,8 @@
+| **Props**                                                                 | **State**                                                  |
+| ------------------------------------------------------------------------- | ---------------------------------------------------------- |
+| Props are used to pass data from a parent component to a child component. | State is used to store and manage data within a component. |
+| Props are **read-only** (cannot be modified by the child).                | State can be **updated** using `useState()`.               |
+| Props are received from another component.                                | State is created and managed inside the component.         |
+| Props make components reusable.                                           | State makes components interactive and dynamic.            |
+
+
