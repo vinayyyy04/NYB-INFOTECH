@@ -1,0 +1,59 @@
+//APi
+
+API--is the application programming interface:which allows one software application to communicate with another.
+
+//client-server architecture.
+
+client--sends the requests(browser,mobile app,React app)
+
+server--processes request and return the data.
+
+
+//REST API
+
+REST--representational state Transfer:is a common way of designing web APis
+
+mehtods:-
+
+GET--read data
+POST--create data
+PUT--update data
+DELETE--remove data
+
+
+//JSON Data Format
+
+JSON:-Javascript object notation:is the standard format used to send data between client and the server.
+
+{
+    "id":1,
+    "name":"vinay,
+    "role":"ASE"
+}
+
+//request and response cycle.
+
+step1--client sends the request     GET/users
+
+step2--server processes it.          Database/logic
+
+step3--server sends the response     JSON+status code
+
+step4--client dispplay data          UI Updates.
+
+
+//HTTPS codes
+
+200--ok---request successfull
+
+201--created--new resource created
+
+
+400--bad request--invalid request
+
+401--unauthorized--authentication required
+
+
+404--not found--resource not found
+
+500--server error--problem on the server
