@@ -1,0 +1,50 @@
+//Redux
+
+Redux is a predictable state management library for JavaScript applications.
+
+It stores the application's shared state in a single centralized store.
+
+Instead of components changing data directly, 
+they dispatch actions, and reducers determine how the state changes.
+
+
+Advantages of Redux:--
+
+Centralized state: All shared data is stored in one place.
+Predictable updates: State changes happen only through actions and reducers.
+Easier debugging: The flow of state changes is clear and easier to trace.
+Reduced prop drilling: Components can access shared state directly from the store.
+Scalable: Well-suited for large and complex applications.
+Developer tools: Integrates with Redux DevTools for inspecting state and action history.
+
+
+Disadvantages of Redux:--
+
+More boilerplate code (though modern tooling reduces this).
+Steeper learning curve than basic React state.
+Can be unnecessary for small applications with simple state.
+
+
+
+| React State (`useState`)   | Redux                                    |
+| -------------------------- | ---------------------------------------- |
+| Local to one component     | Global/shared across the app             |
+| Simple to use              | Better for complex applications          |
+| No extra library required  | Requires Redux setup                     |
+| Best for UI-specific state | Best for shared application state        |
+| Limited sharing            | Easy access from any connected component |
+
+
+Redux Architecture:---
+
+Store: Holds the complete application state.
+
+State: The data stored inside the store.
+
+Action: A plain object that describes what happened.
+
+Reducer: A function that updates the state based on the action.
+
+Dispatch: Sends an action to the store.
+
+Selector: Reads data from the store.
