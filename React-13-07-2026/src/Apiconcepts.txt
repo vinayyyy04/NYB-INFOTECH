@@ -1,0 +1,56 @@
+//need for global state
+
+In React, state is data that determines how a component behaves and what it displays. 
+By default, state is local to a component. 
+However, as applications grow, multiple components often need to access or update the same data. 
+This is where global state management becomes important.
+
+
+//What Is Global State?
+
+Global state is data that is shared across multiple components 
+and can be accessed or updated from anywhere in the application.
+
+Examples of global state include:-
+
+User authentication (logged-in user)
+Shopping cart
+Theme (light/dark mode)
+Language settings
+Notifications
+Application-wide settings
+Benefits of Global State Management
+Eliminates prop drilling by allowing components to access shared data directly.
+Provides a single source of truth, ensuring all components display the same data.
+Simplifies state updates, since changes automatically reflect wherever the state is used.
+Improves maintainability by centralizing shared data.
+Makes debugging easier, especially with tools that track state changes.
+
+example:--
+<App>
+  <Header cart={cart} />
+  <ProductList cart={cart} setCart={setCart} />
+  <Cart cart={cart} />
+</App>
+
+
+//limitations of prop drilling
+
+Props drilling is the practice of passing data or 
+functions from a parent component down through multiple intermediate components, 
+even when those intermediate components don't use them directly.
+
+Limitations of Props Drilling
+
+ -->Verbose code:- Requires passing props through multiple intermediate components.
+
+ -->Hard to maintain:- Changes to props must be updated across many components.
+
+ -->Tight coupling:- Intermediate components become dependent on props they don't use.
+
+ -->Difficult debugging:- Tracking data flow through deep component trees is challenging.
+ 
+ -->Poor scalability:- Props drilling becomes cumbersome as the application grows.
+ 
+ -->Unnecessary re-renders:- Intermediate components may re-render even when they don't use the props.
+
