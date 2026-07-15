@@ -1,0 +1,12 @@
+//diffrences between usestate and use reducer
+
+| `useState`                                         | `useReducer`                                                   |
+| -------------------------------------------------- | -------------------------------------------------------------- |
+| Used for simple state management.                  | Used for complex state management.                             |
+| Easy to learn and use.                             | Slightly more advanced.                                        |
+| State is updated directly using a setter function. | State is updated by dispatching actions to a reducer function. |
+| Best for one or two state variables.               | Best when many state values are related.                       |
+| Logic stays inside the component.                  | State update logic is separated into a reducer function.       |
+| Less code for simple tasks.                        | More code initially but easier to manage as the app grows.     |
+
+
