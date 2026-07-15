@@ -88,7 +88,7 @@ const [state, dispatch] = useReducer(
       <h2>Available Cars</h2>
 
       {state.cars.length === 0 ? (
-        <h3>No Cars Available 🚫</h3>
+        <h3>No Cars Available </h3>
       ) : (
         state.cars.map((car) => (
           <div
