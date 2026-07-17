@@ -1,0 +1,233 @@
+1. Context API
+
+What is Context API?
+
+Context API is a built-in React feature used to share data between components without passing props manually through every level (called prop drilling).
+
+Why use it?
+
+To share common data like:
+Theme (Dark/Light)
+User information
+Language
+Authentication status
+
+Steps:
+
+Create a Context using createContext().
+Wrap components with a Provider.
+Access the data using useContext().
+2. useContext Hook
+
+What is useContext?
+
+useContext is a React Hook used to access the value stored inside a Context.
+
+Syntax
+
+const value = useContext(MyContext);
+
+Advantages
+
+No need for prop drilling.
+Cleaner and simpler code.
+Easy to access shared data.
+
+Example
+
+const ThemeContext = createContext();
+
+function App() {
+  return (
+    <ThemeContext.Provider value="Dark">
+      <Home />
+    </ThemeContext.Provider>
+  );
+}
+
+function Home() {
+  const theme = useContext(ThemeContext);
+  return <h1>{theme}</h1>;
+}
+3. Redux Fundamentals
+
+What is Redux?
+
+Redux is a state management library that stores the application's data in one central place called the Store.
+Why Redux?
+Share data across many components.
+Predictable state updates.
+Easier debugging.
+Redux Flow
+Component
+   ↓
+Dispatch(Action)
+   ↓
+Reducer
+   ↓
+Store Updated
+   ↓
+UI Re-renders
+Main Concepts
+Store
+Stores the entire application state.
+Action
+An object that describes what happened.
+
+Example
+
+{
+  type: "increment"
+}
+Reducer
+A function that updates state based on the action.
+
+Example
+
+function counter(state = 0, action) {
+  switch(action.type){
+    case "increment":
+      return state + 1;
+    default:
+      return state;
+  }
+}
+Dispatch
+Sends an action to Redux.
+dispatch({type:"increment"})
+4. Redux Toolkit (RTK)
+
+What is Redux Toolkit?
+
+Redux Toolkit is the official and recommended way to write Redux code.
+
+Why use RTK?
+
+Less code
+Easier to understand
+Automatically configures Redux Store
+Uses Immer for immutable updates
+Main Functions
+configureStore()
+
+Creates the Redux Store.
+
+const store = configureStore({
+ reducer:{
+   counter: counterReducer
+ }
+})
+createSlice()
+
+Creates:
+
+State
+Reducers
+Actions
+
+Example
+
+const counterSlice = createSlice({
+ name:"counter",
+ initialState:{value:0},
+ reducers:{
+   increment:(state)=>{
+      state.value++;
+   },
+   decrement:(state)=>{
+      state.value--;
+   }
+ }
+})
+useSelector()
+
+Reads data from Redux Store.
+
+const count = useSelector(state=>state.counter.value)
+useDispatch()
+
+Updates Redux Store.
+
+const dispatch = useDispatch();
+
+dispatch(increment())
+5. useReducer Hook
+
+What is useReducer?
+
+useReducer is a React Hook used to manage complex state logic.
+
+Instead of multiple useState, we use one reducer.
+
+Syntax
+const [state, dispatch] = useReducer(reducer, initialState);
+Reducer Function
+function reducer(state, action){
+
+ switch(action.type){
+
+ case "increment":
+ return {count:state.count+1};
+
+ case "decrement":
+ return {count:state.count-1};
+
+ default:
+ return state;
+
+ }
+
+}
+Dispatch
+dispatch({type:"increment"})
+Why useReducer?
+Complex state
+Multiple related values
+Predictable updates
+Cleaner than many useState calls
+6. Global State Management Concepts
+What is State?
+
+State is data that changes over time.
+
+Example:
+
+Counter value
+Logged-in user
+Shopping cart
+Theme
+Local State
+
+Managed inside one component using useState.
+
+const [count,setCount]=useState(0);
+
+Only that component can use it.
+
+Global State
+
+Shared across multiple components.
+
+Example:
+
+Logged-in user
+Shopping cart
+Theme
+Language
+
+Global state can be managed using:
+
+Context API
+Redux
+Redux Toolkit
+Local State vs Global State
+Local State	Global State
+Used by one component	Shared across many components
+Managed using useState	Managed using Context API or Redux
+Simple applications	Large applications
+Context API vs Redux
+Context API	Redux Toolkit
+Built into React	External library
+Best for small to medium apps	Best for medium to large apps
+Simpler setup	More powerful features
+Suitable for theme, language, auth	Suitable for shopping cart, dashboards, large applications
