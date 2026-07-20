@@ -1,0 +1,116 @@
+Introduction to React – React is a JavaScript library used to build fast and interactive user interfaces.
+
+React Project Setup – Setting up a React application using tools like Vite or Create React App.
+
+React Folder Structure – Organizing React files into folders like components, pages, assets, and hooks.
+
+React Libraries and Ecosystem – Tools such as React Router, Axios, Redux, and Material UI that extend React.
+
+Virtual DOM – A lightweight copy of the real DOM that improves rendering performance.
+
+Single Page Applications (SPA) – Applications that load one HTML page and update content without reloading.
+
+Components & JSX – Components are reusable UI blocks written using JSX syntax.
+
+Functional Components – Components created using JavaScript functions.
+
+Class Components – Components created using ES6 classes with lifecycle methods.
+
+JSX Syntax – JSX allows writing HTML-like code inside JavaScript.
+
+Valid and Invalid JSX – JSX must have a single parent element and properly closed tags.
+
+Calling Functions in JSX – Functions can be executed inside JSX using curly braces {}.
+
+Fragments – Fragments group multiple elements without adding extra DOM nodes.
+
+Strict Mode – A React tool that helps identify potential problems during development.
+
+Props & State – Props receive data, while state stores and manages component data.
+
+
+Introduction to Props – Props are read-only data passed from parent to child components.
+
+Introduction to State – State is mutable data managed within a component.
+
+Differences between Props and State – Props are external and immutable, while state is internal and changeable.
+
+Dynamic Rendering using Props and State – UI updates automatically when props or state change.
+
+Component Communication – The process of sharing data between React components.
+
+Parent to Child Communication – Data is passed using props.
+
+Child to Parent Communication – Child sends data using callback functions passed as props.
+
+Child to Child Communication – Data is shared through the parent or global state management.
+
+Component Hierarchy – The tree-like relationship between parent and child components.
+
+Props Drilling – Passing props through multiple intermediate components unnecessarily.
+
+API Integration – Connecting a React app with external servers to fetch or send data.
+
+Fetch API – A built-in JavaScript method for making HTTP requests.
+
+
+Axios – A popular library for making HTTP requests with additional features.
+HTTP Methods – Standard operations used to communicate with a server.
+
+GET – Retrieves data from the server.
+
+POST – Sends new data to the server.
+
+PUT – Replaces an existing resource with new data.
+
+PATCH – Updates specific fields of an existing resource.
+
+DELETE – Removes a resource from the server.
+
+Async/Await with API Calls – Makes asynchronous API requests easier to read and manage.
+
+Error Handling – Handles API or application errors gracefully using try...catch.
+
+Loading States – Displays loading indicators while data is being fetched.
+
+State Management – Managing and sharing application data efficiently.
+
+Context API – React's built-in feature for sharing global data without props drilling.
+
+
+useContext Hook – Accesses data stored in a Context API provider.
+
+Redux Fundamentals – Redux is a predictable state management library for large applications.
+
+Redux Toolkit – The official, simplified way to write Redux logic.
+
+Store, Actions, Reducers, and Dispatch – Store holds state, actions describe changes, reducers update state, and dispatch triggers actions.
+
+Redux Slices – A slice groups Redux state and related reducers into one file.
+
+useReducer Hook – A React hook for managing complex state using reducer functions.
+
+
+
+1. Functional Components vs Class Components:-
+Functional Components use Hooks (useState, useEffect), while Class Components use lifecycle methods.
+Functional Components are simpler, shorter, and preferred in modern React.
+Class Components are mainly found in older React projects.
+
+
+2. Props vs State:-
+Props are passed from parent to child; State is managed inside the component.
+Props are read-only, while State can be updated.
+Changes in State re-render the component, while Props change when the parent passes new values.
+
+
+3. Context API vs Redux vs useReducer:-
+Context API: Shares global data and avoids props drilling.
+Redux: Best for managing complex global state in large applications.
+useReducer: Best for handling complex state logic within a single component.
+
+
+4. Fetch API vs Axios:-
+Fetch API is built into JavaScript; Axios is a third-party library.
+Fetch requires .json() to parse data; Axios automatically parses JSON.
+Axios provides better features like interceptors, request cancellation, and improved error handling.
