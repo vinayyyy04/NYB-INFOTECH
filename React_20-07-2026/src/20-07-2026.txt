@@ -1,0 +1,10 @@
+Conditional Rendering means showing different UI (User Interface) based on a condition. 
+Instead of always displaying the same content, React decides what to display depending on data, 
+user actions, or application state.
+
+Why do we need Conditional Rendering?
+Show content only when required.
+Hide unnecessary information.
+Improve user experience.
+Display different screens based on user actions.
+Handle loading, errors, and authentication.
