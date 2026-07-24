@@ -1,0 +1,55 @@
+What is a Higher-Order Component (HOC)?
+
+A Higher-Order Component (HOC) is a function that takes an existing React component 
+as an input and returns a new component with additional functionality.
+
+It does not modify the original component. Instead, it wraps the original component and adds extra features.
+
+Definition
+
+A Higher-Order Component is a function that accepts a component and returns a new enhanced component.
+
+Syntax
+const EnhancedComponent = higherOrderComponent(OriginalComponent);
+
+Where:
+
+higherOrderComponent → Function that adds extra functionality.
+OriginalComponent → Existing component.
+EnhancedComponent → New component with additional features.
+
+
+
+Why are Higher-Order Components (HOCs) Used?
+
+Higher-Order Components (HOCs) are used to reuse common logic across multiple React components 
+without repeating the same code.
+
+Instead of writing the same functionality (such as authentication, loading, logging, or permissions) in every 
+component, we write it once in an HOC and wrap the required components.
+
+Example
+
+Suppose you have three components:
+
+Student
+Teacher
+Admin
+
+If all three need a login check, instead of writing the login code three times, 
+create one withAuth HOC and use it for all components.
+
+Benefits
+Reuse common logic.
+Avoid duplicate code.
+Keep components clean and simple.
+Make the application easier to maintain.
+
+
+
+
+| HOC                    | Purpose                                                                      | Example                                                       |
+| ---------------------- | ---------------------------------------------------------------------------- | ------------------------------------------------------------- |
+| **Authentication HOC** | Checks **who the user is** (logged in or not).                               | Shopping Cart – only logged-in users can view the cart.       |
+| **Loading HOC**        | Shows a loading screen until data is ready.                                  | Movie App – displays "Loading Movies..." while fetching data. |
+| **Authorization HOC**  | Checks **what the user is allowed to access** based on roles or permissions. | Hospital System – only doctors can view patient records.      |

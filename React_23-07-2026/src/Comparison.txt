@@ -1,0 +1,101 @@
+1. Higher-Order Components (HOCs)
+Definition
+
+A Higher-Order Component is a function that takes a component as input and returns a new enhanced component.
+
+Example
+const ProtectedDashboard = withAuth(Dashboard);
+Use Cases
+Authentication
+Authorization
+Loading
+Logging
+
+
+Advantages:-
+Reuse common logic.
+Avoid duplicate code.
+Works with class and functional components.
+
+Disadvantages:-
+Can create nested wrapper components ("wrapper hell").
+Harder to debug.
+Less preferred in modern React.
+
+
+2. Hooks
+Definition
+
+A Hook is a function that lets you reuse stateful logic in functional components.
+
+
+Use Cases
+State management
+API calls
+Form handling
+Timers
+Reusable business logic
+
+
+Advantages:-
+Cleaner code.
+Easy to understand.
+Recommended in modern React.
+
+Disadvantages:-
+Only works in functional components.
+Must follow the Rules of Hooks.
+
+
+
+3. Component Composition
+
+Definition
+Component Composition means building complex UIs by combining smaller reusable components.
+
+Use Cases
+Layouts
+Cards
+Modals
+Dashboards
+Navigation bars
+
+
+Advantages:-
+Promotes reusable UI.
+Easy to maintain.
+Makes components modular.
+
+Disadvantages
+Mainly reuses UI structure, not business logic.
+
+
+Key diffrences:-
+
+HOC:-
+Component
+     │
+     ▼
+withAuth()
+     │
+     ▼
+Enhanced Component
+
+
+Hook:-
+
+Component
+     │
+     ▼
+useCounter()
+     │
+     ▼
+Returns State & Functions
+
+Component Composition:-
+
+Page
+ ├── Header
+ ├── Sidebar
+ ├── Content
+ └── Footer
