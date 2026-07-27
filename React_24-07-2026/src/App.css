@@ -182,3 +182,70 @@
     border-right-color: var(--border);
   }
 }
+
+body{
+margin:0;
+font-family:Arial;
+background:#f4f4f4;
+}
+
+.login{
+display:flex;
+flex-direction:column;
+align-items:center;
+gap:15px;
+margin-top:100px;
+}
+
+.login input{
+padding:10px;
+width:250px;
+}
+
+button{
+padding:10px 20px;
+background:rgb(194, 29, 29);
+color:white;
+border:none;
+cursor:pointer;
+}
+
+.container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+padding:20px;
+}
+
+.card{
+background:white;
+padding:15px;
+border-radius:10px;
+text-align:center;
+box-shadow:0 0 8px gray;
+}
+
+.card img{
+width:100%;
+height:180px;
+object-fit:cover;
+}
+
+.form{
+display:flex;
+justify-content:center;
+gap:10px;
+padding:20px;
+flex-wrap:wrap;
+}
+
+.form input{
+padding:10px;
+}
+
+.card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    border-radius:10px;
+}
