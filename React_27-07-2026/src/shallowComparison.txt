@@ -1,0 +1,19 @@
+What is Shallow Comparison?
+
+Shallow comparison means React compares only the top-level values (references) of props,
+ not the nested values inside objects or arrays.
+
+React.memo() uses shallow comparison to decide whether a component should re-render.
+
+If the props are the same, the component does not re-render.
+If the props are different, the component re-renders.
+Real-Life Example
+
+Imagine you have an ID card to enter an office.
+
+The security guard checks only your ID card, not every detail about you.
+
+If you show the same ID card, you are allowed in without further checks.
+If you show a different ID card, the guard checks again.
+
+Similarly, React checks only the reference (identity) of the props, not every value inside them.

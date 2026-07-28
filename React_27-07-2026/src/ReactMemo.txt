@@ -1,0 +1,184 @@
+What is React.memo()?
+
+React.memo() is a Higher Order Component (HOC) provided by React.
+
+It memorizes (caches) the rendered output of a functional component. 
+If the component receives the same props as before, React does not re-render it. 
+Instead, it reuses the previous result.
+
+
+
+Why do we use React.memo()?
+
+In React, whenever a parent component re-renders, all of its child components also re-render by default, even if the child's data has not changed.
+
+This can cause:
+
+Unnecessary rendering
+Reduced performance
+Slower applications, especially in large projects
+
+React.memo() solves this problem by preventing child components from re-rendering when their props haven't changed.
+
+Real-Life Example
+
+Imagine a company office.
+
+Manager → Parent Component
+Employees → Child Components
+
+The manager announces:
+
+"Everyone, the meeting room has changed."
+
+Every employee listens because the information affects everyone.
+
+Now imagine the manager only updates their own calendar.
+
+Without React.memo():
+
+Every employee stops working and checks for updates, even though nothing related to them changed.
+
+With React.memo():
+
+Employees continue working because their tasks haven't changed.
+Only the manager updates their own schedule.
+
+This saves time and increases efficiency.
+
+How React.memo() Works
+
+When a parent component re-renders:
+
+React checks the child component's props.
+If the props are the same, React skips rendering the child.
+If the props have changed, React renders the child again.
+
+So, React.memo() performs a props comparison before deciding whether to re-render.
+
+Normal Component Rendering
+
+Without React.memo():
+
+Parent component updates.
+Child component updates.
+Even if the child receives the same data, it still renders again.
+Flow
+Parent Re-renders
+        │
+        ▼
+Child Re-renders
+        │
+        ▼
+UI Updates Again
+
+This may lead to unnecessary work.
+
+Memoized Component Rendering
+
+With React.memo():
+
+Parent component updates.
+React compares the child's current props with its previous props.
+If they are identical, the child does not re-render.
+Flow
+Parent Re-renders
+        │
+        ▼
+React Compares Props
+        │
+   ┌────┴────┐
+   │         │
+Same      Different
+Props       Props
+   │         │
+   ▼         ▼
+Skip      Re-render
+Render      Child
+
+Comparison: Normal Rendering vs Memoized Rendering
+Normal Component Rendering	                         Memoized Component Rendering
+Child re-renders whenever the parent re-renders.	Child re-renders only when its props change.
+No optimization.	                                Optimized for better performance.
+May perform unnecessary renders.	                Prevents unnecessary renders.
+Suitable for simple components.	                    Suitable for components that render frequently or are expensive to render.
+
+Advantages of React.memo()
+Improves application performance.
+Reduces unnecessary component re-renders.
+Makes the UI more efficient.
+Useful in large React applications.
+Helps optimize components that receive the same props repeatedly.
+
+Limitations of React.memo()
+It only compares props.
+If a component's own state changes, it will still re-render.
+If the parent passes a new object, array, or function on every render, React may consider the props changed and re-render the component.
+Using React.memo() everywhere is not recommended because React must compare props each time, which also has a small cost.
+
+
+
+1. Social Media Application 📱
+
+Scenario: A user clicks the Like button on a post.
+
+Without React.memo()
+User Profile re-renders.
+All Posts re-render.
+Comments re-render.
+Friend Suggestions re-render.
+With React.memo()
+Only the liked post re-renders.
+All other components remain unchanged.
+
+
+2. E-Commerce Website 🛒
+
+Scenario: A customer adds a product to the shopping cart.
+
+Without React.memo()
+Product List re-renders.
+User Profile re-renders.
+Categories re-render.
+With React.memo()
+Only the Shopping Cart updates.
+Product List and other components remain unchanged.
+
+
+3. Employee Management System 👨‍💼
+
+Scenario: HR updates one employee's salary.
+
+Without React.memo()
+Entire employee list re-renders.
+Dashboard re-renders.
+Reports re-render.
+With React.memo()
+Only the updated employee card re-renders.
+Other employee cards remain unchanged.
+
+
+4. Banking Application 🏦
+
+Scenario: A new transaction is added.
+
+Without React.memo()
+Account Details re-render.
+Profile re-renders.
+Transaction History re-renders.
+With React.memo()
+Only the Transaction History updates.
+Profile and Account Details remain unchanged.
+
+
+5. Online Learning Platform 🎓
+
+Scenario: A student completes one lesson.
+
+Without React.memo()
+Course List re-renders.
+Instructor Details re-render.
+Comments re-render.
+With React.memo()
+Only the Progress Bar and completed lesson update.
+Other components remain unchanged.

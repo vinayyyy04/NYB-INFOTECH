@@ -1,0 +1,67 @@
+Different Ways of Making API Calls using Fetch API and Axios
+1. Fetch API
+Fetch API is a built-in JavaScript feature used to communicate with servers.
+It does not require any installation.
+It returns a Promise, so you can handle the response using .then() or async/await.
+The response must be converted into JSON using response.json().
+It does not automatically treat HTTP errors (like 404 or 500) as exceptions, so you should check response.ok yourself.
+Ways to use Fetch API
+Using .then() – Chains promises using .then() and .catch().
+Using async/await – Makes asynchronous code easier to read and write.
+With Error Handling – Checks response.ok before processing the data to handle failed requests properly.
+
+2. Axios
+Axios is a third-party library used to make HTTP requests.
+It must be installed before use.
+It automatically converts JSON responses into JavaScript objects.
+It automatically throws errors for failed HTTP requests, making error handling simpler.
+It provides additional features such as request/response interceptors, timeout configuration, and automatic request cancellation.
+Ways to use Axios
+Using .then() – Uses promise chaining to process responses.
+Using async/await – Provides cleaner and more readable asynchronous code.
+Using Configuration Object – Allows you to specify the HTTP method, URL, headers, timeout, and other request options in a single object.
+
+GET Request
+Used to retrieve data from a server.
+It does not modify any data on the server.
+
+POST Request
+Used to send new data to a server.
+Commonly used for registration forms, login forms, and adding new records.
+
+PUT Request
+Used to update an existing resource completely.
+The entire resource is usually replaced with the new data.
+
+PATCH Request
+Used to update only specific fields of an existing resource.
+More efficient than PUT when only a few values need to change.
+
+DELETE Request
+Used to remove data from the server.
+
+API Calls in React
+API calls are usually placed inside useEffect() so they run when the component loads.
+The fetched data is stored using useState().
+React then displays the data by rendering it dynamically.
+
+Fetch API vs Axios
+Fetch API
+Built into modern browsers.
+No installation required.
+Requires manual JSON conversion.
+Manual HTTP error checking.
+Good for simple applications.
+
+Axios
+Requires installation.
+Automatically parses JSON.
+Automatic HTTP error handling.
+Supports interceptors and request configuration.
+Better suited for medium and large React applications.
+Best Practices
+Use Fetch API when you need a lightweight, built-in solution.
+Use Axios when you need advanced features such as interceptors, automatic error handling, or request configuration.
+Always handle loading and error states to improve user experience.
+Store API responses in state and render them dynamically.
+Use async/await for better readability in modern JavaScript applications.
