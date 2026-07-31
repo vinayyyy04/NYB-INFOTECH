@@ -1,0 +1,28 @@
+What are React Portals?
+
+A React Portal allows you to render a React component outside the normal DOM hierarchy of its parent component while still keeping it part of the same React component tree.
+
+Normally, React renders child components inside their parent.
+
+With React Portals, you can render a component somewhere else in the HTML document, such as directly inside the <body> or a separate <div>.
+
+Why Do We Need React Portals?
+
+Sometimes a component should appear above everything else on the page.
+
+Examples include:
+
+Modal (Popup)
+Login Dialog
+Alert Box
+Notification Toast
+Tooltip
+Dropdown Menu
+
+If these components are rendered inside their parent, they may be hidden because of CSS properties like:
+
+overflow: hidden
+z-index
+position
+
+React Portals solve this problem by rendering them outside the parent container.

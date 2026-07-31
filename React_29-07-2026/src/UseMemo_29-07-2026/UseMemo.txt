@@ -1,0 +1,13 @@
+What is useMemo()?
+
+useMemo() is a React Hook that memoizes (stores) the result of an expensive calculation.
+
+Instead of recalculating the value on every render, 
+React reuses the previously calculated value until one of its dependencies changes.
+
+syntax:-
+
+const memoizedValue = useMemo(() => {
+  // Expensive calculation
+  return result;
+}, [dependencies]);

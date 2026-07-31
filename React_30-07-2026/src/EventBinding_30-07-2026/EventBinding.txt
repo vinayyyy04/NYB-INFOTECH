@@ -1,0 +1,8 @@
+| **Inline Event Handling**                                   | **Function Reference**                                |
+| ----------------------------------------------------------- | ----------------------------------------------------- |
+| Function is written directly inside JSX.                    | Function is defined separately and referenced in JSX. |
+| Syntax: `onClick={() => handleClick()}`                     | Syntax: `onClick={handleClick}`                       |
+| Useful for passing parameters.                              | Best when no parameters are needed.                   |
+| Creates a new function on every render.                     | Reuses the same function reference on every render.   |
+| Less readable if the logic is large.                        | Cleaner and easier to maintain.                       |
+| Slightly less efficient for frequently rendered components. | Better for performance and readability.               |

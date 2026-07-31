@@ -1,0 +1,115 @@
+A Higher-Order Component (HOC) is an advanced React pattern used to reuse component logic.
+
+An HOC is a function that takes a component as input and returns a new component with additional functionality or behavior. Instead of changing the original component, it wraps the component and enhances it.
+
+In simple terms, an HOC acts like a wrapper that adds extra features to an existing component.
+
+Why Do We Need HOCs?
+
+In React applications, many components may require the same functionality, such as:
+
+Authentication (checking if a user is logged in)
+Authorization (checking user permissions)
+Loading indicators while fetching data
+Error handling
+Logging user activity
+Tracking analytics
+
+Writing the same code in every component leads to code duplication, makes the application harder to maintain, and increases the chance of errors.
+
+HOCs solve this problem by allowing you to write the common logic once and reuse it across multiple components.
+
+Purpose of HOCs
+
+The main purpose of a Higher-Order Component is to:
+
+Reuse common logic across multiple components.
+Avoid writing the same code repeatedly.
+Keep components clean and focused on displaying UI.
+Separate business logic from presentation logic.
+Improve code organization, readability, and maintainability.
+
+
+
+
+
+comparison of hoc, component composition and hooks.
+
+1. Higher-Order Components (HOCs)
+A Higher-Order Component (HOC) is a function that takes a component as input and returns a new enhanced component.
+It is used to reuse common functionality across multiple components.
+It wraps the original component without modifying it.
+Helps reduce code duplication.
+Commonly used for:
+Authentication
+Authorization
+Loading Spinner
+Error Handling
+Logging
+Creates an additional wrapper component.
+Mostly found in older React applications.
+
+
+2. Component Composition
+Component Composition means combining small components to build a larger component.
+Focuses on reusing UI instead of reusing logic.
+Each component has a single responsibility.
+Components work together to create a complete page or feature.
+Does not create wrapper logic.
+Commonly used for:
+Header
+Sidebar
+Footer
+Navigation Bar
+Dashboard
+Product Cards
+Makes applications easier to organize and maintain.
+
+
+3. Hooks
+Hooks are special React functions that allow functional components to use React features like state and lifecycle methods.
+Used to reuse stateful logic between components.
+Do not require wrapper components.
+Makes code cleaner and easier to understand.
+Commonly used for:
+API Calls
+Form Handling
+Timers
+Theme Management
+Local Storage
+Custom Logic
+Hooks are the modern and recommended approach in React.
+
+
+REAL-LIFE USE Cases
+
+Employee Management System
+Banking Application
+E-Commerce Website
+Online Learning Platform
+Hospital Management System
+Movie Ticket Booking System
+Food Delivery Application
+Ride Booking Application
+Social Media Platform
+Inventory Management System
+School Management System
+College Management System
+HR Management System
+Library Management System
+Hotel Booking System
+Travel Booking Application
+Customer Relationship Management (CRM) System
+Enterprise Resource Planning (ERP) System
+Analytics Dashboard
+News Portal
+Cloud Management Portal
+Project Management System
+Payroll Management System
+Healthcare Portal
+Online Examination System
+Job Portal
+Real Estate Application
+Insurance Management System
+Event Management System
+Finance Management Application

@@ -1,0 +1,11 @@
+What is the key prop?
+
+The key prop is a special attribute used when rendering lists with the map() method. It gives each element a unique identity so React can efficiently 
+track, update, add, or remove items.
+
+Why is key Important?
+Helps React identify each list item uniquely.
+Improves rendering performance.
+Prevents unnecessary re-rendering of unchanged elements.
+Allows React to correctly update, delete, or insert items.
+Reduces UI bugs when the list changes dynamically.

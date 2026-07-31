@@ -1,0 +1,16 @@
+What is Callback Memoization?
+
+Callback memoization means storing (memoizing) a function so that React 
+does not create a new function on every render.
+
+React provides the useCallback() hook for this purpose.
+
+
+
+useCallback() is a React Hook that returns the same function instance between 
+renders until one of its dependencies changes.
+
+Syntax
+const memoizedFunction = useCallback(() => {
+  // Function logic
+}, [dependencies]);

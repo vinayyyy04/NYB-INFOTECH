@@ -1,0 +1,26 @@
+A Custom Hook is a JavaScript function that starts with the word use and allows you to reuse 
+stateful logic across multiple React components.
+
+Custom Hooks are created when the same logic is needed in more than one component. 
+Instead of writing the same code repeatedly, you write it once in a Custom Hook and reuse it wherever needed.
+
+Why are Custom Hooks Used?
+
+To reuse common logic across multiple components.
+To avoid writing duplicate code.
+To keep components clean and easy to read.
+To separate business logic from the UI.
+To improve code organization and maintainability.
+To make the application more scalable.
+To follow the DRY (Don't Repeat Yourself) principle.
+When Should You Create a Custom Hook?
+
+Create a Custom Hook when multiple components need the same functionality, such as:
+
+Fetching data from an API.
+Form validation.
+User authentication.
+Theme switching (Light/Dark mode).
+Window size detection.
+Timer or countdown functionality.
+Local storage management.

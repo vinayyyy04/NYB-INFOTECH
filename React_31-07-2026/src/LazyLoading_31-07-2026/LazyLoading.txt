@@ -1,0 +1,77 @@
+What is Lazy Loading in React?
+
+Lazy Loading is a technique where React loads a component only when it is needed, 
+instead of loading every component when the application starts.
+
+Without Lazy Loading
+
+Imagine your React application has these pages:
+
+Home
+About
+Contact
+Dashboard
+Profile
+
+When the user opens your app, React loads all these components at once, 
+even though the user is only viewing the Home page.
+
+With Lazy Loading
+
+React loads only the Home component when the application starts.
+
+If the user later opens the Dashboard, React loads the Dashboard component at that moment.
+
+How React Implements Lazy Loading
+
+React provides:
+
+React.lazy() → Loads a component only when it's needed.
+Suspense → Displays a loading UI while the component is being loaded.
+
+
+comparison of normal components vs lazy-loaded component.
+
+| **Normal Import**                                        | **Lazy-Loaded Component**                                                              |
+| -------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| Loads the component when the application starts.         | Loads the component only when it is needed.                                            |
+| Uses the `import` statement.                             | Uses `React.lazy()` with `import()`.                                                   |
+| Increases the initial bundle size.                       | Reduces the initial bundle size.                                                       |
+| No loading screen is needed.                             | Requires `Suspense` with a `fallback` UI.                                              |
+| Best for frequently used components like Home or Navbar. | Best for pages/components that are not opened immediately, like Dashboard or Settings. |
+
+
+
+Advantages of Lazy Loading:-
+
+ Faster initial page load.
+ Smaller JavaScript bundle.
+ Reduces memory consumption.
+ Improves user experience.
+ Helpful for mobile users and slower internet connections.
+ Makes large React applications more responsive.
+
+
+Disadvantages of Lazy Loading:-
+The first time a lazy-loaded page is opened, users may briefly see a loading indicator.
+It requires React.lazy() and Suspense (or another loading mechanism) to manage the loading state.
+Overusing lazy loading for tiny components can add unnecessary complexity.
+When Should You Use Lazy Loading?
+
+Use lazy loading for:
+
+Dashboard
+Admin Panel
+Profile Page
+Settings
+Reports
+Analytics
+Any large page that users may not visit immediately
+
+Avoid lazy loading for:
+
+Home Page
+Navbar
+Footer
+Login Page
+Small components that are always visible

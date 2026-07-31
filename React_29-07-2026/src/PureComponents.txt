@@ -1,0 +1,65 @@
+What is a Pure Component?
+
+A Pure Component is a special type of React class component that re-renders only when its props or state change.
+
+
+Rendering Behavior of a Pure Component
+
+The rendering behavior of a Pure Component is based on shallow comparison of its props and state.
+
+What is Shallow Comparison?
+
+Shallow comparison checks only the top-level values or object references.
+
+It does not compare nested values.
+
+Parent Re-renders
+        │
+        ▼
+Pure Component
+        │
+        ▼
+Compare Previous Props & State
+        │
+   ┌────┴────┐
+   │         │
+Same      Different
+   │         │
+Skip      Re-render
+
+
+
+
+
+| Feature                             | React.Component                        | React.PureComponent                                    |
+| ----------------------------------- | -------------------------------------- | ------------------------------------------------------ |
+| Re-renders when parent renders      | ✅ Yes                                 | ❌ No (if props/state are unchanged)                 |
+| Checks props/state before rendering | ❌ No                                  | ✅ Yes (shallow comparison)                          |
+| Performance                         | Lower for frequent unnecessary renders | Better by avoiding unnecessary renders                 |
+| Built-in optimization               | ❌ No                                  | ✅ Yes                                               |
+| Object comparison                   | No comparison                          | Compares object references (shallow comparison)        |
+| Best use case                       | Small/simple components                | Components with unchanged props/state most of the time |
+
+
+
+USe Cases:-
+
+Large Lists – Optimize rendering of long lists (products, employees, students).
+
+Dashboard Applications – Prevent unchanged widgets from re-rendering.
+
+Large Forms – Re-render only the input field being updated.
+
+Frequently Updating Parent Components – Prevent unnecessary child component renders.
+
+API Data Display – Update only the changed data instead of the entire list.
+
+E-commerce Applications – Avoid re-rendering all product cards when one item changes.
+
+Chat Applications – Re-render only the active conversation or new messages.
+
+Games & Live Data – Update only changing values like score or timer.
+
+Expensive Calculations – Cache results to avoid repeated computations.
+
+Large React Applications – Improve overall performance by reducing unnecessary renders.

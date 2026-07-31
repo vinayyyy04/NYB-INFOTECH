@@ -1,0 +1,42 @@
+What are React Portals?
+
+A React Portal is a feature that allows you to render a React component outside its parent DOM element while keeping it part of the same React application.
+
+Normally, React renders child components inside their parent.
+
+With React Portals, the component is displayed in another DOM node (such as portal-root).
+
+Why Do We Need React Portals?
+
+Sometimes we want a component to appear on top of everything else on the screen.
+
+Examples include:
+
+Modal (Popup)
+Login Dialog
+Alert Box
+Tooltip
+Notifications
+
+If these components are rendered inside their parent, they may be affected by CSS properties like:
+
+overflow: hidden
+z-index
+position
+
+React Portals solve this problem by rendering them outside the parent container.
+
+
+
+| **Use Case**        | **Example**                      |
+| ------------------- | -------------------------------- |
+| Modal               | Login Form, Delete Confirmation  |
+| Popup               | Success Message, Error Alert     |
+| Tooltip             | Hover Information                |
+| Dropdown Menu       | Profile Menu, Navigation Menu    |
+| Image Preview       | Product Image Viewer             |
+| Loading Screen      | API Loading, File Upload         |
+| Chat Window         | Customer Support Chat            |
+| Side Drawer         | Mobile Navigation Menu           |
+| Notification Toast  | Order Placed, Payment Successful |
+| Full-Screen Overlay | Video Player, Image Gallery      |
