@@ -1,0 +1,83 @@
+Definition
+
+Browser Routing is the process of displaying different pages (components) in a React application based on the URL without reloading the entire web page.
+
+In React, Browser Routing is commonly implemented using BrowserRouter from the react-router-dom library.
+
+Why Do We Need Browser Routing?
+
+Imagine you're building an online shopping website with these pages:
+
+Home
+Products
+Cart
+Login
+Profile
+
+Without routing, all pages would need to be handled manually, making navigation difficult.
+
+With Browser Routing:
+
+Each page has its own URL.
+Clicking links changes the displayed component.
+The browser doesn't reload the entire page.
+Navigation is faster and smoother.
+
+Advantages of Browser Routing
+Fast navigation
+No full page refresh
+Better user experience
+Clean URLs
+Efficient rendering
+Supports browser Back and Forward buttons
+Easy to organize multiple pages
+
+
+Disadvantages
+Requires React Router setup.
+BrowserRouter may need server configuration for production deployments.
+
+
+
+
+
+1. Client-Side Routing
+Definition
+
+Client-Side Routing is a routing technique where JavaScript (React Router) handles navigation in the browser without requesting a new HTML page from the server.
+
+
+Advantages of Client-Side Routing
+Very fast navigation
+No full page reload
+Better user experience
+Less server requests
+Smooth transitions
+Efficient for Single Page Applications (SPAs)
+
+Disadvantages
+Initial page load may be slower because JavaScript must download first.
+BrowserRouter may require server configuration for production.
+SEO may need additional techniques for public websites.
+
+2. Server-Side Routing
+Definition
+
+Server-Side Routing is a routing technique where every new URL sends a request to the server,
+ and the server returns a new HTML page.
+
+Traditional websites like PHP, JSP, ASP.NET, and many older applications use server-side routing.
+
+
+
+| Feature                | Client-Side Routing                           | Server-Side Routing                                |
+| ---------------------- | --------------------------------------------- | -------------------------------------------------- |
+| Where routing happens  | Browser (React)                               | Server                                             |
+| Page reload            | ❌ No                                         | ✅ Yes                                           |
+| Speed after first load | Very fast                                     | Slower                                             |
+| Server requests        | One initial request, then mostly API requests | New request for every page                         |
+| User experience        | Smooth                                        | Less smooth                                        |
+| Internet usage         | Lower                                         | Higher                                             |
+| Technology             | React Router, Vue Router, Angular Router      | PHP, JSP, ASP.NET, Django Templates, Laravel, etc. |
+| URL changes            | Without page reload                           | With page reload                                   |
+| Best for               | Single Page Applications (SPAs)               | Traditional Multi-Page Applications (MPAs)         |
