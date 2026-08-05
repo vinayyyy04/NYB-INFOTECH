@@ -1,0 +1,103 @@
+Webpack is a popular JavaScript module bundler. It analyzes your project's dependency graph and bundles JavaScript, CSS, images, fonts, and other assets into optimized files for deployment.
+
+What Webpack does
+Bundles multiple JavaScript modules into one or more output files.
+Supports modern JavaScript (ES Modules, CommonJS).
+Transpiles code using loaders (e.g., Babel for modern JS compatibility).
+Processes CSS, Sass, TypeScript, images, and other assets.
+Optimizes bundles through minification, tree shaking, and code splitting.
+Includes a development server with Hot Module Replacement (HMR).
+
+
+basic workflow
+
+Source Files
+     │
+     ▼
+ Entry Point (index.js)
+     │
+     ▼
+Webpack
+  ├── Loaders (Babel, CSS, etc.)
+  ├── Plugins (HTML generation, optimization)
+  └── Dependency Graph
+     │
+     ▼
+ Optimized Bundle(s)
+
+
+ Understand the Purpose of Webpack:-
+
+Webpack is a module bundler that combines all the files required for your web application
+ (JavaScript, CSS, images, fonts, etc.) into optimized bundles for the browser.
+
+
+ Without Webpack:
+
+The browser would need to load many separate files.
+Managing dependencies becomes difficult.
+Code isn't optimized for production.
+
+With Webpack:
+
+It follows all the imports.
+Creates a dependency graph.
+Bundles everything into optimized files (such as bundle.js).
+Main Purpose of Webpack
+Bundle multiple JavaScript files into a single file.
+Manage project dependencies automatically.
+Process CSS, Sass, images, fonts, and other assets.
+Convert modern JavaScript using Babel so older browsers can run it.
+Optimize code for faster loading.
+Support code splitting and lazy loading.
+Provide a development server with Hot Module Replacement (HMR).
+
+
+
+
+
+
+What is Module Bundling?
+
+Module bundling is the process of combining multiple files (modules) 
+such as JavaScript, CSS, images, and fonts into one or more optimized files 
+(bundles) that the browser can load efficiently.
+
+A module is simply a file that contains code and can export or import functionality from other files.
+
+Why is Module Bundling Needed?
+
+In a modern web application, code is split into many files for better organization.
+
+Example:
+
+src/
+│── index.js
+│── App.js
+│── Navbar.js
+│── Footer.js
+│── Home.js
+│── styles.css
+│── logo.png
+
+Without module bundling:
+
+The browser has to load many separate files.
+There are more network requests.
+Loading can become slower.
+Managing dependencies is harder.
+
+With module bundling:
+
+All required files are analyzed.
+Dependencies are resolved automatically.
+Everything is bundled into optimized files.
+
+
+
+Difference Between Entry and Output
+Entry	                                                 Output
+Starting point of bundling	                       Destination of the bundled files
+Usually src/index.js	                          Usually dist/bundle.js
+Builds the dependency graph	                       Stores the final optimized bundle
+Defined with entry	                               Defined with output  

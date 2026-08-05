@@ -1,0 +1,16 @@
+{
+  "name": "webpack-demo",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "webpack serve",
+    "build": "webpack"
+  },
+  "devDependencies": {
+    "css-loader": "^7.x.x",
+    "html-webpack-plugin": "^5.x.x",
+    "style-loader": "^4.x.x",
+    "webpack": "^5.x.x",
+    "webpack-cli": "^6.x.x",
+    "webpack-dev-server": "^5.2.6"
+  }
+}

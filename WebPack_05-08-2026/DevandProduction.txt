@@ -1,0 +1,29 @@
+1. Development Mode
+
+Development mode is used while building and testing your application.
+
+Features
+Faster build time.
+Easier to debug.
+Code is not minified (easy to read).
+Better error messages.
+
+2. Production Mode
+
+Production mode is used when deploying the application.
+
+Features
+Optimized for performance.
+JavaScript is minified.
+Removes unused code (Tree Shaking).
+Smaller bundle size.
+Faster loading in the browser.
+
+
+| Development Mode      | Production Mode        |
+| --------------------- | ---------------------- |
+| Used while developing | Used before deployment |
+| Fast build            | Optimized build        |
+| Readable code         | Minified code          |
+| Better debugging      | Better performance     |
+| Larger bundle size    | Smaller bundle size    |
