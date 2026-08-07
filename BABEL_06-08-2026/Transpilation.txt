@@ -1,0 +1,34 @@
+| Before Transpilation                                            | After Transpilation                                                     |
+| --------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| Uses modern JavaScript (ES6+).                                  | Uses browser-compatible JavaScript (ES5).                               |
+| May not work in older browsers.                                 | Works in both modern and older browsers.                                |
+| Code contains `const`, arrow functions, template literals, etc. | Code is converted to `var`, normal functions, and string concatenation. |
+| Executed directly by browsers that support ES6+.                | Executed by almost all browsers after Babel conversion.                 |
+
+
+before babel:-
+
+Developer
+    │
+    ▼
+Modern JavaScript (ES6+)
+    │
+    ▼
+Browser
+
+
+after babel:-
+
+Developer
+    │
+    ▼
+Modern JavaScript (ES6+)
+    │
+    ▼
+Babel (Transpiles)
+    │
+    ▼
+Browser-Compatible JavaScript (ES5)
+    │
+    ▼
+Browser

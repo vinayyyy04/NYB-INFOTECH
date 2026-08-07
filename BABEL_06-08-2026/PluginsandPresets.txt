@@ -1,0 +1,42 @@
+What is a Babel Plugin?
+
+A plugin is a small package that tells Babel how to transform a specific JavaScript feature.
+
+For example:
+
+Convert arrow functions to normal functions.
+Convert classes to constructor functions.
+Convert optional chaining (?.) into compatible JavaScript.
+
+Think of a plugin as a single tool that performs one specific job.
+
+
+What is a Babel Preset?
+
+A preset is a collection of multiple plugins.
+
+Instead of installing and configuring many plugins one by one, you install a preset, 
+and it includes all the necessary plugins for you.
+
+Think of a preset as a toolbox containing many tools.
+
+
+| Plugin                                             | Preset                             |
+| -------------------------------------------------- | ---------------------------------- |
+| Performs one specific transformation.              | Contains multiple plugins.         |
+| Used for a single JavaScript feature.              | Used for many JavaScript features. |
+| Installed individually.                            | Installed as one package.          |
+| Example: `@babel/plugin-transform-arrow-functions` | Example: `@babel/preset-env`       |
+
+
+
+
+
+| ES6+ Feature       | Browser-Compatible JavaScript  |
+| ------------------ | ------------------------------ |
+| `let`, `const`     | `var`                          |
+| Arrow Functions    | Normal functions               |
+| Template Literals  | String concatenation (`+`)     |
+| Default Parameters | `if (parameter === undefined)` |
+| Classes            | Constructor functions          |
+| Destructuring      | Property assignments           |

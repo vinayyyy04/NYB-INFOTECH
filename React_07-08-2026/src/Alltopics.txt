@@ -1,0 +1,62 @@
+Browser Routing
+Enables navigation between pages without reloading the browser.
+
+React Router
+A library used for client-side routing in React applications.
+
+BrowserRouter
+A component that enables routing using the browser's History API.
+
+Routes
+A container that holds multiple Route components.
+
+Route
+Maps a URL path to a React component.
+
+Link
+Used to navigate between pages without refreshing the page.
+
+useNavigate()
+A hook used for programmatic navigation.
+
+useParams()
+A hook used to access URL parameters.
+
+Nested Routing
+A routing technique where routes contain child routes.
+
+Dynamic Routing
+Routing that uses URL parameters to display dynamic content.
+
+Protected Routes
+Routes accessible only to authenticated users.
+
+404 Page Handling
+Displays a page when no matching route is found.
+
+Webpack
+A module bundler for JavaScript applications.
+
+Module Bundling
+The process of combining multiple modules into one or more bundles.
+
+Loaders
+Process and transform different types of files before bundling.
+
+Plugins
+Extend Webpack functionality during the build process.
+
+Webpack Configuration
+Settings defined in webpack.config.js to configure Webpack.
+
+Babel
+A JavaScript transpiler that converts modern JavaScript into compatible JavaScript.
+
+Babel Presets
+Predefined collections of Babel plugins.
+
+Babel Plugins
+Individual tools that transform specific JavaScript features.
+
+Babel and Webpack Integration
+Babel is integrated with Webpack using babel-loader to transpile JavaScript during bundling.
