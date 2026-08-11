@@ -1,0 +1,12 @@
+useState: A React Hook used to create and manage state (data) inside a functional component.
+
+useEffect: A React Hook used to perform side effects such as API calls, timers, or updating the document.
+
+API Calls: Used to fetch or send data between a React application and a server using methods like fetch() 
+or Axios.
+
+Loading and Error Handling: Loading states show that data is being fetched, while error states display 
+a message when the API request fails.
+
+useRef: A React Hook used to store a value that persists between renders without causing a re-render, 
+and to directly access DOM elements.

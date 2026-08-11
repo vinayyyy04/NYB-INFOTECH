@@ -1,0 +1,22 @@
+
+* **Components:** Components are reusable building blocks of a React application.
+
+ They are used to divide the UI into smaller, manageable parts.
+
+* **JSX:** JSX is a JavaScript syntax that allows us to write HTML-like code inside JavaScript.
+ It is used to describe the UI in React.
+
+* **Props:** Props are used to pass data from a parent component to a child component. 
+They are read-only and cannot be modified by the child.
+
+* **State:** State is an internal data storage mechanism in React that holds information 
+that can change over time. When state changes, the component re-renders.
+
+* **Parent-Child Communication:** Parent components communicate with children by passing data through props.
+ Children can communicate back using callback functions passed by the parent.
+
+* **Conditional Rendering:** Conditional rendering means displaying UI elements based on a condition.
+ React supports techniques such as `if`, ternary operators, and `&&`.
+
+* **List Rendering:** List rendering is used to display multiple data items dynamically.
+ React commonly uses the JavaScript `map()` method with a unique `key` for each item.
