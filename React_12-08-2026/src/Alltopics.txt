@@ -1,0 +1,29 @@
+1. Context API
+Context API is a React feature used to share data between multiple components.
+It helps avoid props drilling, where data is passed through many components.
+Commonly used for user information, themes, language, and authentication.
+2. useContext
+useContext is a React Hook used to access data stored in Context.
+It allows a component to directly get shared data without receiving it through props.
+It is mainly used together with Context API.
+3. useReducer
+useReducer is a React Hook used to manage complex state.
+It works using state, actions, and a reducer function.
+It is useful for forms, shopping carts, counters, and other states with multiple operations.
+4. Redux Toolkit
+Redux Toolkit is the recommended way to use Redux in modern React applications.
+It is used to manage global application state.
+It provides tools such as Store, Slices, Actions, Reducers, useSelector, and useDispatch.
+It is useful for large applications where many components need to access and update the same data.
+Easy Difference
+Topic	Purpose
+Context API	Share data between components
+useContext	Access Context data
+useReducer	Manage complex state
+Redux Toolkit	Manage complex global state
+Simple example to remember
+
+Context API → Sharing
+useContext → Accessing
+useReducer → Managing complex state
+Redux Toolkit → Managing large-scale global state

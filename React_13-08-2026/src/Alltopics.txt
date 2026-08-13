@@ -1,0 +1,53 @@
+1. React.memo()
+Purpose: Prevents a component from re-rendering when its props have not changed.
+Use when: A component receives the same props frequently and re-rendering is unnecessary.
+
+Syntax:
+const MyComponent = React.memo(function MyComponent({ name }) {
+  return <h2>Hello {name}</h2>;
+});
+Real-life example: A product card doesn't need to re-render when unrelated parts of the shopping page change.
+
+2. useMemo()
+Purpose: Memorizes a calculated value so React doesn't calculate it again unnecessarily.
+Use when: A calculation is expensive or takes significant time.
+
+Syntax:
+const total = useMemo(() => price * quantity, [price, quantity]);
+Real-life example: Calculating the total price of many products in a shopping cart.
+
+Remember: useMemo() → remembers a value.
+
+3. useCallback()
+Purpose: Memorizes a function so the same function reference can be reused.
+Use when: Passing functions to optimized child components such as React.memo.
+
+Syntax:
+const handleClick = useCallback(() => {
+  console.log("Clicked");
+}, []);
+Real-life example: Passing an addToCart() function to a product card without creating a new function on every render.
+
+Remember: useCallback() → remembers a function.
+
+4. Custom Hooks
+Purpose: Lets you create your own reusable Hook containing React logic.
+Use when: The same logic is needed in multiple components.
+
+Syntax:
+function useCounter() {
+  const [count, setCount] = useState(0);
+
+  return { count, setCount };
+}
+
+Then use it:
+
+const { count, setCount } = useCounter();
+Real-life example: Creating useFetch() once and using it in multiple components to fetch API data.
+
+5. Lazy Loading
+Purpose: Loads a component only when it is needed, instead of loading everything when the application starts.
+Use when: Your application has large pages/components that don't need to load immediately.
+Syntax:
+const Dashboard = React.lazy(() => import("./Dashboard"));
