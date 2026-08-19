@@ -1,0 +1,34 @@
+React Router
+
+React Router is a library used in React to navigate between 
+different pages or components without refreshing the entire webpage.
+
+BrowserRouter
+
+BrowserRouter is the main container that enables routing in a
+React application and keeps the UI synchronized with the browser URL.
+
+Routes and Route
+
+Routes contains all the routes in the application, 
+while Route connects a specific URL path to the component that should be displayed.
+
+Dynamic Routing
+
+Dynamic Routing allows a route to contain changing values, 
+such as a product ID or employee ID, so the same component can display
+ different data based on the URL.
+
+Example: /products/101 and /products/102.
+
+Protected Routes
+
+Protected Routes restrict access to certain pages and allow only 
+authenticated or authorized users to access them, such as a dashboard after login.
+
+Complete React Revision
+
+A complete React revision means reviewing the important concepts learned so far,
+including components, JSX, props, state, hooks, forms, API calls, Context API,
+Redux Toolkit, HOCs, performance optimization, and React Router, 
+and understanding when and why each concept is used.

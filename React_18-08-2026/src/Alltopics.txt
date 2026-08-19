@@ -1,0 +1,58 @@
+1. API Calls
+
+An API call is a request from your React application to a server to get, 
+send, update, or delete data.
+
+Example: Fetching a list of users from a server.
+
+2. Fetch / Axios
+Fetch → Built-in JavaScript method used to make API requests.
+Axios → External library that makes API requests easier and provides 
+features like automatic JSON handling and better error handling.
+3. Query Parameters
+
+Query parameters are extra values added to a URL to filter, search,
+ or customize the API request.
+
+Example:
+
+https://api.example.com/users?name=John&age=20
+
+Here, name and age are query parameters.
+
+4. Error Handling
+
+Error handling means detecting and displaying problems when an API request fails, 
+such as server errors, network errors, or invalid responses.
+
+Example:
+
+try {
+  // API call
+} catch (error) {
+  // Handle error
+}
+5. Loading States
+
+A loading state shows the user that data is currently being fetched from the API.
+
+Example:
+
+const [loading, setLoading] = useState(true);
+
+While loading:
+
+{loading && <p>Loading...</p>}
+6. API Response Handling
+
+API response handling means receiving the data returned by the server, converting it into a usable format, and displaying or storing it in React state.
+
+Typical flow:
+
+API Request → Loading → Response → Store Data → Display Data
+
+Example:
+
+const response = await fetch(url);
+const data = await response.json();
+setUsers(data);

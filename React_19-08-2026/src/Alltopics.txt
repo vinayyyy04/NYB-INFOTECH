@@ -1,0 +1,16 @@
+1. Context API Revision
+Context API allows data to be shared between multiple components without passing props manually. It is useful for global data like theme, user information, and language.
+
+2. useReducer Revision
+useReducer is a React Hook used to manage complex state logic. It uses a reducer function and dispatch() to perform actions and update the state.
+
+3. Redux Toolkit
+Redux Toolkit is the recommended way to use Redux in React. It simplifies creating stores, reducers, and actions and helps manage complex application state efficiently.
+
+4. Global State Management
+Global state management means storing and managing data that is required by multiple components in one common place. Examples include login information, shopping cart data, and application settings.
+
+5. When to Use Context API vs Redux
+
+Context API: Use for simple global data such as theme, language, or authentication.
+Redux Toolkit: Use for large applications with complex state, frequent updates, and many components depending on the state.
