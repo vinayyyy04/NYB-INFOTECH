@@ -1,0 +1,64 @@
+1. React.memo()
+
+Explanation:
+React.memo() is used to prevent a component from re-rendering when its props have not changed. 
+It helps improve performance.
+
+Basic Syntax:
+
+const MyComponent = React.memo(function MyComponent(props) {
+  return <h1>{props.name}</h1>;
+});
+
+
+export default MyComponent;
+2. useMemo()
+
+Explanation:
+useMemo() is used to memorize a calculated value.
+ React will reuse the previous value and only recalculate it when its dependencies change.
+
+Basic Syntax:
+
+const value = useMemo(() => {
+  return calculation;
+}, [dependencies]);
+3. useCallback()
+
+Explanation:
+useCallback() is used to memorize a function.
+ It prevents the function from being created again on every component re-render 
+ unless its dependencies change.
+
+Basic Syntax:
+
+const handleClick = useCallback(() => {
+  // function logic
+}, [dependencies]);
+4. Lazy Loading
+
+Explanation:
+Lazy Loading means loading a component only when it is needed,
+ instead of loading all components when the application starts. 
+ This can improve the initial loading performance.
+
+Basic Syntax:
+
+const MyComponent = React.lazy(() => import("./MyComponent"));
+
+Usually used with Suspense:
+
+<Suspense fallback={<p>Loading...</p>}>
+  <MyComponent />
+</Suspense>
+5. Code Splitting
+
+Explanation:
+Code Splitting means dividing a large JavaScript bundle into smaller chunks. 
+The browser loads only the required code instead of downloading the entire application at once.
+
+In React, it is commonly implemented using React.lazy() and import().
+
+Basic Syntax:
+
+const MyComponent = React.lazy(() => import("./MyComponent"));

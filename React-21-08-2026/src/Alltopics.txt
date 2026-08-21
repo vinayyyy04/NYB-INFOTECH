@@ -1,0 +1,118 @@
+1. React Router
+
+Explanation:
+React Router is used to handle navigation between different pages/components
+ in a React application without reloading the entire page.
+
+Basic Syntax:
+
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+
+<BrowserRouter>
+  <Routes>
+    <Route path="/" element={<Home />} />
+    <Route path="/about" element={<About />} />
+  </Routes>
+</BrowserRouter>
+2. Dynamic Routing
+
+Explanation:
+Dynamic Routing is used when a route contains a dynamic value, 
+such as a user ID, product ID, or post ID.
+
+Basic Syntax:
+
+<Route path="/user/:id" element={<User />} />
+
+Access the dynamic value using useParams():
+
+import { useParams } from "react-router-dom";
+
+
+const { id } = useParams();
+3. Nested Routing
+
+Explanation:
+Nested Routing means creating routes inside another route. 
+It is commonly used for dashboards where multiple pages share the same layout.
+
+Basic Syntax:
+
+<Route path="/dashboard" element={<Dashboard />}>
+  <Route path="profile" element={<Profile />} />
+  <Route path="settings" element={<Settings />} />
+</Route>
+
+Use Outlet to display child routes:
+
+import { Outlet } from "react-router-dom";
+
+
+function Dashboard() {
+  return (
+    <>
+      <h1>Dashboard</h1>
+      <Outlet />
+    </>
+  );
+}
+4. Protected Routes
+
+Explanation:
+Protected Routes restrict access to certain pages. 
+Usually, users can access those pages only after logging in.
+
+Basic Syntax:
+
+function ProtectedRoute({ children }) {
+  const isLoggedIn = true;
+
+
+  return isLoggedIn ? children : <Navigate to="/login" />;
+}
+
+Usage:
+
+<Route
+  path="/dashboard"
+  element={
+    <ProtectedRoute>
+      <Dashboard />
+    </ProtectedRoute>
+  }
+/>
+5. 404 Page
+
+Explanation:
+A 404 Page is displayed when the user visits a URL that does not match any available route.
+
+Basic Syntax:
+
+<Route path="*" element={<NotFound />} />
+
+The * matches all unknown URLs.
+
+6. Complete React Revision
+
+For complete React revision, you should understand how all the major concepts work together:
+
+Components → Build reusable UI parts.
+JSX → Write HTML-like syntax inside JavaScript.
+Props → Pass data from parent to child components.
+State (useState) → Manage changing data.
+Events → Handle user actions such as clicks and input changes.
+Conditional Rendering → Display UI based on conditions.
+Lists and map() → Render multiple items dynamically.
+useEffect() → Handle side effects such as API calls.
+Forms → Handle user input and validation.
+Context API → Share global data between components.
+useReducer() → Manage complex state logic.
+Redux Toolkit → Manage large-scale global state.
+API Calls → Fetch and display external data.
+React Router → Navigate between pages.
+Dynamic Routes → Handle dynamic URL parameters.
+Nested Routes → Create routes inside parent layouts.
+Protected Routes → Restrict pages based on authentication.
+404 Page → Handle invalid URLs.
+Performance Optimization → Use React.memo, useMemo, useCallback, Lazy Loading, and Code Splitting.

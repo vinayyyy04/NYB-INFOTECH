@@ -1,0 +1,291 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f6fb;
+}
+
+.app {
+  min-height: 100vh;
+  padding: 40px;
+}
+
+header {
+  max-width: 1000px;
+  margin: auto;
+  margin-bottom: 30px;
+
+  background: linear-gradient(135deg, #667eea, #764ba2);
+
+  padding: 30px;
+
+  border-radius: 18px;
+
+  color: white;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+header h1 {
+  font-size: 30px;
+  margin-bottom: 8px;
+}
+
+header p {
+  opacity: 0.9;
+}
+
+.counter-btn {
+  background: white;
+  color: #667eea;
+
+  border: none;
+
+  padding: 14px 22px;
+
+  border-radius: 10px;
+
+  font-size: 16px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.counter-btn:hover {
+  transform: translateY(-3px);
+}
+
+main {
+  max-width: 1000px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+  gap: 25px;
+}
+
+section {
+  background: white;
+
+  padding: 25px;
+
+  border-radius: 18px;
+
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+
+  transition: 0.3s;
+}
+
+section:hover {
+  transform: translateY(-5px);
+}
+
+section h2 {
+  margin-bottom: 12px;
+
+  color: #333;
+}
+
+.description {
+  color: #777;
+
+  line-height: 1.6;
+
+  margin-bottom: 20px;
+}
+
+/* User Card */
+
+.user-card {
+  background: #f8f9ff;
+
+  padding: 20px;
+
+  border-radius: 15px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+}
+
+.avatar {
+  width: 55px;
+
+  height: 55px;
+
+  border-radius: 50%;
+
+  background: linear-gradient(135deg, #667eea, #764ba2);
+
+  color: white;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  font-size: 22px;
+
+  font-weight: bold;
+}
+
+.user-card h3 {
+  color: #333;
+}
+
+.user-card p {
+  color: #777;
+
+  font-size: 14px;
+}
+
+.user-card button {
+  margin-left: auto;
+
+  background: #667eea;
+
+  color: white;
+
+  border: none;
+
+  padding: 10px 15px;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+}
+
+/* Calculation */
+
+.calculation-card {
+  margin-top: 20px;
+
+  background: #fff8e8;
+
+  padding: 20px;
+
+  border-radius: 15px;
+
+  text-align: center;
+}
+
+.calculation-card h1 {
+  margin-top: 10px;
+
+  color: #e67e22;
+
+  font-size: 22px;
+}
+
+.number-btn,
+.settings-btn {
+  background: #667eea;
+
+  color: white;
+
+  border: none;
+
+  padding: 12px 18px;
+
+  border-radius: 8px;
+
+  font-size: 15px;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.number-btn:hover,
+.settings-btn:hover {
+  background: #764ba2;
+
+  transform: scale(1.03);
+}
+
+/* Settings */
+
+.settings-card {
+  margin-top: 20px;
+
+  background: #eef7ff;
+
+  padding: 25px;
+
+  border-radius: 15px;
+
+  text-align: center;
+}
+
+.settings-card p {
+  margin: 15px 0;
+
+  color: #666;
+}
+
+.settings-card button {
+  background: #27ae60;
+
+  color: white;
+
+  border: none;
+
+  padding: 10px 18px;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+}
+
+/* Loading */
+
+.loading {
+  margin-top: 20px;
+
+  padding: 20px;
+
+  text-align: center;
+
+  color: #667eea;
+
+  font-weight: bold;
+}
+
+/* Responsive */
+
+@media (max-width: 600px) {
+  .app {
+    padding: 20px;
+  }
+
+  header {
+    flex-direction: column;
+
+    gap: 20px;
+
+    text-align: center;
+  }
+
+  header h1 {
+    font-size: 24px;
+  }
+}
