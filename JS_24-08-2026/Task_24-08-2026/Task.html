@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Car JavaScript Concepts</title>
+
+  <link rel="stylesheet" href="Task.css" />
+</head>
+
+<body>
+
+  <div class="container">
+
+    <h1>🚗 Car Control Center</h1>
+    <p class="subtitle">
+      JavaScript Function Concepts
+    </p>
+
+
+    <!-- Callback -->
+    <div class="card">
+      <h2>1. Callback Function</h2>
+      <p>Start the car and show a message after the engine starts.</p>
+
+      <button onclick="startCar()">
+        Start Car
+      </button>
+
+      <p id="callbackResult"></p>
+    </div>
+
+
+    <!-- Higher Order Function -->
+    <div class="card">
+      <h2>2. Higher-Order Function</h2>
+      <p>Apply different operations to the car price.</p>
+
+      <button onclick="calculatePrice(addTax)">
+        Add Tax
+      </button>
+
+      <button onclick="calculatePrice(applyDiscount)">
+        Apply Discount
+      </button>
+
+      <p id="priceResult"></p>
+    </div>
+
+
+    <!-- First Class Function -->
+    <div class="card">
+      <h2>3. First-Class Function</h2>
+      <p>Store a car action inside a variable.</p>
+
+      <button onclick="runCarAction()">
+        Start Engine
+      </button>
+
+      <p id="firstClassResult"></p>
+    </div>
+
+
+    <!-- Closure -->
+    <div class="card">
+      <h2>4. Closure</h2>
+      <p>Remember the car's speed.</p>
+
+      <h3 id="speed">0 km/h</h3>
+
+      <button onclick="increaseSpeed()">
+        Accelerate +10
+      </button>
+    </div>
+
+
+    <!-- IIFE -->
+    <div class="card">
+      <h2>5. IIFE</h2>
+      <p id="systemStatus">
+        Loading car system...
+      </p>
+    </div>
+
+
+    <!-- Pure Function -->
+    <div class="card">
+      <h2>6. Pure Function</h2>
+      <p>Calculate EMI without changing external data.</p>
+
+      <button onclick="showEMI()">
+        Calculate EMI
+      </button>
+
+      <p id="emiResult"></p>
+    </div>
+
+
+    <!-- Impure Function -->
+    <div class="card">
+      <h2>7. Impure Function</h2>
+      <p>Driving the car changes the external fuel value.</p>
+
+      <h3 id="fuel">50 Litres</h3>
+
+      <button onclick="driveCar()">
+        Drive Car -5L
+      </button>
+    </div>
+
+
+    <!-- Function Composition -->
+    <div class="card">
+      <h2>8. Function Composition</h2>
+      <p>Apply discount first, then add tax.</p>
+
+      <button onclick="calculateFinalPrice()">
+        Calculate Final Price
+      </button>
+
+      <p id="finalPrice"></p>
+    </div>
+
+  </div>
+
+  <script src="CallbackFunction.js"></script>
+  <script src="./HigherOrdrFunction.js"></script>
+  <script src="./FirstClassFunction.js"></script>
+  <script src="./Closure.js"></script>
+  <script src="./IIFEfunction.js"></script>
+  <script src="./PureFunction.js"></script>
+  <script src="./ImpureFunction.js"></script>
+  <script src="./FunctionComposition.js"></script>
+
+</body>
+</html>

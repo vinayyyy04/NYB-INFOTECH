@@ -1,0 +1,112 @@
+1. Callback Function – Revision
+
+Definition: A function that is passed as an argument to another function and is executed later.
+
+Syntax:
+
+function greet(name) {
+  console.log(name);
+}
+
+function processUser(callback) {
+  callback("Sowmith");
+}
+
+processUser(greet);
+2. Higher-Order Function (HOF)
+
+Definition: A function that either accepts another function as an argument or returns another function.
+
+Syntax:
+
+function higherOrder(callback) {
+  callback();
+}
+
+Or:
+
+function higherOrder() {
+  return function () {
+    console.log("Hello");
+  };
+}
+3. First-Class Functions
+
+Definition: In JavaScript, functions are treated like values. 
+They can be stored in variables, passed as arguments, and returned from other functions.
+
+Syntax:
+
+const greet = function () {
+  console.log("Hello");
+};
+
+greet();
+4. Closures
+
+Definition: A closure is created when an inner function remembers and 
+can access variables from its outer function, even after the outer function has finished executing.
+
+Syntax:
+
+function outer() {
+  let count = 0;
+
+  function inner() {
+    count++;
+    return count;
+  }
+
+  return inner;
+}
+
+const counter = outer();
+5. IIFE
+
+Definition: IIFE stands for Immediately Invoked Function Expression.
+ It is a function that is created and executed immediately.
+
+Syntax:
+
+(function () {
+  console.log("Hello");
+})();
+
+Arrow function syntax:
+
+(() => {
+  console.log("Hello");
+})();
+6. Pure Function
+
+Definition: A pure function always produces the same output for the same input and 
+does not modify anything outside the function.
+
+Syntax:
+
+function add(a, b) {
+  return a + b;
+}
+7. Impure Function
+
+Definition: An impure function can produce different results for the same input or modify external
+ data/state.
+
+Syntax:
+
+let count = 0;
+
+function increase() {
+  count++;
+}
+8. Function Composition
+
+Definition: Function composition means combining multiple functions, 
+where the output of one function becomes the input of another function.
+
+Syntax:
+
+const add = (x) => x + 2;
+const multiply = (x) => x * 3;
+
+const result = multiply(add(5));
