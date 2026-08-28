@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Smart Task Manager</title>
+
+    <link rel="stylesheet" href="Task.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>📚 Smart Task Manager</h1>
+
+            <p>
+                Manage your tasks and track your progress
+            </p>
+        </header>
+
+
+        <!-- Task Input -->
+
+        <div class="task-form">
+
+            <input
+                type="text"
+                id="taskInput"
+                placeholder="Enter your task..."
+            >
+
+            <select id="priority">
+
+                <option value="Low">
+                    Low Priority
+                </option>
+
+                <option value="Medium">
+                    Medium Priority
+                </option>
+
+                <option value="High">
+                    High Priority
+                </option>
+
+            </select>
+
+            <button id="addBtn">
+                Add Task
+            </button>
+
+        </div>
+
+
+        <!-- Statistics -->
+
+        <div class="stats">
+
+            <div class="stat-card">
+
+                <span>Total Tasks</span>
+
+                <h2 id="totalTasks">
+                    0
+                </h2>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <span>Completed</span>
+
+                <h2 id="completedTasks">
+                    0
+                </h2>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <span>Pending</span>
+
+                <h2 id="pendingTasks">
+                    0
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <!-- Task List -->
+
+        <div class="task-section">
+
+            <h2>Your Tasks</h2>
+
+            <ul id="taskList">
+
+                <!-- Tasks will appear here -->
+
+            </ul>
+
+        </div>
+
+    </div>
+
+
+    <script src="Task.js"></script>
+
+</body>
+
+</html>

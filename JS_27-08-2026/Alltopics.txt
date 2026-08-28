@@ -1,0 +1,117 @@
+1. Call Stack
+
+The Call Stack keeps track of functions currently being executed. It follows LIFO (Last In, First Out).
+
+function first() {
+  second();
+}
+
+function second() {
+  console.log("Hello");
+}
+
+first();
+2. Web APIs
+
+Web APIs are browser-provided features that handle tasks like timers, events, and network requests outside the Call Stack.
+
+setTimeout(() => {
+  console.log("Hello");
+}, 1000);
+3. Event Loop
+
+The Event Loop continuously checks whether the Call Stack is empty and moves queued tasks to it.
+
+console.log("Start");
+
+setTimeout(() => {
+  console.log("Task");
+}, 0);
+
+console.log("End");
+
+Output:
+
+Start
+End
+Task
+4. Callback Queue
+
+The Callback Queue stores callback functions from tasks such as setTimeout() until the Call Stack is empty.
+
+setTimeout(() => {
+  console.log("Callback executed");
+}, 1000);
+5. Microtask Queue
+
+The Microtask Queue mainly stores Promise callbacks and has higher priority than the Callback/Macrotask Queue.
+
+Promise.resolve().then(() => {
+  console.log("Microtask");
+});
+6. Macrotask Queue
+
+The Macrotask Queue stores tasks such as setTimeout(), setInterval(), and some event callbacks.
+
+setTimeout(() => {
+  console.log("Macrotask");
+}, 0);
+7. Execution Order
+
+JavaScript generally executes in this order:
+
+Synchronous code
+Microtasks
+Macrotasks
+console.log("1");
+
+Promise.resolve().then(() => {
+  console.log("2");
+});
+
+setTimeout(() => {
+  console.log("3");
+}, 0);
+
+console.log("4");
+
+Output:
+
+1
+4
+2
+3
+8. Promises – Revision
+
+A Promise represents the result of an asynchronous operation.
+
+Basic Syntax
+const promise = new Promise((resolve, reject) => {
+  resolve("Success");
+});
+Using .then() and .catch()
+promise
+  .then((result) => {
+    console.log(result);
+  })
+  .catch((error) => {
+    console.log(error);
+  });
+9. Async/Await – Revision
+
+async/await is a cleaner way to work with Promises.
+
+Basic Syntax
+async function getData() {
+  const result = await promise;
+  console.log(result);
+}
+With Error Handling
+async function getData() {
+  try {
+    const result = await promise;
+    console.log(result);
+  } catch (error) {
+    console.log(error);
+  }
+}

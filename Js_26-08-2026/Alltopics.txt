@@ -1,0 +1,125 @@
+1. Prototype
+
+Prototype: An object from which another object inherits properties and methods.
+
+Syntax:
+
+Object.getPrototypeOf(obj);
+2. Prototype Chain
+
+Prototype Chain: JavaScript searches an object and then its prototype until it finds a property or reaches null.
+
+Example:
+
+child → parent → Object.prototype → null
+3. prototype
+
+prototype: A property of constructor functions/classes used to add shared properties and methods.
+
+Syntax:
+
+function Person() {}
+
+Person.prototype.greet = function () {
+  console.log("Hello");
+};
+4. __proto__
+
+__proto__: Refers to the prototype of a specific object.
+
+Syntax:
+
+console.log(obj.__proto__);
+
+Prefer Object.getPrototypeOf(obj) in modern JavaScript.
+
+5. Constructor Functions
+
+Constructor Function: A function used with new to create multiple objects.
+
+Syntax:
+
+function Person(name) {
+  this.name = name;
+}
+
+const p1 = new Person("John");
+6. Classes
+
+Class: A blueprint for creating objects with properties and methods.
+
+Syntax:
+
+class Person {
+  constructor(name) {
+    this.name = name;
+  }
+}
+7. Constructor
+
+Constructor: A special method that runs automatically when an object is created.
+
+Syntax:
+
+class Person {
+  constructor(name) {
+    this.name = name;
+  }
+}
+8. Methods
+
+Methods: Functions defined inside an object or class.
+
+Syntax:
+
+class Person {
+  greet() {
+    console.log("Hello");
+  }
+}
+9. Inheritance
+
+Inheritance: Allows one class to use the properties and methods of another class.
+
+Syntax:
+
+class Animal {
+  eat() {
+    console.log("Eating");
+  }
+}
+
+class Dog extends Animal {}
+10. Encapsulation
+
+Encapsulation: Bundling data and methods together while restricting direct access to internal data.
+
+Syntax:
+
+class Bank {
+  #balance = 1000;
+
+  getBalance() {
+    return this.#balance;
+  }
+}
+11. extends
+
+extends: Used to create a child class that inherits from a parent class.
+
+Syntax:
+
+class Dog extends Animal {
+}
+12. super
+
+super: Used to call the parent class constructor or methods.
+
+Syntax:
+
+class Dog extends Animal {
+  constructor(name) {
+    super();
+    this.name = name;
+  }
+}

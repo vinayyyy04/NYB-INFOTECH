@@ -1,0 +1,267 @@
+1. ES6+ Features – Revision
+
+ES6 introduced many modern JavaScript features that make code cleaner and easier to write.
+
+Common ES6+ features:
+let and const
+Arrow Functions
+Template Literals
+Destructuring
+Spread and Rest Operators
+Classes
+Promises
+Modules
+Optional Chaining
+Nullish Coalescing
+Example
+const name = "Sowmith";
+
+const greet = () => {
+    console.log(`Hello ${name}`);
+};
+
+greet();
+
+Short explanation: ES6+ provides modern features to write cleaner, shorter, and more readable JavaScript.
+
+
+2. JavaScript Modules
+
+Modules allow us to divide JavaScript code into multiple files and reuse functionality.
+
+math.js
+export function add(a, b) {
+    return a + b;
+}
+app.js
+import { add } from "./math.js";
+
+console.log(add(10, 20));
+
+Short explanation:
+
+export → sends data/function from one file.
+import → receives data/function into another file.
+
+3. Optional Chaining ?.
+
+Optional chaining safely accesses nested object properties.
+
+Syntax
+object?.property
+Example
+const user = {
+    name: "Sowmith",
+    address: {
+        city: "Hyderabad"
+    }
+};
+
+console.log(user.address?.city);
+
+If a property does not exist:
+
+console.log(user.contact?.phone);
+
+Output:
+
+undefined
+
+Short explanation: ?. prevents errors when a property does not exist.
+
+4. Nullish Coalescing ??
+
+The ?? operator provides a default value when the value is only null or undefined.
+
+Syntax
+value ?? defaultValue
+Example
+let username = null;
+
+console.log(username ?? "Guest");
+
+Output:
+
+Guest
+Difference from ||
+let score = 0;
+
+console.log(score || 100); // 100
+console.log(score ?? 100); // 0
+
+Short explanation: ?? uses the default value only when the value is null or undefined.
+
+5. Spread Operator ...
+
+The spread operator expands elements from arrays or objects.
+
+Array Example
+const numbers = [1, 2, 3];
+
+const newNumbers = [...numbers, 4, 5];
+
+console.log(newNumbers);
+
+Output:
+
+[1, 2, 3, 4, 5]
+Object Example
+const user = {
+    name: "Sowmith"
+};
+
+const updatedUser = {
+    ...user,
+    age: 22
+};
+
+console.log(updatedUser);
+
+Short explanation: Spread ... expands or copies values.
+
+6. Rest Operator ...
+
+The rest operator collects multiple values into one array.
+
+Syntax
+function example(...values) {
+}
+Example
+function add(...numbers) {
+    console.log(numbers);
+}
+
+add(10, 20, 30);
+
+Output:
+
+[10, 20, 30]
+
+Short explanation: Rest ... collects multiple values into a single array.
+
+Easy Difference
+// Spread → Expands
+const arr = [1, 2, 3];
+console.log(...arr);
+
+// Rest → Collects
+function test(...values) {
+    console.log(values);
+}
+7. Destructuring
+
+Destructuring allows us to extract values from arrays or objects easily.
+
+Object Destructuring
+const user = {
+    name: "Sowmith",
+    age: 22
+};
+
+const { name, age } = user;
+
+console.log(name);
+console.log(age);
+Array Destructuring
+const colors = ["Red", "Blue", "Green"];
+
+const [first, second] = colors;
+
+console.log(first);
+console.log(second);
+
+Short explanation: Destructuring extracts values directly into variables.
+
+8. Template Literals
+
+Template literals allow us to insert variables directly into strings.
+
+Syntax
+`Text ${variable}`
+Example
+const name = "Sowmith";
+const age = 22;
+
+console.log(`My name is ${name} and I am ${age} years old.`);
+
+Short explanation: Template literals use backticks ` ` and ${} to insert values.
+
+9. Map
+
+A Map stores data as key-value pairs.
+
+Syntax
+const map = new Map();
+Example
+const student = new Map();
+
+student.set("name", "Sowmith");
+student.set("age", 22);
+
+console.log(student.get("name"));
+
+Output:
+
+Sowmith
+Useful Methods
+student.set("city", "Hyderabad");
+student.get("name");
+student.has("age");
+student.delete("city");
+student.size;
+
+Short explanation: Map stores key-value pairs and allows keys of different data types.
+
+10. Set
+
+A Set stores unique values only.
+
+Syntax
+const set = new Set();
+Example
+const numbers = new Set([1, 2, 2, 3, 3, 4]);
+
+console.log(numbers);
+
+Output:
+
+Set(4) {1, 2, 3, 4}
+Useful Methods
+numbers.add(5);
+numbers.has(2);
+numbers.delete(3);
+numbers.size;
+
+Short explanation: Set automatically removes duplicate values.
+
+11. WeakMap – Introduction
+
+WeakMap is similar to Map, but its keys must be objects.
+
+Example
+const user = {
+    name: "Sowmith"
+};
+
+const weakMap = new WeakMap();
+
+weakMap.set(user, "Student");
+
+console.log(weakMap.get(user));
+
+Short explanation: WeakMap stores object keys and allows them to be garbage collected when they are no longer used.
+
+12. WeakSet – Introduction
+
+WeakSet is similar to Set, but it stores objects only.
+
+Example
+const user1 = {
+    name: "Sowmith"
+};
+
+const weakSet = new WeakSet();
+
+weakSet.add(user1);
+
+console.log(weakSet.has(user1));
