@@ -1,0 +1,193 @@
+1. Array Creation and Accessing Elements
+
+Definition:
+An array is used to store multiple values in a single variable.
+
+Basic Syntax:
+
+let fruits = ["Apple", "Banana", "Mango"];
+
+console.log(fruits[0]); // Apple
+console.log(fruits[1]); // Banana
+Array index starts from 0.
+fruits[0] → first element
+fruits[1] → second element
+
+2. Array Methods
+
+Definition:
+Array methods are built-in JavaScript functions used to add, remove,
+search, modify, or process array elements.
+
+3. map()
+
+Definition:
+map() creates a new array by applying a function to every element.
+
+Basic Syntax:
+
+array.map((element) => {
+    return newValue;
+});
+
+Example:
+
+let numbers = [1, 2, 3];
+
+let result = numbers.map(num => num * 2);
+
+console.log(result); // [2, 4, 6]
+
+4. filter()
+
+Definition:
+filter() creates a new array containing only the elements that satisfy a condition.
+
+Basic Syntax:
+
+array.filter((element) => {
+    return condition;
+});
+
+Example:
+
+let numbers = [10, 15, 20, 25];
+
+let result = numbers.filter(num => num > 15);
+
+console.log(result); // [20, 25]
+
+5. reduce()
+
+Definition:
+reduce() reduces all array elements into one single value.
+
+Basic Syntax:
+
+array.reduce((accumulator, element) => {
+    return updatedValue;
+}, initialValue);
+
+Example:
+
+let numbers = [10, 20, 30];
+
+let total = numbers.reduce((sum, num) => sum + num, 0);
+
+console.log(total); // 60
+
+6. find()
+
+Definition:
+find() returns the first element that satisfies a condition.
+
+Basic Syntax:
+
+array.find((element) => {
+    return condition;
+});
+
+Example:
+
+let numbers = [5, 10, 15, 20];
+
+let result = numbers.find(num => num > 10);
+
+console.log(result); // 15
+
+7. findIndex()
+
+Definition:
+findIndex() returns the index of the first element that satisfies a condition.
+
+Basic Syntax:
+
+array.findIndex((element) => {
+    return condition;
+});
+
+Example:
+
+let numbers = [5, 10, 15, 20];
+
+let index = numbers.findIndex(num => num > 10);
+
+console.log(index); // 2
+
+8. some()
+
+Definition:
+some() checks whether at least one element satisfies a condition. It returns true or false.
+
+Basic Syntax:
+
+array.some((element) => {
+    return condition;
+});
+
+Example:
+
+let numbers = [10, 20, 30];
+
+console.log(numbers.some(num => num > 25));
+// true
+
+
+9. every()
+
+Definition:
+every() checks whether all elements satisfy a condition. It returns true or false.
+
+Basic Syntax:
+
+array.every((element) => {
+    return condition;
+});
+
+Example:
+
+let numbers = [10, 20, 30];
+
+console.log(numbers.every(num => num > 5));
+// true
+Easy difference:
+some() → At least ONE? 
+every() → ALL? 
+
+
+10. sort()
+
+Definition:
+sort() sorts the elements of an array and modifies the original array.
+
+Basic Syntax:
+
+array.sort();
+
+For numbers:
+
+array.sort((a, b) => a - b);
+
+Example:
+
+let numbers = [30, 10, 20];
+
+numbers.sort((a, b) => a - b);
+
+console.log(numbers); // [10, 20, 30]
+11. Removing Duplicate Elements
+
+Definition:
+Duplicate elements can be removed using a Set, because a Set stores only unique values.
+
+Basic Syntax:
+
+let uniqueArray = [...new Set(array)];
+
+Example:
+
+let numbers = [10, 20, 10, 30, 20];
+
+let unique = [...new Set(numbers)];
+
+console.log(unique);

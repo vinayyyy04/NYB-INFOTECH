@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Performance Dashboard</title>
+
+    <link rel="stylesheet" href="Task.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>🎓 Student Performance</h1>
+            <p>Array Methods Practice Dashboard</p>
+        </header>
+
+        <section class="stats">
+
+            <div class="card">
+                <span>👨‍🎓</span>
+                <h3>Total Students</h3>
+                <p id="totalStudents">0</p>
+            </div>
+
+            <div class="card">
+                <span>🏆</span>
+                <h3>Average Marks</h3>
+                <p id="averageMarks">0</p>
+            </div>
+
+            <div class="card">
+                <span>✅</span>
+                <h3>Passed</h3>
+                <p id="passedStudents">0</p>
+            </div>
+
+            <div class="card">
+                <span>❌</span>
+                <h3>Failed</h3>
+                <p id="failedStudents">0</p>
+            </div>
+
+        </section>
+
+        <section class="students-section">
+
+            <div class="section-title">
+                <h2>Student List</h2>
+                <button id="sortBtn">Sort by Marks ↓</button>
+            </div>
+
+            <div id="studentList" class="student-list"></div>
+
+        </section>
+
+        <section class="result-box">
+
+            <h2>📊 Dashboard Results</h2>
+
+            <p id="topStudent"></p>
+            <p id="searchIndex"></p>
+            <p id="failedCheck"></p>
+            <p id="allPassed"></p>
+            <p id="uniqueCourses"></p>
+
+        </section>
+
+    </div>
+
+    <script src="Task.js"></script>
+
+</body>
+</html>
