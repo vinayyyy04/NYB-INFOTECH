@@ -1,0 +1,91 @@
+1. Creating and Accessing Objects
+
+Purpose: Store data as key-value pairs.
+
+Syntax:
+
+const objectName = {
+    key: value
+};
+
+Access:
+
+objectName.key
+objectName["key"]
+2. Nested Objects
+
+Purpose: Store an object inside another object.
+
+Syntax:
+
+const objectName = {
+    key: {
+        nestedKey: value
+    }
+};
+
+Access:
+
+objectName.key.nestedKey
+3. Object Destructuring
+
+Purpose: Extract properties from an object into variables.
+
+Syntax:
+
+const { key1, key2 } = objectName;
+4. Spread Operator ...
+
+Purpose: Copy or combine object properties.
+
+Syntax:
+
+const newObject = {
+    ...oldObject
+};
+5. Rest Operator ...
+
+Purpose: Collect the remaining object properties into a new object.
+
+Syntax:
+
+const { key, ...rest } = objectName;
+6. Object.keys()
+
+Purpose: Returns an array containing the object's keys.
+
+Syntax:
+
+Object.keys(objectName);
+7. Object.values()
+
+Purpose: Returns an array containing the object's values.
+
+Syntax:
+
+Object.values(objectName);
+8. Object.entries()
+
+Purpose: Returns an array containing the object's key-value pairs.
+
+Syntax:
+
+Object.entries(objectName);
+9. Optional Chaining ?.
+
+Purpose: Safely access a property that may not exist.
+
+Syntax:
+
+objectName?.property;
+
+For nested properties:
+
+objectName?.property?.nestedProperty;
+10. Nullish Coalescing ??
+
+Purpose: Provides a default value when the left-hand value is null or undefined.
+
+Syntax:
+
+value ?? defaultValue;

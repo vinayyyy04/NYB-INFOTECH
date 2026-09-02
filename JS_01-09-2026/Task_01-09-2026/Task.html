@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Employee Dashboard</title>
+
+    <link rel="stylesheet" href="./Task.css">
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <header>
+            <div>
+                <p class="welcome">WELCOME BACK</p>
+                <h1>Employee Dashboard</h1>
+            </div>
+
+            <div class="employee-icon">
+                👨‍💻
+            </div>
+        </header>
+
+        <main>
+
+            <section class="profile-card">
+
+                <div class="profile-top">
+                    <div class="avatar">VR</div>
+
+                    <div>
+                        <h2 id="employeeName"></h2>
+                        <p id="employeeRole"></p>
+                    </div>
+                </div>
+
+                <div class="info-grid">
+
+                    <div class="info">
+                        <span>Department</span>
+                        <strong id="department"></strong>
+                    </div>
+
+                    <div class="info">
+                        <span>Experience</span>
+                        <strong id="experience"></strong>
+                    </div>
+
+                    <div class="info">
+                        <span>Location</span>
+                        <strong id="location"></strong>
+                    </div>
+
+                    <div class="info">
+                        <span>Email</span>
+                        <strong id="email"></strong>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <section class="cards">
+
+                <div class="card">
+                    <span class="card-icon">📊</span>
+                    <p>Projects</p>
+                    <h2 id="projects"></h2>
+                </div>
+
+                <div class="card">
+                    <span class="card-icon">⭐</span>
+                    <p>Performance</p>
+                    <h2 id="performance"></h2>
+                </div>
+
+                <div class="card">
+                    <span class="card-icon">💰</span>
+                    <p>Salary</p>
+                    <h2 id="salary"></h2>
+                </div>
+
+            </section>
+
+
+            <section class="skills-section">
+
+                <h2>Technical Skills</h2>
+
+                <div id="skills" class="skills"></div>
+
+            </section>
+
+
+            <section class="data-section">
+
+                <h2>Employee Data</h2>
+
+                <div id="employeeData"></div>
+
+            </section>
+
+
+            <button id="updateButton">
+                Update Employee
+            </button>
+
+        </main>
+
+    </div>
+
+    <script src="Task.js"></script>
+
+</body>
+
+</html>

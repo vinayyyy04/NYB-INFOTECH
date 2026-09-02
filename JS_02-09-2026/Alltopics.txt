@@ -1,0 +1,187 @@
+1. try
+
+try is used to contain code that might produce an error.
+
+If an error occurs inside the try block, JavaScript can pass control to the catch block.
+
+Basic syntax
+try {
+    // code that may cause an error
+}
+
+Purpose:
+
+Tests potentially problematic code.
+Works together with catch and optionally finally.
+2. catch
+
+catch is used to handle an error that occurs inside the try block.
+
+It receives an error object that contains information about what went wrong.
+
+Basic syntax
+try {
+    // risky code
+} catch (error) {
+    // handle the error
+}
+Important
+
+catch runs only when an error occurs in the corresponding try block.
+
+3. finally
+
+finally contains code that should run regardless of whether an error occurs or not.
+
+Basic syntax
+try {
+    // code
+} catch (error) {
+    // handle error
+} finally {
+    // always runs
+}
+Important
+
+finally runs:
+
+If there is no error.
+If there is an error.
+Even after the error has been handled by catch.
+
+It is commonly used for cleanup operations.
+
+4. throw
+
+throw is used when you want to manually create and raise an error.
+
+Instead of waiting for JavaScript to generate an error, you can decide that something is invalid and throw an error yourself.
+
+Basic syntax
+throw new Error("Error message");
+
+The thrown error can then be handled using catch.
+
+Important
+
+throw immediately stops the normal execution of the current code and looks for an appropriate error handler.
+
+5. Custom Errors
+
+A custom error is an error that you create specifically for your application's requirements.
+
+JavaScript provides built-in error types such as:
+
+Error
+TypeError
+ReferenceError
+SyntaxError
+RangeError
+
+You can also create your own error class by extending Error.
+
+Basic syntax
+class MyError extends Error {
+    constructor(message) {
+        super(message);
+        this.name = "MyError";
+    }
+}
+
+Then you can create and throw your custom error.
+
+Why use custom errors?
+
+They make it easier to identify specific types of problems in larger applications.
+
+For example, instead of every error simply being called Error, you can have errors representing different application-specific situations.
+
+6. Local Storage
+
+Local Storage is a browser storage mechanism used to store data as key-value pairs.
+
+The important characteristic is that the data normally remains stored even after:
+
+Closing the browser.
+Refreshing the page.
+Opening the website again later.
+Basic syntax
+localStorage.setItem("key", "value");
+
+localStorage.getItem("key");
+
+localStorage.removeItem("key");
+
+localStorage.clear();
+Main methods
+Method	Purpose
+setItem()	Store data
+getItem()	Retrieve data
+removeItem()	Remove one item
+clear()	Remove all items
+Important
+
+Local Storage stores values as strings.
+
+So if you want to store objects or arrays, you generally use:
+
+JSON.stringify()
+
+And when retrieving them:
+
+JSON.parse()
+7. Session Storage
+
+Session Storage is also browser storage using key-value pairs.
+
+The major difference from Local Storage is its lifetime.
+
+Session Storage data generally exists only for the current browser tab/session.
+
+Basic syntax
+sessionStorage.setItem("key", "value");
+
+sessionStorage.getItem("key");
+
+sessionStorage.removeItem("key");
+
+sessionStorage.clear();
+Main methods
+Method	Purpose
+setItem()	Store data
+getItem()	Retrieve data
+removeItem()	Remove one item
+clear()	Remove all items
+Local Storage vs Session Storage
+Local Storage	Session Storage
+Data persists after closing the browser	Data is tied to the current tab/session
+Usually used for longer-term browser data	Usually used for temporary session data
+Shared by pages from the same origin	Specific to the current tab/session
+8. JSON.stringify()
+
+JSON.stringify() converts a JavaScript value/object into a JSON string.
+
+This is especially useful when storing objects or arrays in Local Storage or Session Storage.
+
+Basic syntax
+JSON.stringify(value);
+
+Think of it as:
+
+JavaScript object → JSON string
+
+For example conceptually:
+
+JavaScript Object
+       ↓
+JSON.stringify()
+       ↓
+JSON String
+9. JSON.parse()
+
+JSON.parse() does the opposite of JSON.stringify().
+
+It converts a JSON string back into a JavaScript value/object.
+
+Basic syntax
+JSON.parse(jsonString);
