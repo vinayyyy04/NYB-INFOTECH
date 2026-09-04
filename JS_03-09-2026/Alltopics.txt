@@ -1,0 +1,150 @@
+1. Fetch API
+
+The Fetch API is used to make HTTP requests from JavaScript to a server or API.
+
+It returns a Promise and allows you to retrieve or send data over the network.
+
+Basic Syntax:
+
+fetch(url)
+
+2. GET Requests
+
+A GET request is used to retrieve data from a server or API.
+
+Basic Syntax:
+
+fetch(url, {
+    method: "GET"
+});
+
+Since GET is the default method, this can also be written as:
+
+fetch(url);
+
+3. POST Requests
+
+A POST request is used to send data to a server, usually to create a new resource.
+
+Basic Syntax:
+
+fetch(url, {
+    method: "POST",
+    headers: {
+        "Content-Type": "application/json"
+    },
+    body: JSON.stringify(data)
+});
+method → Specifies the HTTP method.
+headers → Provides information about the request.
+body → Contains the data being sent.
+
+4. Promises
+
+A Promise represents the eventual result of an asynchronous operation.
+
+A Promise can have three states:
+
+Pending → Operation is still running.
+Fulfilled → Operation completed successfully.
+Rejected → Operation failed.
+
+Basic Syntax:
+
+const promise = new Promise((resolve, reject) => {
+    // asynchronous operation
+
+    resolve(result);  // success
+    reject(error);    // failure
+});
+
+
+5. .then()
+
+The .then() method is used to handle the successful result of a Promise.
+
+Basic Syntax:
+
+promise
+    .then((result) => {
+        // handle successful result
+    });
+
+It can also be chained:
+
+promise
+    .then((result) => {
+        // first operation
+        return result;
+    })
+    .then((result) => {
+        // next operation
+    });
+
+
+6. .catch()
+
+The .catch() method is used to handle errors or rejected Promises.
+
+Basic Syntax:
+
+promise
+    .catch((error) => {
+        // handle error
+    });
+
+It is commonly used with .then():
+
+promise
+    .then((result) => {
+        // success
+    })
+    .catch((error) => {
+        // error
+    });
+
+    
+7. Async/Await
+
+async and await provide a cleaner way to work with Promises.
+
+An async function always returns a Promise.
+
+Basic Syntax:
+
+async function functionName() {
+    // code
+}
+
+await pauses the execution of the async function until the Promise is resolved or rejected.
+
+Basic Syntax:
+
+async function functionName() {
+    const result = await promise;
+}
+
+await can normally be used inside an async function.
+
+8. Error Handling with APIs
+
+API requests can fail because of network problems, invalid URLs, server errors, or unsuccessful HTTP responses.
+
+With Async/Await, try...catch is commonly used for error handling.
+
+Basic Syntax:
+
+async function functionName() {
+    try {
+        const response = await fetch(url);
+
+        if (!response.ok) {
+            throw new Error("Request failed");
+        }
+
+        const data = await response.json();
+
+    } catch (error) {
+        // handle error
+    }
+}

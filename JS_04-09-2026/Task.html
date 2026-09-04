@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Music Playlist</title>
+
+    <link
+        rel="stylesheet"
+        href="Task.css"></head>
+
+
+<body>
+
+
+    <!-- HEADER -->
+
+    <header>
+
+        <div class="logo">
+            🎵
+        </div>
+
+        <div>
+            <h1>My Playlist</h1>
+
+            <p>
+                Create your favourite music collection
+            </p>
+        </div>
+
+    </header>
+
+
+    <main>
+
+
+        <!-- SUMMARY -->
+
+        <section class="summary">
+
+            <div class="summary-card">
+
+                <span>
+                    Total Songs
+                </span>
+
+                <strong id="totalSongs">
+                    0
+                </strong>
+
+            </div>
+
+
+            <div class="summary-card">
+
+                <span>
+                    Favourite Songs
+                </span>
+
+                <strong id="favoriteSongs">
+                    0
+                </strong>
+
+            </div>
+
+
+            <div class="summary-card">
+
+                <span>
+                    Total Duration
+                </span>
+
+                <strong id="totalDuration">
+                    0 min
+                </strong>
+
+            </div>
+
+        </section>
+
+
+        <!-- ADD SONG -->
+
+        <section class="box">
+
+            <h2>
+                ➕ Add New Song
+            </h2>
+
+
+            <form id="songForm">
+
+                <input
+                    type="text"
+                    id="songName"
+                    placeholder="Song name"
+                    required
+                >
+
+
+                <input
+                    type="text"
+                    id="artistName"
+                    placeholder="Artist name"
+                    required
+                >
+
+
+                <input
+                    type="number"
+                    id="duration"
+                    placeholder="Duration in minutes"
+                    min="1"
+                    required
+                >
+
+
+                <button type="submit">
+                    Add Song
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- SEARCH -->
+
+        <section class="box tools">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="🔍 Search song or artist..."
+            >
+
+
+            <button id="loadSongsBtn">
+                Load Sample Songs
+            </button>
+
+        </section>
+
+
+        <!-- STATUS -->
+
+        <div
+            id="loading"
+            class="loading hidden"
+        >
+            Loading songs...
+        </div>
+
+
+        <div
+            id="error"
+            class="error hidden"
+        ></div>
+
+
+        <!-- PLAYLIST -->
+
+        <section class="box">
+
+            <div class="playlist-header">
+
+                <h2>
+                    🎧 Your Playlist
+                </h2>
+
+                <button
+                    id="clearBtn"
+                    class="clear-btn"
+                >
+                    Clear All
+                </button>
+
+            </div>
+
+
+            <div id="songList"></div>
+
+
+            <div
+                id="emptyMessage"
+                class="empty"
+            >
+
+                <div>
+                    🎶
+                </div>
+
+                <h3>
+                    Your playlist is empty
+                </h3>
+
+                <p>
+                    Add some songs to get started.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            🎵 My Playlist © 2026
+        </p>
+
+    </footer>
+
+
+    <script src="Task.js"></script>
+
+</body>
+
+</html>

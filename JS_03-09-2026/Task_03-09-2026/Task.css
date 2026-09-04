@@ -1,0 +1,326 @@
+/* ==============================
+   RESET
+============================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ==============================
+   BODY
+============================== */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: #f4f6f9;
+
+    color: #1f2937;
+
+    min-height: 100vh;
+}
+
+
+/* ==============================
+   CONTAINER
+============================== */
+
+.container {
+    width: 90%;
+
+    max-width: 1200px;
+
+    margin: auto;
+}
+
+
+/* ==============================
+   HEADER
+============================== */
+
+.header {
+    background: #111827;
+
+    color: white;
+
+    padding: 45px 0;
+
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 38px;
+
+    margin-bottom: 10px;
+}
+
+.header p {
+    color: #d1d5db;
+
+    font-size: 16px;
+}
+
+
+/* ==============================
+   MAIN
+============================== */
+
+.products-section {
+    padding: 45px 0;
+}
+
+
+/* ==============================
+   SECTION HEADING
+============================== */
+
+.section-heading {
+    text-align: center;
+
+    margin-bottom: 30px;
+}
+
+.section-heading h2 {
+    font-size: 30px;
+
+    margin-bottom: 8px;
+}
+
+.section-heading p {
+    color: #6b7280;
+}
+
+
+/* ==============================
+   LOADING
+============================== */
+
+.loading {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 60px;
+
+    color: #6b7280;
+}
+
+.spinner {
+    width: 45px;
+
+    height: 45px;
+
+    border: 5px solid #e5e7eb;
+
+    border-top: 5px solid #2563eb;
+
+    border-radius: 50%;
+
+    animation: spin 1s linear infinite;
+
+    margin-bottom: 15px;
+}
+
+@keyframes spin {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+
+/* ==============================
+   ERROR
+============================== */
+
+.error {
+    display: none;
+
+    background: #fee2e2;
+
+    color: #991b1b;
+
+    padding: 18px;
+
+    border-radius: 10px;
+
+    text-align: center;
+
+    margin-bottom: 30px;
+
+    border: 1px solid #fecaca;
+}
+
+
+/* ==============================
+   PRODUCT GRID
+============================== */
+
+.product-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(260px, 1fr));
+
+    gap: 25px;
+}
+
+
+/* ==============================
+   PRODUCT CARD
+============================== */
+
+.product-card {
+    background: white;
+
+    border-radius: 14px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.08);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 12px 25px rgba(0, 0, 0, 0.12);
+}
+
+
+/* ==============================
+   PRODUCT IMAGE
+============================== */
+
+.product-image {
+    width: 100%;
+
+    height: 230px;
+
+    object-fit: contain;
+
+    padding: 25px;
+
+    background: #f9fafb;
+}
+
+
+/* ==============================
+   PRODUCT CONTENT
+============================== */
+
+.product-content {
+    padding: 20px;
+}
+
+.product-title {
+    font-size: 18px;
+
+    line-height: 1.4;
+
+    margin-bottom: 12px;
+}
+
+.product-description {
+    color: #6b7280;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+    margin-bottom: 18px;
+}
+
+
+/* ==============================
+   PRODUCT FOOTER
+============================== */
+
+.product-footer {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+.price {
+    font-size: 20px;
+
+    font-weight: bold;
+
+    color: #111827;
+}
+
+.category {
+    background: #eef2ff;
+
+    color: #3730a3;
+
+    padding: 6px 10px;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+
+    text-transform: capitalize;
+}
+
+
+/* ==============================
+   FOOTER
+============================== */
+
+.footer {
+    text-align: center;
+
+    padding: 30px;
+
+    color: #6b7280;
+
+    font-size: 14px;
+}
+
+
+/* ==============================
+   RESPONSIVE DESIGN
+============================== */
+
+@media (max-width: 600px) {
+
+    .header h1 {
+        font-size: 28px;
+    }
+
+    .section-heading h2 {
+        font-size: 25px;
+    }
+
+    .container {
+        width: 94%;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+}

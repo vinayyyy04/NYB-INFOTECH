@@ -1,0 +1,587 @@
+* {
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+}
+
+
+body {
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background: #0f172a;
+
+    color: white;
+
+    min-height: 100vh;
+
+}
+
+
+/* ================= HEADER ================= */
+
+header {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 35px 7%;
+
+    background: #111827;
+
+    border-bottom:
+        1px solid #1f2937;
+
+}
+
+
+.logo {
+
+    width: 60px;
+
+    height: 60px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background: #1e293b;
+
+    border-radius: 15px;
+
+    font-size: 30px;
+
+}
+
+
+header h1 {
+
+    font-size: 32px;
+
+    margin-bottom: 5px;
+
+}
+
+
+header p {
+
+    color: #94a3b8;
+
+}
+
+
+/* ================= MAIN ================= */
+
+main {
+
+    width: min(1000px, 92%);
+
+    margin: 40px auto;
+
+}
+
+
+/* ================= SUMMARY ================= */
+
+.summary {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 18px;
+
+    margin-bottom: 25px;
+
+}
+
+
+.summary-card {
+
+    background: #1e293b;
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    border:
+        1px solid #334155;
+
+}
+
+
+.summary-card span {
+
+    display: block;
+
+    color: #94a3b8;
+
+    font-size: 14px;
+
+    margin-bottom: 10px;
+
+}
+
+
+.summary-card strong {
+
+    font-size: 30px;
+
+}
+
+
+/* ================= BOX ================= */
+
+.box {
+
+    background: #1e293b;
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    border:
+        1px solid #334155;
+
+    margin-bottom: 25px;
+
+}
+
+
+.box h2 {
+
+    margin-bottom: 20px;
+
+}
+
+
+/* ================= FORM ================= */
+
+form {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr 1fr auto;
+
+    gap: 10px;
+
+}
+
+
+input {
+
+    width: 100%;
+
+    padding: 13px;
+
+    border: 1px solid #475569;
+
+    background: #0f172a;
+
+    color: white;
+
+    border-radius: 8px;
+
+    outline: none;
+
+}
+
+
+input:focus {
+
+    border-color: #94a3b8;
+
+}
+
+
+button {
+
+    padding: 13px 18px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #f8fafc;
+
+    color: #0f172a;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+
+}
+
+
+button:hover {
+
+    transform:
+        translateY(-2px);
+
+    background: #cbd5e1;
+
+}
+
+
+/* ================= TOOLS ================= */
+
+.tools {
+
+    display: flex;
+
+    gap: 10px;
+
+}
+
+
+.tools input {
+
+    flex: 1;
+
+}
+
+
+/* ================= PLAYLIST HEADER ================= */
+
+.playlist-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 20px;
+
+}
+
+
+.playlist-header h2 {
+
+    margin: 0;
+
+}
+
+
+.clear-btn {
+
+    background: #ef4444;
+
+    color: white;
+
+}
+
+
+.clear-btn:hover {
+
+    background: #dc2626;
+
+}
+
+
+/* ================= SONG ================= */
+
+.song {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 16px;
+
+    background: #111827;
+
+    border:
+        1px solid #334155;
+
+    border-radius: 12px;
+
+    margin-bottom: 12px;
+
+    transition: 0.2s;
+
+}
+
+
+.song:hover {
+
+    transform:
+        translateX(4px);
+
+    border-color:
+        #64748b;
+
+}
+
+
+.song-left {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+}
+
+
+.song-icon {
+
+    width: 48px;
+
+    height: 48px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    border-radius: 12px;
+
+    background: #334155;
+
+    font-size: 22px;
+
+}
+
+
+.song-name {
+
+    font-weight: bold;
+
+    margin-bottom: 5px;
+
+}
+
+
+.artist {
+
+    color: #94a3b8;
+
+    font-size: 13px;
+
+}
+
+
+.song-right {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+}
+
+
+.song-duration {
+
+    color: #94a3b8;
+
+}
+
+
+.favorite-btn {
+
+    background: transparent;
+
+    color: white;
+
+    border:
+        1px solid #475569;
+
+    padding: 8px 10px;
+
+}
+
+
+.favorite-btn.active {
+
+    background: #ef4444;
+
+    border-color: #ef4444;
+
+    color: white;
+
+}
+
+
+.delete-btn {
+
+    background: #334155;
+
+    color: #fca5a5;
+
+    padding: 8px 10px;
+
+}
+
+
+.delete-btn:hover {
+
+    background: #7f1d1d;
+
+    color: white;
+
+}
+
+
+/* ================= EMPTY ================= */
+
+.empty {
+
+    text-align: center;
+
+    padding: 45px;
+
+    color: #64748b;
+
+}
+
+
+.empty div {
+
+    font-size: 50px;
+
+    margin-bottom: 12px;
+
+}
+
+
+.empty h3 {
+
+    color: white;
+
+    margin-bottom: 6px;
+
+}
+
+
+/* ================= LOADING ================= */
+
+.loading {
+
+    text-align: center;
+
+    padding: 20px;
+
+    color: #94a3b8;
+
+}
+
+
+/* ================= ERROR ================= */
+
+.error {
+
+    background: #450a0a;
+
+    color: #fecaca;
+
+    padding: 15px;
+
+    border-radius: 8px;
+
+    margin-bottom: 20px;
+
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+
+    text-align: center;
+
+    color: #64748b;
+
+    padding: 30px;
+
+}
+
+
+/* ================= HIDDEN ================= */
+
+.hidden {
+
+    display: none;
+
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 850px) {
+
+    form {
+
+        grid-template-columns:
+            1fr 1fr;
+
+    }
+
+    .summary {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    form {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+    .tools {
+
+        flex-direction: column;
+
+    }
+
+    .song {
+
+        align-items: flex-start;
+
+        gap: 15px;
+
+    }
+
+    .song-right {
+
+        flex-direction: column;
+
+        align-items: flex-end;
+
+    }
+
+    header h1 {
+
+        font-size: 26px;
+
+    }
+
+}

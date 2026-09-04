@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Product Explorer</title>
+
+    <link rel="stylesheet" href="Task.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container">
+            <h1>🛍️ Product Explorer</h1>
+
+            <p>
+                Explore products fetched from a public API
+            </p>
+        </div>
+    </header>
+
+
+    <main class="container">
+
+        <section class="products-section">
+
+            <div class="section-heading">
+                <h2>Our Products</h2>
+
+                <p>
+                    Product information is loaded dynamically.
+                </p>
+            </div>
+
+
+            <!-- Loading -->
+
+            <div id="loading" class="loading">
+
+                <div class="spinner"></div>
+
+                <p>Loading products...</p>
+
+            </div>
+
+
+            <!-- Error -->
+
+            <div id="error" class="error">
+
+            </div>
+
+
+            <!-- Products -->
+
+            <div
+                id="productGrid"
+                class="product-grid">
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer class="footer">
+
+        <p>
+            Product Explorer &copy; 2026
+        </p>
+
+    </footer>
+
+
+    <script src="Task.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,130 @@
+1. DOM Selection
+
+DOM Selection is used to select HTML elements from a webpage so that JavaScript can work with them.
+
+Select by ID
+document.getElementById("id");
+Select by Class
+document.getElementsByClassName("className");
+Select by Tag
+document.getElementsByTagName("tagName");
+Select the first matching element
+document.querySelector("selector");
+Select all matching elements
+document.querySelectorAll("selector");
+
+2. DOM Manipulation
+
+DOM Manipulation is used to change HTML elements, content, attributes, and styles using JavaScript.
+
+Change HTML content
+element.innerHTML = "content";
+Change text content
+element.textContent = "content";
+Change an attribute
+element.setAttribute("attribute", "value");
+Get an attribute
+element.getAttribute("attribute");
+Remove an attribute
+element.removeAttribute("attribute");
+Change CSS
+element.style.property = "value";
+Add a class
+element.classList.add("className");
+Remove a class
+element.classList.remove("className");
+Toggle a class
+element.classList.toggle("className");
+Check whether a class exists
+element.classList.contains("className");
+
+
+3. Creating Elements Dynamically
+
+JavaScript can create and add new HTML elements while the webpage is running.
+
+Create an element
+document.createElement("tagName");
+Add content
+element.textContent = "content";
+Add an element inside another element
+parent.appendChild(element);
+Add an element at the beginning
+parent.prepend(element);
+Insert HTML
+parent.insertAdjacentHTML("position", "html");
+Remove an element
+element.remove();
+Replace an element
+oldElement.replaceWith(newElement);
+4. Event Listeners
+
+Event Listeners allow JavaScript to respond to user actions, such as clicks, typing, submitting forms, and mouse movements.
+
+Basic syntax
+element.addEventListener("event", function () {
+    // code
+});
+Using an arrow function
+element.addEventListener("event", () => {
+    // code
+});
+Remove an event listener
+element.removeEventListener("event", functionName);
+Common events
+click
+dblclick
+mouseover
+mouseout
+mouseenter
+mouseleave
+keydown
+keyup
+input
+change
+submit
+focus
+blur
+5. Event Delegation
+
+Event Delegation means adding one event listener to a parent element instead of adding separate listeners to every child element.
+
+Basic syntax
+parent.addEventListener("event", (event) => {
+    if (event.target.matches("selector")) {
+        // code
+    }
+});
+Using event.target
+event.target
+Using event.currentTarget
+event.currentTarget
+Stop event propagation
+event.stopPropagation();
+
+Event Delegation is especially useful for dynamically created elements.
+
+6. Form Handling
+
+Form Handling is used to read, validate, process, and submit user input.
+
+Select a form
+const form = document.querySelector("form");
+Listen for form submission
+form.addEventListener("submit", (event) => {
+    // code
+});
+Prevent default form submission
+event.preventDefault();
+Get input value
+input.value;
+Set input value
+input.value = "value";
+Check whether input is empty
+input.value.trim() === "";
+Get form data
+const formData = new FormData(form);
+Get a specific form value
+formData.get("fieldName");
+Reset a form
+form.reset();
