@@ -1,0 +1,117 @@
+Variables
+
+Variables act as named containers for storing data values. In JavaScript, they are declared using three keywords:
+
+var: Declares a function-scoped or globally-scoped variable that can be re-declared and updated. It is hoisted to the top of its scope and initialized with undefined.
+
+Syntax: var identifier; or var identifier = value;
+
+let: Declares a block-scoped local variable that can be updated but not re-declared within the same scope. It is hoisted but exists in a Temporal Dead Zone (TDZ) until evaluated.
+
+Syntax: let identifier; or let identifier = value;
+
+const: Declares a block-scoped constant reference. It cannot be re-declared or reassigned, and must be initialized during declaration.
+
+Syntax: const identifier = value;
+
+JavaScript Data Types
+
+1. Primitive Data Types
+
+Immutable data stored directly in the call stack by value. There are 7 primitive types:
+
+String: Textual sequences enclosed in single quotes, double quotes, or backticks.
+
+Number: Double-precision 64-bit binary format IEEE 754 values (integers and floating-point numbers).
+
+BigInt: Arbitrary-precision integers for values exceeding the safe integer limit of Number.
+
+Boolean: Logical entity with two possible values: true or false.
+
+Undefined: Automatically assigned to a variable that has been declared but not assigned a value.
+
+Null: Intentional representation of the absence of any object value.
+
+Symbol: A unique and immutable primitive identifier often used as object property keys.
+
+2. Reference Data Types
+Mutable collections stored in heap memory and accessed by reference rather than by value:
+
+Object: Key-value pairs.
+
+Syntax: { key: value }
+
+Array: Ordered lists of indexed values (a specialized object subtype).
+
+Syntax: [element0, element1]
+
+Function: Callable object blocks of code.
+
+Syntax: function name(parameters) { /* body */ }
+
+
+3. typeof Operator
+A unary operator placed before an operand that returns a string indicating the operand's type.
+
+Syntax: typeof operand or typeof(operand)
+
+Type Conversion and Type Coercion
+
+Type Conversion (Explicit): Manually transforming a value from one data type to another using built-in wrapper functions.
+
+Syntax: String(value), Number(value), Boolean(value)
+
+Type Coercion (Implicit): Automatic conversion applied by the JavaScript engine when operators are applied to mismatched types (such as using + between strings and numbers).
+
+Operators
+
+1. Arithmetic Operators
+Perform mathematical calculations on numeric operands:
+
++ (Addition), - (Subtraction), * (Multiplication), / (Division)
+
+% (Remainder/Modulo), ** (Exponentiation)
+
+++ (Increment), -- (Decrement)
+
+Syntax: operand1 operator operand2 or ++operand / operand++
+
+2. Assignment Operators
+Assign and optionally update values to variables:
+
+Basic: =
+
+Compound: +=, -=, *=, /=, %=, **=
+
+Logical assignment: &&=, ||=, ??=
+
+Syntax: variable operator value
+
+3. Comparison Operators
+Compare operands and return a Boolean value (true or false):
+
+Equality: == (Loose equality with coercion), === (Strict equality without coercion)
+
+Inequality: != (Loose inequality), !== (Strict inequality)
+
+Relational: >, <, >=, <=
+
+Syntax: operand1 operator operand2
+
+4. Logical Operators
+Evaluate logical conditions, often performing short-circuit evaluation:
+
+&& (Logical AND: returns first falsy value or last truthy value)
+
+|| (Logical OR: returns first truthy value or last falsy value)
+
+! (Logical NOT: inverts Boolean value)
+
+?? (Nullish Coalescing: returns right side only if left side is null or undefined)
+
+Syntax: operand1 && operand2, operand1 || operand2, !operand, operand1 ?? operand2
+
+Template Literals
+String literals that permit embedded expressions, multi-line strings, and string interpolation, enclosed by backtick (`) characters rather than quotes. Embedded expressions are delimited by dollar signs and curly braces.
+
+Syntax: `string text ${expression} string text`

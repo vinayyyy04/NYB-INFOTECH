@@ -1,0 +1,518 @@
+1. Arrays
+
+An array is used to store multiple values in a single variable.
+
+Creating an Array
+let fruits = ["Apple", "Banana", "Mango"];
+Basic Syntax
+let arrayName = [value1, value2, value3];
+
+Array indexes start from 0.
+
+Index:    0        1         2
+        Apple    Banana    Mango
+2. Creating and Accessing Arrays
+Creating
+let numbers = [10, 20, 30, 40];
+Accessing an element
+arrayName[index];
+Accessing the first element
+numbers[0];
+Accessing the last element
+numbers[numbers.length - 1];
+Array length
+arrayName.length;
+3. Adding and Removing Elements
+
+JavaScript provides several methods to add and remove elements.
+
+push()
+
+Adds elements to the end.
+
+array.push(value);
+pop()
+
+Removes the last element.
+
+array.pop();
+unshift()
+
+Adds elements to the beginning.
+
+array.unshift(value);
+shift()
+
+Removes the first element.
+
+array.shift();
+splice()
+
+Used to add, remove, or replace elements at a particular position.
+
+array.splice(start, deleteCount);
+
+For adding/replacing:
+
+array.splice(start, deleteCount, item1, item2);
+4. Searching Elements
+includes()
+
+Checks whether an array contains a particular value.
+
+array.includes(value);
+
+Returns:
+
+true
+
+or
+
+false
+indexOf()
+
+Returns the index of the first matching element.
+
+array.indexOf(value);
+
+If the value doesn't exist, it returns:
+
+-1
+lastIndexOf()
+
+Returns the index of the last matching element.
+
+array.lastIndexOf(value);
+5. Looping Through Arrays
+
+Arrays can be processed using loops.
+
+Traditional for loop
+for (let i = 0; i < array.length; i++) {
+    // code
+}
+for...of
+
+Used to directly access array values.
+
+for (let value of array) {
+    // code
+}
+forEach()
+
+Used to execute a function for every element.
+
+array.forEach(function(value) {
+    // code
+});
+
+Arrow-function syntax:
+
+array.forEach((value) => {
+    // code
+});
+6. map()
+
+map() creates a new array by transforming every element.
+
+Basic Syntax
+let newArray = array.map((value) => {
+    return newValue;
+});
+
+Important point:
+
+map() → transforms elements → returns a new array
+
+7. filter()
+
+filter() creates a new array containing only elements that satisfy a condition.
+
+Basic Syntax
+let newArray = array.filter((value) => {
+    return condition;
+});
+
+Important point:
+
+filter() → selects elements → returns a new array
+
+8. reduce()
+
+reduce() processes all elements and produces one final value.
+
+Basic Syntax
+let result = array.reduce((accumulator, value) => {
+    return updatedValue;
+}, initialValue);
+
+Important terms:
+
+accumulator → stores the result accumulated so far
+value → current array element
+initialValue → starting value
+
+reduce() → multiple values → one final value
+
+9. find()
+
+find() returns the first element that satisfies a condition.
+
+Basic Syntax
+let result = array.find((value) => {
+    return condition;
+});
+
+If no element satisfies the condition:
+
+undefined
+10. findIndex()
+
+findIndex() returns the index of the first element that satisfies a condition.
+
+Basic Syntax
+let index = array.findIndex((value) => {
+    return condition;
+});
+
+If no element satisfies the condition:
+
+-1
+Difference
+find()       → returns the element
+findIndex()  → returns the index
+11. some()
+
+some() checks whether at least one element satisfies a condition.
+
+Basic Syntax
+let result = array.some((value) => {
+    return condition;
+});
+
+Returns:
+
+true
+
+or
+
+false
+
+Think:
+
+"Is there at least one?"
+
+12. every()
+
+every() checks whether all elements satisfy a condition.
+
+Basic Syntax
+let result = array.every((value) => {
+    return condition;
+});
+
+Returns:
+
+true
+
+or
+
+false
+
+Think:
+
+"Do all of them satisfy the condition?"
+
+13. forEach()
+
+forEach() executes a function once for each element.
+
+Basic Syntax
+array.forEach((value) => {
+    // code
+});
+
+You can also access the index:
+
+array.forEach((value, index) => {
+    // code
+});
+
+Important:
+
+forEach() does not normally create or return a new array.
+
+14. sort()
+
+sort() is used to arrange array elements.
+
+Basic Syntax
+array.sort();
+
+For custom sorting:
+
+array.sort((a, b) => {
+    return a - b;
+});
+
+For descending order:
+
+array.sort((a, b) => {
+    return b - a;
+});
+
+Important:
+
+sort() modifies the original array.
+
+15. join()
+
+join() converts array elements into a string.
+
+Basic Syntax
+array.join(separator);
+
+If no separator is provided:
+
+array.join();
+16. Flattening Arrays
+
+Flattening means converting nested arrays into a less-nested or single-level array.
+
+flat()
+
+Basic syntax:
+
+array.flat();
+
+Specify the depth:
+
+array.flat(depth);
+
+For complete flattening:
+
+array.flat(Infinity);
+17. Removing Duplicate Values
+
+A common way to remove duplicates is using Set.
+
+Basic Syntax
+let uniqueArray = [...new Set(array)];
+
+Set stores unique values only.
+
+18. Objects
+
+An object stores data in key-value pairs.
+
+Creating an Object
+let objectName = {
+    key1: value1,
+    key2: value2
+};
+
+Structure:
+
+key → value
+19. Accessing and Updating Properties
+
+Suppose an object has properties.
+
+There are two main ways to access them.
+
+Dot notation
+object.property;
+Bracket notation
+object["property"];
+Updating a property
+object.property = newValue;
+Adding a new property
+object.newProperty = value;
+Deleting a property
+delete object.property;
+20. Nested Objects
+
+An object can contain another object.
+
+Basic Syntax
+let user = {
+    name: value,
+    address: {
+        city: value,
+        state: value
+    }
+};
+Accessing nested properties
+object.property.property;
+
+Or:
+
+object["property"]["property"];
+21. Object Methods
+
+A function stored inside an object is called a method.
+
+Basic Syntax
+let object = {
+    property: value,
+
+    method() {
+        // code
+    }
+};
+
+A method can be called using:
+
+object.method();
+22. Object.keys()
+
+Returns an array containing the object's property names/keys.
+
+Basic Syntax
+Object.keys(object);
+
+Return type:
+
+Array
+23. Object.values()
+
+Returns an array containing the object's property values.
+
+Basic Syntax
+Object.values(object);
+
+Return type:
+
+Array
+24. Object.entries()
+
+Returns an array containing the object's key-value pairs.
+
+Basic Syntax
+Object.entries(object);
+
+The result has the general structure:
+
+[
+    [key1, value1],
+    [key2, value2]
+]
+25. Object Copying
+
+Object copying means creating another object based on an existing object.
+
+There are two important types:
+
+Shallow Copy
+Deep Copy
+26. Shallow Copy
+
+A shallow copy copies the object's top-level properties.
+
+Common methods:
+
+Spread operator
+let copy = { ...original };
+Object.assign()
+let copy = Object.assign({}, original);
+
+Important:
+
+If the original object contains nested objects, a shallow copy does not create completely independent nested objects.
+
+27. Deep Copy
+
+A deep copy creates an independent copy of nested data as well.
+
+A simple modern approach is:
+
+let copy = structuredClone(original);
+
+Another traditional approach is:
+
+let copy = JSON.parse(JSON.stringify(original));
+
+However, JSON.parse(JSON.stringify()) has limitations with certain JavaScript data types, so structuredClone() is generally preferable when supported.
+
+28. Destructuring
+
+Destructuring allows you to extract values from arrays or objects into variables.
+
+There are two major types:
+
+Array Destructuring
+Object Destructuring
+Array destructuring
+let [variable1, variable2] = array;
+Object destructuring
+let { property1, property2 } = object;
+Renaming during object destructuring
+let { property: newVariable } = object;
+Default value
+let { property = defaultValue } = object;
+29. Spread Operator ...
+
+The spread operator expands/unpacks elements or properties.
+
+Array
+let newArray = [...array];
+Combining arrays
+let combined = [...array1, ...array2];
+Object
+let newObject = { ...object };
+Combining objects
+let combined = { ...object1, ...object2 };
+
+Think:
+
+Spread = unpack / expand
+
+30. Rest Operator ...
+
+The rest operator collects remaining values into an array or object.
+
+Although it uses the same ... syntax as spread, its purpose is different.
+
+In function parameters
+function functionName(...parameters) {
+    // code
+}
+In array destructuring
+let [first, ...rest] = array;
+In object destructuring
+let { first, ...rest } = object;
+
+Think:
+
+Rest = collect remaining
+
+31. Optional Chaining ?.
+
+Optional chaining allows you to safely access properties that might not exist.
+
+Basic Syntax
+object?.property;
+Nested property
+object?.property?.nestedProperty;
+Array element
+array?.[index];
+Method call
+object?.method?.();
+
+If the value before ?. is null or undefined, JavaScript returns:
+
+undefined
+
+instead of throwing an error.
+
+32. Nullish Coalescing ??
+
+The nullish coalescing operator provides a fallback value when the left side is:
+
+null
+
+or
+
+undefined
+Basic Syntax
+let result = value ?? fallbackValue;

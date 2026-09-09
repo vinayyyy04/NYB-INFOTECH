@@ -1,0 +1,209 @@
+
+ /* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+ /* BODY */
+
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f1f5f9;
+    color: #1e293b;
+    min-height: 100vh;
+}
+
+
+
+ /* MAIN CONTAINER */
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 40px auto;
+}
+
+
+ /* HEADER */
+
+
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    font-size: 36px;
+    margin-bottom: 8px;
+}
+
+.header p {
+    color: #64748b;
+    font-size: 16px;
+}
+
+
+
+/* CARD */
+
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+
+
+ /* SECTION */
+
+
+section {
+    margin-bottom: 35px;
+}
+
+section h2 {
+    font-size: 20px;
+    margin-bottom: 18px;
+}
+
+
+
+/* INFORMATION GRID */
+
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.info-box {
+    background: #f8fafc;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #e2e8f0;
+}
+
+.info-box span,
+.result-box span,
+.status span {
+    display: block;
+    color: #64748b;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.info-box strong,
+.result-box strong,
+.status strong {
+    font-size: 20px;
+}
+
+
+
+ /* RESULT GRID */
+
+
+.result-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.result-box {
+    padding: 20px;
+    border-radius: 10px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+}
+
+
+/* STATUS */
+
+
+.status {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.status div {
+    padding: 20px;
+    border-radius: 10px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+}
+
+
+
+ /* MARKS */
+
+
+.marks-container {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.mark {
+    padding: 12px 18px;
+    background: #f1f5f9;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+    margin-top: 25px;
+    color: #64748b;
+}
+
+
+/* ==============================
+   RESPONSIVE DESIGN
+================================= */
+
+@media (max-width: 768px) {
+
+    .info-grid,
+    .result-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .status {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .container {
+        width: 95%;
+        margin: 20px auto;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .info-grid,
+    .result-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .header h1 {
+        font-size: 28px;
+    }
+}

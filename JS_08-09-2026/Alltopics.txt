@@ -1,0 +1,309 @@
+1. Truthy and Falsy Values
+
+JavaScript evaluates a value as either truthy or falsy when used in a condition.
+
+Falsy values
+
+These values are treated as false:
+
+false
+0
+-0
+0n
+""
+null
+undefined
+NaN
+Truthy values
+
+Almost every other value is treated as true.
+
+Important: Empty arrays [] and empty objects {} are truthy.
+
+2. Conditional Statements
+
+Conditional statements are used to execute code based on a condition.
+
+if
+
+Executes a block of code when the condition is true.
+
+Syntax
+if (condition) {
+    // statements
+}
+if...else
+
+Executes one block if the condition is true, and another block if it is false.
+
+Syntax
+if (condition) {
+    // statements
+} else {
+    // statements
+}
+else if
+
+Used when there are multiple conditions to check.
+
+Syntax
+if (condition1) {
+    // statements
+} else if (condition2) {
+    // statements
+} else {
+    // statements
+}
+Nested Conditions
+
+An if statement placed inside another if statement is called a nested condition.
+
+Syntax
+if (condition1) {
+    if (condition2) {
+        // statements
+    }
+}
+
+It can also contain else or else if.
+
+3. switch
+
+switch is used to execute different blocks of code based on the value of an expression.
+
+Syntax
+switch (expression) {
+    case value1:
+        // statements
+        break;
+
+    case value2:
+        // statements
+        break;
+
+    default:
+        // statements
+}
+Important keywords
+case → specifies a possible value
+break → exits the switch
+default → executes when no case matches
+4. Ternary Operator
+
+The ternary operator is a short form of if...else.
+
+Syntax
+condition ? expressionIfTrue : expressionIfFalse;
+
+It is called ternary because it has three parts:
+
+Condition
+True expression
+False expression
+5. Loops
+
+Loops are used to repeat a block of code.
+
+JavaScript provides several types of loops.
+
+for Loop
+
+Used when the number of iterations is generally known or controlled by a counter.
+
+Syntax
+for (initialization; condition; increment/decrement) {
+    // statements
+}
+Three parts
+Initialization → runs first
+Condition → checked before each iteration
+Increment/Decrement → runs after each iteration
+while Loop
+
+Repeats code as long as the condition is true.
+
+Syntax
+while (condition) {
+    // statements
+}
+
+The condition is checked before executing the loop body.
+
+do...while Loop
+
+Executes the code first and checks the condition afterward.
+
+Syntax
+do {
+    // statements
+} while (condition);
+
+Important: A do...while loop executes at least once.
+
+for...in
+
+Used to iterate over the enumerable properties/keys of an object.
+
+Syntax
+for (let variable in object) {
+    // statements
+}
+
+Remember: for...in → generally used for keys/properties.
+
+for...of
+
+Used to iterate over the values of an iterable such as arrays, strings, maps, and sets.
+
+Syntax
+for (let variable of iterable) {
+    // statements
+}
+
+Remember: for...of → values.
+
+Easy distinction
+for...in  → keys / indexes
+for...of  → values
+6. Functions
+
+A function is a reusable block of code designed to perform a specific task.
+
+General syntax
+function functionName(parameters) {
+    // statements
+}
+7. Function Declaration
+
+A function created using the function keyword with a function name.
+
+Syntax
+function functionName(parameters) {
+    // statements
+}
+
+Function declarations are hoisted, meaning they can generally be called before their declaration in the code.
+
+8. Function Expression
+
+A function assigned to a variable.
+
+Syntax
+const functionName = function(parameters) {
+    // statements
+};
+
+The function itself can be anonymous.
+
+9. Arrow Functions
+
+Arrow functions provide a shorter syntax for writing functions.
+
+Syntax
+const functionName = (parameters) => {
+    // statements
+};
+Single parameter
+
+Parentheses can be omitted when there is exactly one parameter.
+
+const functionName = parameter => {
+    // statements
+};
+Implicit return
+
+For a single expression, braces and return can be omitted.
+
+const functionName = (parameters) => expression;
+10. Parameters and Arguments
+
+These two terms are related but different.
+
+Parameters
+
+Variables defined when a function is created.
+
+Syntax
+function functionName(parameter1, parameter2) {
+    // statements
+}
+Arguments
+
+Actual values passed when the function is called.
+
+Syntax
+functionName(argument1, argument2);
+
+Remember:
+
+Parameters → function definition
+Arguments  → function call
+11. Default Parameters
+
+A default parameter provides a default value when an argument is not supplied or is undefined.
+
+Syntax
+function functionName(parameter = defaultValue) {
+    // statements
+}
+
+Multiple default parameters can also be used.
+
+12. Rest Parameters
+
+Rest parameters allow a function to accept multiple arguments as an array.
+
+They are written using ....
+
+Syntax
+function functionName(...parameters) {
+    // statements
+}
+Important
+
+The rest parameter:
+
+Must be the last parameter
+Collects remaining arguments
+Is an array
+13. Arguments Object
+
+The arguments object contains the arguments passed to a regular function.
+
+Syntax
+function functionName() {
+    arguments;
+}
+
+It provides access to arguments using indexes.
+
+arguments[0]
+arguments[1]
+Important
+
+The arguments object is available in regular functions, but not in arrow functions.
+
+14. Recursive Functions
+
+A recursive function is a function that calls itself.
+
+A recursive function normally contains:
+
+Base condition → stops recursion
+Recursive call → calls the function again
+Basic syntax
+function functionName(parameters) {
+    if (baseCondition) {
+        return;
+    }
+
+    functionName(modifiedParameter);
+}
+15. Callback Functions
+
+A callback function is a function passed as an argument to another function, which can then be called later.
+
+Basic syntax
+function functionName(callback) {
+    callback();
+}
