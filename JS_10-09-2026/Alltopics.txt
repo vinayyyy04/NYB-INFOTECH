@@ -1,0 +1,274 @@
+1. Introduction to DOM
+
+DOM (Document Object Model) represents an HTML document as a tree of objects.
+
+Basic syntax:
+
+document
+document.body
+document.head
+document.documentElement
+
+2. Selecting DOM Elements
+getElementById()
+document.getElementById("id");
+getElementsByClassName()
+document.getElementsByClassName("class");
+getElementsByTagName()
+document.getElementsByTagName("tag");
+querySelector()
+document.querySelector("selector");
+querySelectorAll()
+document.querySelectorAll("selector");
+
+3. Reading and Modifying DOM Properties
+Read content
+element.textContent;
+element.innerHTML;
+element.innerText;
+Modify content
+element.textContent = "value";
+element.innerHTML = "value";
+Read/modify attributes
+element.getAttribute("attribute");
+element.setAttribute("attribute", "value");
+element.removeAttribute("attribute");
+Read/modify styles
+element.style.property;
+element.style.property = "value";
+Classes
+element.classList.add("class");
+element.classList.remove("class");
+element.classList.toggle("class");
+element.classList.contains("class");
+
+4. DOM Traversing
+Parent
+element.parentElement;
+element.parentNode;
+Children
+element.children;
+element.childNodes;
+First child
+element.firstElementChild;
+element.firstChild;
+Last child
+element.lastElementChild;
+element.lastChild;
+Next element
+element.nextElementSibling;
+element.nextSibling;
+Previous element
+element.previousElementSibling;
+element.previousSibling;
+
+5. Creating Elements Dynamically
+Create an element
+document.createElement("tag");
+Create text
+document.createTextNode("text");
+
+6. Adding and Removing Elements
+Add at the end
+parent.appendChild(element);
+Add using append()
+parent.append(element);
+Add at the beginning
+parent.prepend(element);
+Insert before another element
+parent.insertBefore(newElement, existingElement);
+Remove an element
+element.remove();
+Remove child
+parent.removeChild(child);
+Replace an element
+parent.replaceChild(newElement, oldElement);
+
+7. Event Listeners
+
+Basic syntax:
+
+element.addEventListener("event", function);
+
+Arrow function syntax:
+
+element.addEventListener("event", () => {
+    // code
+});
+
+Remove event listener:
+
+element.removeEventListener("event", function);
+
+8. Normal Events
+
+Common event syntax:
+
+element.onclick = function() {};
+element.onchange = function() {};
+element.oninput = function() {};
+element.onmouseover = function() {};
+element.onmouseout = function() {};
+element.onkeydown = function() {};
+element.onkeyup = function() {};
+element.onsubmit = function() {};
+element.onload = function() {};
+
+Using addEventListener():
+
+element.addEventListener("click", handler);
+element.addEventListener("change", handler);
+element.addEventListener("input", handler);
+element.addEventListener("mouseover", handler);
+element.addEventListener("keydown", handler);
+element.addEventListener("submit", handler);
+
+9. Event Bubbling
+
+Event moves from the target element → parent → ancestor elements.
+
+Basic syntax:
+
+element.addEventListener("event", handler);
+
+Stop bubbling:
+
+event.stopPropagation();
+
+10. Event Capturing
+
+Event moves from the ancestor → parent → target element.
+
+Basic syntax:
+
+element.addEventListener("event", handler, true);
+
+Or:
+
+element.addEventListener("event", handler, {
+    capture: true
+});
+
+11. Event Delegation
+
+Event delegation uses a parent element to handle events from its child elements.
+
+Basic syntax:
+
+parent.addEventListener("event", (event) => {
+    if (event.target.matches("selector")) {
+        // code
+    }
+});
+
+Useful properties:
+
+event.target;
+event.currentTarget;
+
+12. Throttling
+
+Throttling limits a function so it runs at most once within a specified time interval.
+
+Basic syntax:
+
+function throttle(callback, delay) {
+    let lastTime = 0;
+
+    return function (...args) {
+        const currentTime = Date.now();
+
+        if (currentTime - lastTime >= delay) {
+            lastTime = currentTime;
+            callback.apply(this, args);
+        }
+    };
+}
+
+Usage syntax:
+
+element.addEventListener("event", throttle(callback, delay));
+
+13. Debouncing
+
+Debouncing makes a function execute only after the event stops for a specified time.
+
+Basic syntax:
+
+function debounce(callback, delay) {
+    let timer;
+
+    return function (...args) {
+        clearTimeout(timer);
+
+        timer = setTimeout(() => {
+            callback.apply(this, args);
+        }, delay);
+    };
+}
+
+Usage syntax:
+
+element.addEventListener("event", debounce(callback, delay));
+BOM – Browser Object Model
+
+14. BOM
+
+BOM allows JavaScript to interact with the browser window and browser features.
+
+Basic objects:
+
+window
+navigator
+location
+history
+screen
+15. Output Methods
+console.log()
+console.log(value);
+console.error()
+console.error(value);
+console.warn()
+console.warn(value);
+alert()
+alert(message);
+confirm()
+confirm(message);
+prompt()
+prompt(message);
+Write to document
+document.write(value);
+
+16. Local Storage
+
+Local Storage stores data in the browser and generally remains available after the browser is closed.
+
+Store data
+localStorage.setItem("key", "value");
+Get data
+localStorage.getItem("key");
+Remove specific data
+localStorage.removeItem("key");
+Remove all data
+localStorage.clear();
+Get number of stored items
+localStorage.length;
+Get key by index
+localStorage.key(index);
+
+17. Session Storage
+
+Session Storage stores data for the current browser tab/session.
+
+Store data
+sessionStorage.setItem("key", "value");
+Get data
+sessionStorage.getItem("key");
+Remove specific data
+sessionStorage.removeItem("key");
+Remove all data
+sessionStorage.clear();
+Get number of stored items
+sessionStorage.length;
+Get key by index
+sessionStorage.key(index);

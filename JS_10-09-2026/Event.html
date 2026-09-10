@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Events</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            padding: 30px;
+        }
+
+        #carBox {
+            padding: 30px;
+            background: lightblue;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+        }
+
+        input {
+            padding: 10px;
+            width: 250px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>🚗 Car Events</h2>
+
+    <!-- Event Bubbling & Capturing -->
+    <div id="carBox">
+        <button id="carBtn">Click Car</button>
+    </div>
+
+    <!-- Event Delegation -->
+    <ul id="carList">
+        <li>BMW</li>
+        <li>Audi</li>
+        <li>Mercedes</li>
+    </ul>
+
+    <!-- Debouncing -->
+    <input id="search" type="text" placeholder="Search car...">
+
+    <!-- Throttling -->
+    <button id="scrollBtn">Move Mouse Here</button>
+
+    <p id="output"></p>
+
+    <script src="Event.js"></script>
+</body>
+</html>
