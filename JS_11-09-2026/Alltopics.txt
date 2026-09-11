@@ -1,0 +1,383 @@
+1. Synchronous vs Asynchronous JavaScript
+Synchronous JavaScript
+
+Definition: Code executes one statement at a time, in order. The next statement waits until the current one finishes.
+
+Basic syntax:
+
+statement1();
+statement2();
+statement3();
+Asynchronous JavaScript
+
+Definition: Code can start a task and continue executing other code without waiting for that task to finish.
+
+Basic syntax:
+
+setTimeout(() => {
+    // asynchronous task
+}, time);
+2. setTimeout()
+
+Definition: Executes a function once after a specified delay.
+
+Basic syntax:
+
+setTimeout(function, delay);
+3. setInterval()
+
+Definition: Executes a function repeatedly after a specified time interval.
+
+Basic syntax:
+
+setInterval(function, interval);
+4. clearTimeout()
+
+Definition: Cancels a timer created using setTimeout().
+
+Basic syntax:
+
+const timerId = setTimeout(function, delay);
+
+clearTimeout(timerId);
+5. clearInterval()
+
+Definition: Stops an interval created using setInterval().
+
+Basic syntax:
+
+const intervalId = setInterval(function, interval);
+
+clearInterval(intervalId);
+6. Callback Functions
+
+Definition: A callback is a function that is passed as an argument to another function and called later.
+
+Basic syntax:
+
+function mainFunction(callback) {
+    callback();
+}
+7. Callback Hell
+
+Definition: Callback Hell occurs when multiple callbacks are nested inside one another, making code difficult to read and maintain.
+
+Basic syntax:
+
+function1(() => {
+    function2(() => {
+        function3(() => {
+            function4(() => {
+                // code
+            });
+        });
+    });
+});
+8. Promises
+
+Definition: A Promise represents the eventual result of an asynchronous operation. It can be pending, fulfilled, or rejected.
+
+Basic syntax:
+
+const promise = new Promise((resolve, reject) => {
+    // operation
+
+    resolve(value);
+    // or
+    reject(error);
+});
+9. .then()
+
+Definition: Used to handle a successfully fulfilled Promise.
+
+Basic syntax:
+
+promise.then((result) => {
+    // success
+});
+10. .catch()
+
+Definition: Used to handle a rejected Promise or error.
+
+Basic syntax:
+
+promise.catch((error) => {
+    // error handling
+});
+11. .finally()
+
+Definition: Executes code after a Promise is settled, whether it is fulfilled or rejected.
+
+Basic syntax:
+
+promise.finally(() => {
+    // cleanup code
+});
+12. Promise.all()
+
+Definition: Waits for all Promises to fulfill. If one Promise rejects, the entire operation rejects.
+
+Basic syntax:
+
+Promise.all([promise1, promise2, promise3])
+    .then((results) => {
+        // results
+    })
+    .catch((error) => {
+        // error
+    });
+13. Promise.race()
+
+Definition: Returns the result of the first Promise that settles, whether fulfilled or rejected.
+
+Basic syntax:
+
+Promise.race([promise1, promise2, promise3])
+    .then((result) => {
+        // result
+    })
+    .catch((error) => {
+        // error
+    });
+14. Promise.allSettled()
+
+Definition: Waits for all Promises to finish, regardless of whether they fulfill or reject.
+
+Basic syntax:
+
+Promise.allSettled([promise1, promise2, promise3])
+    .then((results) => {
+        // results
+    });
+15. Promise.any()
+
+Definition: Returns the result of the first Promise that fulfills. It rejects only when all Promises reject.
+
+Basic syntax:
+
+Promise.any([promise1, promise2, promise3])
+    .then((result) => {
+        // result
+    })
+    .catch((error) => {
+        // error
+    });
+16. Async/Await
+async
+
+Definition: The async keyword makes a function return a Promise.
+
+Basic syntax:
+
+async function functionName() {
+    // code
+}
+await
+
+Definition: await pauses execution inside an async function until a Promise settles.
+
+Basic syntax:
+
+const result = await promise;
+17. Error Handling
+
+Definition: Error handling is the process of detecting and managing errors so the program can continue or fail safely.
+
+Basic syntax:
+
+try {
+    // code
+} catch (error) {
+    // handle error
+} finally {
+    // cleanup
+}
+Fetch API
+18. Fetch API
+
+Definition: The Fetch API is used to request and receive resources/data from a server.
+
+Basic syntax:
+
+fetch(url);
+19. GET Request
+
+Definition: A GET request is used to retrieve data from a server.
+
+Basic syntax:
+
+fetch(url, {
+    method: "GET"
+});
+20. POST Request
+
+Definition: A POST request is used to send/create data on a server.
+
+Basic syntax:
+
+fetch(url, {
+    method: "POST",
+    headers: {},
+    body: JSON.stringify(data)
+});
+21. PUT Request
+
+Definition: A PUT request is generally used to replace or completely update existing data.
+
+Basic syntax:
+
+fetch(url, {
+    method: "PUT",
+    headers: {},
+    body: JSON.stringify(data)
+});
+22. PATCH Request
+
+Definition: A PATCH request is used to partially update existing data.
+
+Basic syntax:
+
+fetch(url, {
+    method: "PATCH",
+    headers: {},
+    body: JSON.stringify(data)
+});
+23. DELETE Request
+
+Definition: A DELETE request is used to remove data from a server.
+
+Basic syntax:
+
+fetch(url, {
+    method: "DELETE"
+});
+24. Request and Response
+Request
+
+Definition: A request is the information sent from the client to the server.
+
+Basic syntax:
+
+fetch(url, {
+    method: "GET",
+    headers: {},
+    body: data
+});
+Response
+
+Definition: A response is the information returned from the server to the client.
+
+Basic syntax:
+
+fetch(url)
+    .then(response => {
+        // handle response
+    });
+25. Headers
+
+Definition: Headers contain additional information or metadata about a request or response.
+
+Basic syntax:
+
+headers: {
+    "Content-Type": "application/json"
+}
+26. JSON Data
+
+Definition: JSON (JavaScript Object Notation) is a common format used to send and receive structured data.
+
+Basic syntax:
+
+JSON.stringify(data);
+response.json();
+27. Loading and Error Handling
+
+Definition: Loading handling manages the UI while data is being fetched, while error handling manages problems that occur during the request.
+
+Basic syntax:
+
+try {
+    // request
+} catch (error) {
+    // error
+} finally {
+    // loading complete
+}
+JavaScript Modules
+28. Modules
+
+Definition: Modules allow JavaScript code to be divided into separate files and reused through import and export.
+
+Export syntax
+export { name };
+
+or
+
+export default name;
+Import syntax
+import { name } from "./file.js";
+
+or
+
+import name from "./file.js";
+29. Iterators
+
+Definition: An iterator is an object that provides a way to access values one at a time.
+
+Basic syntax:
+
+const iterator = object[Symbol.iterator]();
+
+iterator.next();
+
+The next() method returns an object containing:
+
+{
+    value: value,
+    done: false
+}
+30. Generators
+
+Definition: A generator is a special function that can pause and resume its execution using yield.
+
+Basic syntax:
+
+function* generatorName() {
+    yield value;
+}
+
+Calling it:
+
+const generator = generatorName();
+31. Classes and Objects – Introduction
+Class
+
+Definition: A class is a blueprint/template for creating objects.
+
+Basic syntax:
+
+class ClassName {
+    constructor() {
+        // properties
+    }
+
+    methodName() {
+        // method
+    }
+}
+Object
+
+Definition: An object is an instance of a class containing properties and methods.
+
+Basic syntax:
+
+const objectName = new ClassName();
+32. Prototype – Introduction
+
+Definition: A prototype is an object from which JavaScript objects can inherit properties and methods.
+
+Basic syntax:
+
+ObjectName.prototype.methodName = function() {
+    // code
+};

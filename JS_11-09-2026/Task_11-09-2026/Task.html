@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="Task.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>🌤️ Weather Dashboard</h1>
+        <p>Fetch and manage weather data</p>
+
+        <div class="search">
+            <input
+                type="text"
+                id="city"
+                placeholder="Enter city..."
+            >
+
+            <button onclick="getWeather()">Search</button>
+        </div>
+
+        <div id="status"></div>
+
+        <div id="weather"></div>
+
+        <div class="buttons">
+            <button onclick="postData()">POST</button>
+            <button onclick="putData()">PUT</button>
+            <button onclick="patchData()">PATCH</button>
+            <button onclick="deleteData()">DELETE</button>
+        </div>
+
+    </div>
+
+    <script src="Task.js"></script>
+
+</body>
+</html>
