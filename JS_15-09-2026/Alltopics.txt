@@ -1,0 +1,201 @@
+1. Function Declaration
+
+Definition: A function declaration defines a function using the function keyword. It can be called before its declaration because function declarations are hoisted.
+
+Basic Syntax:
+
+function functionName(parameters) {
+    // function body
+}
+2. Function Expression
+
+Definition: A function expression stores a function inside a variable. The function is created when the execution reaches that line.
+
+Basic Syntax:
+
+const functionName = function(parameters) {
+    // function body
+};
+3. Named and Anonymous Functions
+Named Function
+
+Definition: A function that has a name.
+
+Basic Syntax:
+
+function functionName() {
+    // function body
+}
+Anonymous Function
+
+Definition: A function that does not have its own name and is usually assigned to a variable or passed as an argument.
+
+Basic Syntax:
+
+function() {
+    // function body
+}
+4. Arrow Functions
+
+Definition: Arrow functions provide a shorter syntax for writing functions. They use the => operator.
+
+Basic Syntax:
+
+const functionName = (parameters) => {
+    // function body
+};
+5. Callback Functions
+
+Definition: A callback function is a function passed as an argument to another function and executed later by that function.
+
+Basic Syntax:
+
+function mainFunction(callback) {
+    callback();
+}
+6. Higher-Order Functions
+
+Definition: A higher-order function is a function that takes another function as an argument, returns a function, or does both.
+
+Basic Syntax:
+
+function higherOrderFunction(callback) {
+    // function body
+}
+7. First-Class Functions
+
+Definition: In JavaScript, functions are treated as values. They can be stored in variables, passed as arguments, returned from functions, and stored in data structures.
+
+Basic Syntax:
+
+const myFunction = function() {
+    // function body
+};
+8. Default Parameters
+
+Definition: Default parameters allow a function parameter to have a default value when no value or undefined is passed.
+
+Basic Syntax:
+
+function functionName(parameter = defaultValue) {
+    // function body
+}
+9. Rest Parameters
+
+Definition: Rest parameters collect multiple arguments into a single array using the ... operator.
+
+Basic Syntax:
+
+function functionName(...parameters) {
+    // function body
+}
+10. Arguments Object
+
+Definition: The arguments object contains all arguments passed to a regular function. It is array-like but is not a real array.
+
+Basic Syntax:
+
+function functionName() {
+    // arguments
+}
+
+Note: Arrow functions do not have their own arguments object.
+
+Scope
+11. Global Scope
+
+Definition: A variable declared outside all functions and blocks has global scope and can generally be accessed throughout the script.
+
+Basic Syntax:
+
+let variableName = value;
+12. Function Scope
+
+Definition: A variable declared inside a function has function scope and can be accessed only within that function.
+
+Basic Syntax:
+
+function functionName() {
+    let variableName = value;
+}
+13. Block Scope
+
+Definition: A variable declared using let or const inside a block {} is accessible only within that block.
+
+Basic Syntax:
+
+{
+    let variableName = value;
+    const anotherVariable = value;
+}
+14. Lexical Scope
+
+Definition: Lexical scope means a function can access variables based on where the function is written in the code, including variables from its outer scopes.
+
+Basic Syntax:
+
+function outerFunction() {
+    let variableName = value;
+
+    function innerFunction() {
+        // Can access outer scope
+    }
+}
+15. Closures
+
+Definition: A closure occurs when an inner function remembers and can access variables from its outer function even after the outer function has finished executing.
+
+Basic Syntax:
+
+function outerFunction() {
+    let variableName = value;
+
+    return function innerFunction() {
+        // Access outer variable
+    };
+}
+16. IIFE
+
+Definition: IIFE stands for Immediately Invoked Function Expression. It is a function that is executed immediately after it is created.
+
+Basic Syntax:
+
+(function() {
+    // function body
+})();
+Hoisting & Variables
+17. Hoisting
+
+Definition: Hoisting is JavaScript's behavior of processing certain variable and function declarations before executing the code, making them available according to their declaration type.
+
+Basic Syntax:
+
+function functionName() {
+    // function body
+}
+
+var variableName;
+
+var declarations are hoisted differently from let and const, and function declarations are hoisted with their function definition.
+
+18. var
+
+Definition: var is an older keyword used to declare variables. It is function-scoped and can be redeclared and reassigned.
+
+Basic Syntax:
+
+var variableName = value;
+19. let
+
+Definition: let is used to declare variables that can be reassigned but cannot be redeclared in the same scope. It is block-scoped.
+
+Basic Syntax:
+
+let variableName = value;
+20. const
+
+Definition: const is used to declare variables that cannot be reassigned after initialization. It is block-scoped and must be initialized when declared.
+
+Basic Syntax:
+
+const variableName = value;

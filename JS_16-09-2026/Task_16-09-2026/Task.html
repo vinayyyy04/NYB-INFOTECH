@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FitTrack - Workout Dashboard</title>
+
+    <link rel="stylesheet" href="Task.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+
+            <div>
+                <h1>🏋️ FitTrack</h1>
+                <p>Track your workouts and fitness progress</p>
+            </div>
+
+            <div class="profile">
+                👤 <span id="profileName">Alex</span>
+            </div>
+
+        </header>
+
+
+        <!-- Search & Filter -->
+
+        <section class="controls">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="🔍 Search workout..."
+            >
+
+            <select id="categoryFilter">
+
+                <option value="all">
+                    All Categories
+                </option>
+
+                <option value="Strength">
+                    Strength
+                </option>
+
+                <option value="Cardio">
+                    Cardio
+                </option>
+
+                <option value="Flexibility">
+                    Flexibility
+                </option>
+
+            </select>
+
+            <select id="sortWorkout">
+
+                <option value="default">
+                    Sort By
+                </option>
+
+                <option value="calories">
+                    Calories Burned
+                </option>
+
+                <option value="duration">
+                    Duration
+                </option>
+
+                <option value="name">
+                    Workout Name
+                </option>
+
+            </select>
+
+        </section>
+
+
+        <!-- Statistics -->
+
+        <section class="stats">
+
+            <div class="stat-card">
+                <span>🏃 Workouts</span>
+                <strong id="totalWorkouts">0</strong>
+            </div>
+
+            <div class="stat-card">
+                <span>🔥 Calories</span>
+                <strong id="totalCalories">0</strong>
+            </div>
+
+            <div class="stat-card">
+                <span>⏱️ Total Time</span>
+                <strong>
+                    <span id="totalTime">0</span> min
+                </strong>
+            </div>
+
+            <div class="stat-card">
+                <span>⭐ Best Calories</span>
+                <strong id="bestCalories">0</strong>
+            </div>
+
+        </section>
+
+
+        <!-- Workout Cards -->
+
+        <main
+            id="workoutContainer"
+            class="workouts">
+        </main>
+
+    </div>
+
+
+    <script src="Task.js"></script>
+
+</body>
+
+</html>

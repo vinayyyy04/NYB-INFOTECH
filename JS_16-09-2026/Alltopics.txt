@@ -1,0 +1,307 @@
+1. Array Creation
+
+Definition:
+An array is a collection of multiple values stored in a single variable. Arrays can contain different types of values.
+
+Basic Syntax:
+
+let arrayName = [value1, value2, value3];
+2. Adding and Removing Elements
+
+Definition:
+JavaScript provides methods to add or remove elements from an array.
+
+Basic Syntax:
+
+array.push(value);      // Add at end
+array.pop();            // Remove from end
+
+array.unshift(value);   // Add at beginning
+array.shift();          // Remove from beginning
+3. Searching Arrays
+
+Definition:
+Searching arrays means finding whether a particular value exists or finding its position.
+
+Basic Syntax:
+
+array.includes(value);
+array.indexOf(value);
+array.lastIndexOf(value);
+4. Array Iteration
+
+Definition:
+Array iteration means going through the elements of an array one by one.
+
+Basic Syntax:
+
+for (let item of array) {
+    // code
+}
+5. map()
+
+Definition:
+map() creates a new array by applying a function to every element of the original array.
+
+Basic Syntax:
+
+array.map(function(item) {
+    // return modified value
+});
+6. filter()
+
+Definition:
+filter() creates a new array containing only the elements that satisfy a condition.
+
+Basic Syntax:
+
+array.filter(function(item) {
+    return condition;
+});
+7. reduce()
+
+Definition:
+reduce() processes all array elements and reduces them into a single value.
+
+Basic Syntax:
+
+array.reduce(function(accumulator, item) {
+    return updatedValue;
+}, initialValue);
+8. forEach()
+
+Definition:
+forEach() executes a function once for every element in an array.
+
+Basic Syntax:
+
+array.forEach(function(item) {
+    // code
+});
+9. find()
+
+Definition:
+find() returns the first element that satisfies a condition.
+
+Basic Syntax:
+
+array.find(function(item) {
+    return condition;
+});
+10. findIndex()
+
+Definition:
+findIndex() returns the index of the first element that satisfies a condition.
+
+Basic Syntax:
+
+array.findIndex(function(item) {
+    return condition;
+});
+11. some()
+
+Definition:
+some() checks whether at least one element satisfies a condition. It returns true or false.
+
+Basic Syntax:
+
+array.some(function(item) {
+    return condition;
+});
+12. every()
+
+Definition:
+every() checks whether all elements satisfy a condition. It returns true or false.
+
+Basic Syntax:
+
+array.every(function(item) {
+    return condition;
+});
+13. sort()
+
+Definition:
+sort() arranges the elements of an array in a specified order. By default, it sorts elements as strings.
+
+Basic Syntax:
+
+array.sort();
+
+For custom sorting:
+
+array.sort(function(a, b) {
+    return a - b;
+});
+14. join()
+
+Definition:
+join() combines all array elements into a single string using a specified separator.
+
+Basic Syntax:
+
+array.join(separator);
+15. flat()
+
+Definition:
+flat() creates a new array by removing nested array levels.
+
+Basic Syntax:
+
+array.flat(depth);
+16. Removing Duplicates
+
+Definition:
+Removing duplicates means creating an array that contains only unique values.
+
+Basic Syntax:
+
+let uniqueArray = [...new Set(array)];
+JavaScript Objects
+17. Objects
+
+Definition:
+An object is a collection of data stored as key-value pairs.
+
+Basic Syntax:
+
+let objectName = {
+    key: value
+};
+18. Object Creation
+
+Definition:
+Object creation means creating an object to store related data and properties.
+
+Basic Syntax:
+
+let objectName = {
+    property1: value1,
+    property2: value2
+};
+19. Nested Objects
+
+Definition:
+A nested object is an object that contains another object as one of its properties.
+
+Basic Syntax:
+
+let objectName = {
+    property: {
+        nestedProperty: value
+    }
+};
+20. Accessing and Updating Properties
+
+Definition:
+Object properties can be accessed and their values can be changed.
+
+Dot Notation:
+
+object.property;
+object.property = newValue;
+
+Bracket Notation:
+
+object["property"];
+object["property"] = newValue;
+21. Object Methods
+
+Definition:
+An object method is a function stored as a property of an object.
+
+Basic Syntax:
+
+let objectName = {
+    methodName: function() {
+        // code
+    }
+};
+
+Modern syntax:
+
+let objectName = {
+    methodName() {
+        // code
+    }
+};
+22. Object.keys()
+
+Definition:
+Object.keys() returns an array containing all the keys/property names of an object.
+
+Basic Syntax:
+
+Object.keys(object);
+23. Object.values()
+
+Definition:
+Object.values() returns an array containing all the values of an object.
+
+Basic Syntax:
+
+Object.values(object);
+24. Object.entries()
+
+Definition:
+Object.entries() returns an array containing the object's key-value pairs.
+
+Basic Syntax:
+
+Object.entries(object);
+Modern JavaScript
+25. Object Destructuring
+
+Definition:
+Object destructuring allows you to extract properties from an object and store them in variables.
+
+Basic Syntax:
+
+let { property1, property2 } = object;
+26. Spread Operator
+
+Definition:
+The spread operator ... expands the elements of an array or properties of an object.
+
+Basic Syntax with Array:
+
+let newArray = [...oldArray];
+
+Basic Syntax with Object:
+
+let newObject = { ...oldObject };
+27. Rest Operator
+
+Definition:
+The rest operator ... collects multiple values into a single array or object.
+
+Basic Syntax with Function:
+
+function functionName(...values) {
+    // code
+}
+
+Basic Syntax with Destructuring:
+
+let [first, ...remaining] = array;
+28. Shallow Copy
+
+Definition:
+A shallow copy creates a new array or object, but nested objects/arrays are still referenced from the original.
+
+Basic Syntax:
+
+Array:
+
+let copy = [...original];
+
+Object:
+
+let copy = { ...original };
+29. Deep Copy
+
+Definition:
+A deep copy creates a completely independent copy, including nested objects and arrays.
+
+Basic Syntax:
+
+let copy = structuredClone(original);
