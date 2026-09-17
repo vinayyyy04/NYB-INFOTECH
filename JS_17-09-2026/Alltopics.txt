@@ -1,0 +1,261 @@
+1. DOM Structure
+
+Definition:
+DOM (Document Object Model) represents an HTML document as a tree structure of objects, where elements, attributes, and text are represented as nodes.
+
+Basic Syntax:
+
+document
+document.documentElement
+document.head
+document.body
+2. Selecting Elements
+
+Definition:
+Selecting elements means finding and accessing HTML elements from the DOM using JavaScript.
+
+Basic Syntax:
+
+document.getElementById("id");
+
+document.getElementsByClassName("class");
+
+document.getElementsByTagName("tag");
+
+document.querySelector("selector");
+
+document.querySelectorAll("selector");
+3. Reading and Updating DOM Properties
+
+Definition:
+DOM properties allow you to read or modify the content, attributes, values, and other properties of HTML elements.
+
+Basic Syntax:
+
+element.textContent;
+
+element.innerHTML;
+
+element.value;
+
+element.id;
+
+element.className;
+
+element.textContent = "new content";
+
+element.value = "new value";
+4. Creating Elements Dynamically
+
+Definition:
+Creating elements dynamically means creating new HTML elements using JavaScript while the webpage is running.
+
+Basic Syntax:
+
+document.createElement("element");
+5. Adding and Removing Elements
+
+Definition:
+Adding elements means inserting new elements into the DOM, while removing elements means deleting existing elements from the DOM.
+
+Basic Syntax:
+
+parent.appendChild(element);
+
+parent.append(element);
+
+parent.prepend(element);
+
+element.remove();
+
+parent.removeChild(element);
+6. DOM Traversing
+
+Definition:
+DOM traversing means moving between related elements or nodes in the DOM tree.
+
+Basic Syntax:
+
+element.parentElement;
+
+element.children;
+
+element.firstElementChild;
+
+element.lastElementChild;
+
+element.nextElementSibling;
+
+element.previousElementSibling;
+Events
+7. Events
+
+Definition:
+Events are actions or occurrences that happen in a webpage, such as clicking, typing, submitting, loading, or moving the mouse.
+
+Basic Syntax:
+
+element.event = function() {
+    // code
+};
+8. Event Listeners
+
+Definition:
+An event listener waits for a specific event to occur and executes a function when that event happens.
+
+Basic Syntax:
+
+element.addEventListener("event", function() {
+    // code
+});
+9. Event Object
+
+Definition:
+The event object contains information about the event that occurred.
+
+Basic Syntax:
+
+function(event) {
+    event.type;
+    event.target;
+}
+
+With an event listener:
+
+element.addEventListener("event", function(event) {
+    // code
+});
+10. Event Bubbling
+
+Definition:
+Event bubbling is the process where an event starts from the target element and moves upward through its parent elements.
+
+Basic Syntax:
+
+element.addEventListener("event", handler);
+
+The event normally propagates:
+
+Target → Parent → Parent → Document
+11. Event Capturing
+
+Definition:
+Event capturing is the process where an event travels from the outermost parent toward the target element.
+
+Basic Syntax:
+
+element.addEventListener("event", handler, true);
+
+The event travels:
+
+Document → Parent → Target
+12. Event Delegation
+
+Definition:
+Event delegation means attaching a single event listener to a parent element to handle events from its child elements.
+
+Basic Syntax:
+
+parent.addEventListener("event", function(event) {
+    // handle child event
+});
+13. Event Binding
+
+Definition:
+Event binding means connecting an event to an element so that a specific function executes when that event occurs.
+
+Basic Syntax:
+
+element.addEventListener("event", function() {
+    // code
+});
+
+Common older syntax:
+
+element.onclick = function() {
+    // code
+};
+Performance
+14. Throttling
+
+Definition:
+Throttling limits how often a function can execute within a specific time period, even if the event occurs many times.
+
+Basic Syntax:
+
+function throttle(callback, delay) {
+    // throttling logic
+}
+
+Usage structure:
+
+element.addEventListener("event", throttle(callback, delay));
+15. Debouncing
+
+Definition:
+Debouncing delays function execution until a specific amount of time has passed without the event occurring again.
+
+Basic Syntax:
+
+function debounce(callback, delay) {
+    // debouncing logic
+}
+
+Usage structure:
+
+element.addEventListener("event", debounce(callback, delay));
+Browser Storage
+16. Browser Storage
+
+Definition:
+Browser Storage allows websites to store data in the user's browser so that the data can be accessed later.
+
+Main types:
+
+localStorage
+sessionStorage
+17. Local Storage
+
+Definition:
+localStorage stores data in the browser with no automatic expiration. The data remains until it is manually removed or cleared.
+
+Basic Syntax:
+
+localStorage.setItem("key", "value");
+
+localStorage.getItem("key");
+
+localStorage.removeItem("key");
+
+localStorage.clear();
+18. Session Storage
+
+Definition:
+sessionStorage stores data for the current browser tab/session. The data is removed when that tab/session ends.
+
+Basic Syntax:
+
+sessionStorage.setItem("key", "value");
+
+sessionStorage.getItem("key");
+
+sessionStorage.removeItem("key");
+
+sessionStorage.clear();
+JSON
+19. JSON.stringify()
+
+Definition:
+JSON.stringify() converts a JavaScript value, commonly an object or array, into a JSON string.
+
+Basic Syntax:
+
+JSON.stringify(value);
+20. JSON.parse()
+
+Definition:
+JSON.parse() converts a valid JSON string back into a JavaScript value, such as an object or array.
+
+Basic Syntax:
+
+JSON.parse(jsonString);

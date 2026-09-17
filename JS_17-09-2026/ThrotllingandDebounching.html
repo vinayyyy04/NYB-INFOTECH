@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Throttle & Debounce</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Throttle & Debounce</h1>
+
+        <div class="card">
+            <h2>🔄 Throttling</h2>
+            <p>Move your mouse inside the box.</p>
+            <div id="mouseBox">Move Mouse Here</div>
+            <p>Mouse events handled: <span id="mouseCount">0</span></p>
+        </div>
+
+        <div class="card">
+            <h2>⌨️ Debouncing</h2>
+            <p>Type something in the search box.</p>
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search something..."
+            >
+            <p id="searchResult">Start typing...</p>
+        </div>
+    </div>
+
+    <script src="ThrotllingandDEbounching.js"></script>
+</body>
+</html>
