@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Directory</title>
+
+    <link rel="stylesheet" href="Task.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header class="header">
+            <h1>👥 User Directory</h1>
+            <p>Explore users from an API</p>
+        </header>
+
+        <section class="controls">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="🔍 Search users..."
+            >
+
+            <select id="filterCity">
+                <option value="all">All Cities</option>
+            </select>
+
+            <button id="refreshBtn">
+                🔄 Refresh
+            </button>
+
+        </section>
+
+        <div id="statusMessage" class="status"></div>
+
+        <section id="userContainer" class="user-grid"></section>
+
+    </div>
+
+    <script src="Task.js"></script>
+</body>
+</html>

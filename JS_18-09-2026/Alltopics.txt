@@ -1,0 +1,499 @@
+1. Asynchronous JavaScript
+Synchronous JavaScript
+
+Definition: Code executes one line at a time, and each line waits for the previous line to finish.
+
+Syntax:
+
+console.log("First");
+console.log("Second");
+Asynchronous JavaScript
+
+Definition: Some tasks can run later without blocking the execution of other code.
+
+Syntax:
+
+setTimeout(() => {
+    console.log("Done");
+}, 1000);
+2. Call Stack
+
+Definition: The Call Stack keeps track of the functions currently being executed. It follows LIFO (Last In, First Out).
+
+Syntax:
+
+function greet() {
+    console.log("Hello");
+}
+
+greet();
+3. Web APIs
+
+Definition: Web APIs are browser-provided features that handle tasks like timers, DOM events, and network requests outside the JavaScript engine.
+
+Syntax:
+
+setTimeout(() => {
+    console.log("Hello");
+}, 1000);
+4. Callback Queue
+
+Definition: The Callback Queue stores callback functions that are ready to execute after asynchronous tasks are completed.
+
+Syntax:
+
+setTimeout(() => {
+    console.log("Hello");
+}, 1000);
+5. Microtask Queue
+
+Definition: The Microtask Queue stores high-priority asynchronous callbacks, mainly from Promises.
+
+Syntax:
+
+Promise.resolve().then(() => {
+    console.log("Microtask");
+});
+6. Event Loop
+
+Definition: The Event Loop continuously checks whether the Call Stack is empty and moves waiting tasks from queues to the Call Stack.
+
+Basic flow:
+
+Call Stack
+    ↓
+Web APIs
+    ↓
+Task Queues
+    ↓
+Event Loop
+    ↓
+Call Stack
+7. setTimeout()
+
+Definition: Executes a function once after a specified delay.
+
+Syntax:
+
+setTimeout(() => {
+    console.log("Hello");
+}, 2000);
+8. setInterval()
+
+Definition: Executes a function repeatedly after a specified time interval.
+
+Syntax:
+
+setInterval(() => {
+    console.log("Hello");
+}, 1000);
+9. Promises
+
+Definition: A Promise represents the eventual success or failure of an asynchronous operation.
+
+States:
+
+Pending
+Fulfilled
+Rejected
+
+Syntax:
+
+const promise = new Promise((resolve, reject) => {
+    if (success) {
+        resolve("Success");
+    } else {
+        reject("Failed");
+    }
+});
+10. .then()
+
+Definition: .then() handles the successful result of a Promise.
+
+Syntax:
+
+promise.then((result) => {
+    console.log(result);
+});
+11. .catch()
+
+Definition: .catch() handles a rejected Promise or error.
+
+Syntax:
+
+promise.catch((error) => {
+    console.log(error);
+});
+12. .finally()
+
+Definition: .finally() executes whether the Promise is fulfilled or rejected.
+
+Syntax:
+
+promise.finally(() => {
+    console.log("Completed");
+});
+13. Promise.all()
+
+Definition: Waits for all Promises to fulfill. If one rejects, the entire Promise rejects.
+
+Syntax:
+
+Promise.all([promise1, promise2, promise3])
+    .then((results) => {
+        console.log(results);
+    })
+    .catch((error) => {
+        console.log(error);
+    });
+14. Promise.race()
+
+Definition: Returns the result of the first Promise that settles, whether fulfilled or rejected.
+
+Syntax:
+
+Promise.race([promise1, promise2])
+    .then((result) => {
+        console.log(result);
+    });
+15. Promise.allSettled()
+
+Definition: Waits for all Promises to finish and returns the status of every Promise, whether fulfilled or rejected.
+
+Syntax:
+
+Promise.allSettled([promise1, promise2])
+    .then((results) => {
+        console.log(results);
+    });
+16. Promise.any()
+
+Definition: Returns the result of the first Promise that fulfills. It rejects only if all Promises reject.
+
+Syntax:
+
+Promise.any([promise1, promise2, promise3])
+    .then((result) => {
+        console.log(result);
+    });
+17. Async/Await
+async
+
+Definition: Makes a function return a Promise.
+
+Syntax:
+
+async function getData() {
+    return "Data";
+}
+await
+
+Definition: Waits for a Promise to settle inside an async function.
+
+Syntax:
+
+async function getData() {
+    const result = await promise;
+    console.log(result);
+}
+18. Error Handling
+
+Definition: Error handling is used to detect and handle runtime errors without stopping the entire application.
+
+Syntax:
+
+try {
+    // code
+} catch (error) {
+    console.log(error);
+} finally {
+    // always executes
+}
+19. Fetch API
+
+Definition: Fetch API is used to make HTTP requests and communicate with servers/APIs.
+
+Syntax:
+
+fetch("https://example.com/data")
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.log(error));
+20. HTTP Methods
+GET
+
+Definition: Used to retrieve data.
+
+fetch(url, {
+    method: "GET"
+});
+POST
+
+Definition: Used to create/send new data.
+
+fetch(url, {
+    method: "POST",
+    body: JSON.stringify(data)
+});
+PUT
+
+Definition: Used to replace/update an entire resource.
+
+fetch(url, {
+    method: "PUT",
+    body: JSON.stringify(data)
+});
+PATCH
+
+Definition: Used to partially update a resource.
+
+fetch(url, {
+    method: "PATCH",
+    body: JSON.stringify(data)
+});
+DELETE
+
+Definition: Used to delete a resource.
+
+fetch(url, {
+    method: "DELETE"
+});
+Modern JavaScript — ES6+
+21. ES6+ Features
+
+Definition: ES6+ refers to modern JavaScript features introduced from ES6 (ECMAScript 2015) and later versions.
+
+Examples:
+
+let name = "Raj";
+const age = 22;
+
+const greet = () => {
+    console.log("Hello");
+};
+22. Destructuring
+
+Definition: Destructuring extracts values from arrays or objects into variables.
+
+Array
+const [first, second] = numbers;
+Object
+const { name, age } = user;
+23. Spread Operator
+
+Definition: Spread (...) expands the elements/properties of an array or object.
+
+Syntax:
+
+const newArray = [...oldArray];
+
+const newObject = { ...oldObject };
+24. Rest Operator
+
+Definition: Rest (...) collects multiple values into a single array or object.
+
+Syntax:
+
+function add(...numbers) {
+    console.log(numbers);
+}
+25. Template Literals
+
+Definition: Template literals use backticks and allow variables/expressions inside ${}.
+
+Syntax:
+
+const name = "Raj";
+
+console.log(`Hello ${name}`);
+26. Optional Chaining
+
+Definition: Optional chaining (?.) safely accesses nested properties without throwing an error if a value is null or undefined.
+
+Syntax:
+
+console.log(user?.address?.city);
+27. Nullish Coalescing
+
+Definition: Nullish coalescing (??) provides a default value only when the left side is null or undefined.
+
+Syntax:
+
+const name = username ?? "Guest";
+28. Modules
+
+Definition: Modules allow JavaScript code to be divided into separate files and shared using export and import.
+
+Export
+export const name = "Raj";
+Import
+import { name } from "./user.js";
+29. Map
+
+Definition: Map is a collection that stores key-value pairs and allows keys of any data type.
+
+Syntax:
+
+const users = new Map();
+
+users.set("id", 101);
+users.get("id");
+30. Set
+
+Definition: Set is a collection that stores unique values.
+
+Syntax:
+
+const numbers = new Set();
+
+numbers.add(10);
+numbers.add(20);
+31. WeakMap
+
+Definition: WeakMap stores key-value pairs where keys must be objects and does not prevent those objects from being garbage collected.
+
+Syntax:
+
+const weakMap = new WeakMap();
+
+const user = {};
+weakMap.set(user, "Data");
+32. WeakSet
+
+Definition: WeakSet stores unique objects and does not prevent them from being garbage collected.
+
+Syntax:
+
+const weakSet = new WeakSet();
+
+const user = {};
+weakSet.add(user);
+Object-Oriented JavaScript
+33. Objects
+
+Definition: An object is a collection of key-value pairs used to represent data and behavior.
+
+Syntax:
+
+const user = {
+    name: "Raj",
+    age: 22
+};
+34. Constructor Functions
+
+Definition: A constructor function is a regular function used with new to create multiple similar objects.
+
+Syntax:
+
+function User(name, age) {
+    this.name = name;
+    this.age = age;
+}
+
+const user1 = new User("Raj", 22);
+35. Classes
+
+Definition: A class is a blueprint for creating objects.
+
+Syntax:
+
+class User {
+    // properties and methods
+}
+36. Constructor
+
+Definition: A constructor() is a special method that runs automatically when a new object is created from a class.
+
+Syntax:
+
+class User {
+    constructor(name) {
+        this.name = name;
+    }
+}
+37. Methods
+
+Definition: A method is a function defined inside an object or class.
+
+Syntax:
+
+class User {
+    greet() {
+        console.log("Hello");
+    }
+}
+38. Prototype
+
+Definition: A prototype is an object from which other objects can inherit properties and methods.
+
+Syntax:
+
+User.prototype.greet = function() {
+    console.log("Hello");
+};
+39. Prototype Chain
+
+Definition: The prototype chain is the mechanism JavaScript uses to search for a property or method through an object's prototypes.
+
+Basic structure:
+
+object
+   ↓
+prototype
+   ↓
+Object.prototype
+   ↓
+null
+40. Inheritance
+
+Definition: Inheritance allows one class/object to reuse properties and methods from another class/object.
+
+Syntax:
+
+class Dog extends Animal {
+}
+41. extends
+
+Definition: extends creates a child class that inherits from a parent class.
+
+Syntax:
+
+class Dog extends Animal {
+}
+42. super
+
+Definition: super is used to access the parent class's constructor or methods.
+
+Syntax:
+
+class Dog extends Animal {
+    constructor(name) {
+        super(name);
+    }
+}
+43. Encapsulation
+
+Definition: Encapsulation means bundling data and methods together and controlling direct access to internal data.
+
+Syntax:
+
+class User {
+    #password;
+
+    constructor(password) {
+        this.#password = password;
+    }
+}
+
+#password is a private field.
+
+44. Iterators
+
+Definition: An iterator is an object that allows values to be accessed one at a time using next().
+
+Syntax:
+
+const iterator = array[Symbol.iterator]();
+
+console.log(iterator.next());
+console.log(iterator.next());
