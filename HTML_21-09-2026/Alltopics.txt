@@ -1,0 +1,242 @@
+1. Introduction to HTML
+
+Definition:
+HTML stands for HyperText Markup Language. It is used to create and structure the content of web pages.
+
+Basic Syntax:
+
+<tag>Content</tag>
+2. HTML Document Structure
+
+Definition:
+HTML document structure defines the basic arrangement of an HTML page, including the document declaration, HTML element, head section, and body section.
+
+Basic Syntax:
+
+<!DOCTYPE html>
+<html>
+<head>
+    ...
+</head>
+<body>
+    ...
+</body>
+</html>
+3. DOCTYPE
+
+Definition:
+DOCTYPE tells the browser which HTML standard the document follows. For modern HTML, HTML5 is declared using <!DOCTYPE html>.
+
+Basic Syntax:
+
+<!DOCTYPE html>
+4. HTML
+
+Definition:
+The <html> element is the root element of an HTML document. All other HTML elements are placed inside it.
+
+Basic Syntax:
+
+<html>
+    ...
+</html>
+5. Head
+
+Definition:
+The <head> element contains information about the webpage that is generally not displayed directly as page content.
+
+Basic Syntax:
+
+<head>
+    ...
+</head>
+6. Body
+
+Definition:
+The <body> element contains the visible content of the webpage.
+
+Basic Syntax:
+
+<body>
+    ...
+</body>
+7. Headings
+
+Definition:
+Headings are used to define titles and section headings in a webpage. HTML provides six heading levels, from <h1> to <h6>.
+
+Basic Syntax:
+
+<h1>...</h1>
+<h2>...</h2>
+<h3>...</h3>
+<h4>...</h4>
+<h5>...</h5>
+<h6>...</h6>
+8. Paragraphs
+
+Definition:
+The <p> element is used to define a paragraph of text.
+
+Basic Syntax:
+
+<p>...</p>
+9. Line Breaks
+
+Definition:
+The <br> element is used to break the current line and move content to the next line.
+
+Basic Syntax:
+
+<br>
+
+<br> is a void element, so it does not have a closing tag.
+
+10. Horizontal Rules
+
+Definition:
+The <hr> element represents a thematic break or separation between sections of content.
+
+Basic Syntax:
+
+<hr>
+
+<hr> is also a void element.
+
+Text Formatting Tags
+11. Bold
+
+Definition:
+The <b> element is used to make text visually bold without giving it additional semantic importance.
+
+Basic Syntax:
+
+<b>...</b>
+12. Italic
+
+Definition:
+The <i> element is used to display text in an italic style, generally for text that has a different voice or mood.
+
+Basic Syntax:
+
+<i>...</i>
+13. Underline
+
+Definition:
+The <u> element represents text that should be visually marked or underlined.
+
+Basic Syntax:
+
+<u>...</u>
+14. Strong
+
+Definition:
+The <strong> element indicates that the text has strong importance, seriousness, or urgency. Browsers normally display it in bold.
+
+Basic Syntax:
+
+<strong>...</strong>
+15. Emphasis
+
+Definition:
+The <em> element gives text emphasis. Browsers normally display emphasized text in italic.
+
+Basic Syntax:
+
+<em>...</em>
+16. Highlight
+
+Definition:
+The <mark> element is used to represent text that is highlighted or marked as relevant.
+
+Basic Syntax:
+
+<mark>...</mark>
+17. Subscript
+
+Definition:
+The <sub> element displays text slightly below the normal text baseline.
+
+Basic Syntax:
+
+<sub>...</sub>
+18. Superscript
+
+Definition:
+The <sup> element displays text slightly above the normal text baseline.
+
+Basic Syntax:
+
+<sup>...</sup>
+19. HTML Comments
+
+Definition:
+HTML comments are notes written inside HTML code that are not displayed on the webpage. They are useful for explaining or organizing code.
+
+Basic Syntax:
+
+<!-- Comment -->
+HTML Entities & Symbols
+20. HTML Entities
+
+Definition:
+HTML entities are special codes used to represent reserved characters, special characters, or characters that may not be easily typed directly in HTML.
+
+Basic Syntax:
+
+&entity_name;
+
+or
+
+&#entity_number;
+21. HTML Symbols
+
+Definition:
+HTML symbols are special characters that can be represented using HTML entities or Unicode characters.
+
+Basic Syntax:
+
+&symbol_name;
+
+or
+
+&#number;
+Types of HTML Elements
+22. Block-level Elements
+
+Definition:
+Block-level elements generally start on a new line and occupy the available width of their containing element.
+
+Basic Syntax:
+
+<element>
+    ...
+</element>
+23. Inline Elements
+
+Definition:
+Inline elements generally remain within the same line and take only the space required by their content.
+
+Basic Syntax:
+
+<element>...</element>
+24. Semantic HTML
+
+Definition:
+Semantic HTML means using HTML elements that clearly describe the meaning and purpose of their content.
+
+Semantic elements help browsers, search engines, developers, and assistive technologies understand the structure and meaning of a webpage.
+
+Basic Syntax:
+
+<semantic-element>
+    ...
+</semantic-element>
+Common Semantic Elements
+<header>...</header>
+<nav>...</nav>
+<main>...</main>
+<section>...</section>
+<article>...</article>
+<aside>...</aside>
+<footer>...</footer>
