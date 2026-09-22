@@ -1,0 +1,308 @@
+1. Anchor Tag
+Definition
+
+The <a> (anchor) tag is used to create a hyperlink that allows users to navigate to another page, section, file, email address, or phone number.
+
+Basic Syntax
+<a href="URL">Link Text</a>
+2. Internal Links
+Definition
+
+An internal link connects to another page or section within the same website.
+
+Basic Syntax
+<a href="page.html">Link Text</a>
+
+For a section on the same page:
+
+<a href="#section">Link Text</a>
+3. External Links
+Definition
+
+An external link connects to a different website or domain.
+
+Basic Syntax
+<a href="https://www.example.com">Link Text</a>
+4. Email Links
+Definition
+
+An email link opens the user's default email application and allows them to send an email.
+
+Basic Syntax
+<a href="mailto:email@example.com">Send Email</a>
+5. Telephone Links
+Definition
+
+A telephone link allows users to call a phone number, especially on mobile devices.
+
+Basic Syntax
+<a href="tel:+1234567890">Call</a>
+6. Opening Links in New Tabs
+Definition
+
+The target attribute specifies where the linked document should open. _blank opens the link in a new tab or browsing context.
+
+Basic Syntax
+<a href="URL" target="_blank">Link Text</a>
+7. Images
+Definition
+
+Images are visual content added to a webpage to display pictures, graphics, icons, or other visual information.
+
+Basic Syntax
+<img src="image-path" alt="description">
+8. Image Tag
+Definition
+
+The <img> tag is used to embed an image into an HTML document.
+
+Basic Syntax
+<img src="image-path" alt="description">
+9. src
+Definition
+
+src stands for source. It specifies the location or path of the image.
+
+Basic Syntax
+<img src="image-path">
+10. alt
+Definition
+
+alt provides alternative text for an image. It is useful when the image cannot be displayed and improves accessibility.
+
+Basic Syntax
+<img src="image-path" alt="alternative text">
+11. Width and Height
+Definition
+
+width and height attributes specify the displayed dimensions of an image.
+
+Basic Syntax
+<img src="image-path" alt="description" width="value" height="value">
+12. Image Links
+Definition
+
+An image link makes an image clickable by placing the <img> tag inside an <a> tag.
+
+Basic Syntax
+<a href="URL">
+    <img src="image-path" alt="description">
+</a>
+13. Favicon
+Definition
+
+A favicon is a small icon associated with a webpage. It is usually displayed in the browser tab.
+
+Basic Syntax
+<link rel="icon" href="favicon-path">
+14. Multimedia
+Definition
+
+Multimedia refers to different types of media, such as audio and video, that can be included in a webpage.
+
+Basic Syntax
+<audio>...</audio>
+<video>...</video>
+15. Audio
+Definition
+
+The <audio> element is used to embed and play audio content on a webpage.
+
+Basic Syntax
+<audio>
+    <source src="audio-path" type="audio-type">
+</audio>
+16. Video
+Definition
+
+The <video> element is used to embed and play video content on a webpage.
+
+Basic Syntax
+<video>
+    <source src="video-path" type="video-type">
+</video>
+17. Source
+Definition
+
+The <source> element specifies the media file and its type for audio or video.
+
+Basic Syntax
+<source src="media-path" type="media-type">
+18. Controls
+Definition
+
+The controls attribute displays built-in media controls, such as play, pause, volume, and progress.
+
+Basic Syntax
+<audio controls>
+    ...
+</audio>
+<video controls>
+    ...
+</video>
+19. Autoplay
+Definition
+
+The autoplay attribute makes audio or video start playing automatically when permitted by the browser.
+
+Basic Syntax
+<audio autoplay>
+    ...
+</audio>
+<video autoplay>
+    ...
+</video>
+20. Loop
+Definition
+
+The loop attribute makes audio or video repeat automatically after it finishes.
+
+Basic Syntax
+<audio loop>
+    ...
+</audio>
+<video loop>
+    ...
+</video>
+21. Muted
+Definition
+
+The muted attribute makes audio or video start without sound.
+
+Basic Syntax
+<audio muted>
+    ...
+</audio>
+<video muted>
+    ...
+</video>
+22. Lists
+Definition
+
+Lists are used to organize and display related items in a structured format.
+
+HTML mainly provides:
+
+Ordered Lists
+Unordered Lists
+Description Lists
+23. Ordered Lists
+Definition
+
+An ordered list displays items in a specific sequence, normally using numbers.
+
+Basic Syntax
+<ol>
+    <li>Item</li>
+</ol>
+24. Unordered Lists
+Definition
+
+An unordered list displays items using bullet points rather than a numbered sequence.
+
+Basic Syntax
+<ul>
+    <li>Item</li>
+</ul>
+25. Description Lists
+Definition
+
+A description list is used to display terms and their corresponding descriptions.
+
+Basic Syntax
+<dl>
+    <dt>Term</dt>
+    <dd>Description</dd>
+</dl>
+<dl> → Description List
+<dt> → Description Term
+<dd> → Description/Definition
+26. Nested Lists
+Definition
+
+A nested list is a list placed inside another list item.
+
+Basic Syntax
+<ul>
+    <li>
+        Item
+        <ul>
+            <li>Sub-item</li>
+        </ul>
+    </li>
+</ul>
+27. Tables
+Definition
+
+Tables are used to organize data into rows and columns.
+
+Basic Syntax
+<table>
+    ...
+</table>
+28. Table
+Definition
+
+The <table> element defines the main table structure.
+
+Basic Syntax
+<table>
+    <tr>
+        ...
+    </tr>
+</table>
+29. Table Row
+Definition
+
+The <tr> element defines a row inside a table.
+
+Basic Syntax
+<tr>
+    ...
+</tr>
+30. Table Header
+Definition
+
+The <th> element defines a header cell in a table.
+
+Basic Syntax
+<th>Header</th>
+31. Table Data
+Definition
+
+The <td> element defines a regular data cell in a table.
+
+Basic Syntax
+<td>Data</td>
+32. colspan
+Definition
+
+colspan specifies the number of columns a cell should span across.
+
+Basic Syntax
+<td colspan="number">Data</td>
+
+It can also be used with <th>:
+
+<th colspan="number">Header</th>
+33. rowspan
+Definition
+
+rowspan specifies the number of rows a cell should span across.
+
+Basic Syntax
+<td rowspan="number">Data</td>
+
+It can also be used with <th>:
+
+<th rowspan="number">Header</th>
+34. Table Caption
+Definition
+
+The <caption> element provides a title or description for a table.
+
+Basic Syntax
+<table>
+    <caption>Table Title</caption>
+    ...
+</table>
