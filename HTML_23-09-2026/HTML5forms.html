@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 Form Validation</title>
+</head>
+<body>
+
+    <h1>Registration Form</h1>
+
+    <form action="/submit" method="post">
+
+        <!-- Required + Text Validation -->
+        <label for="name">Name:</label>
+        <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Enter your name"
+            required
+            maxlength="30"
+            pattern="[A-Za-z ]+">
+        <br><br>
+
+        <!-- Email Validation -->
+        <label for="email">Email:</label>
+        <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email"
+            required>
+        <br><br>
+
+        <!-- Password Validation -->
+        <label for="password">Password:</label>
+        <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Enter password"
+            required
+            minlength="8"
+            maxlength="20">
+        <br><br>
+
+        <!-- Number Validation -->
+        <label for="age">Age:</label>
+        <input
+            type="number"
+            id="age"
+            name="age"
+            min="18"
+            max="60"
+            required>
+        <br><br>
+
+        <!-- Date Validation -->
+        <label for="dob">Date of Birth:</label>
+        <input
+            type="date"
+            id="dob"
+            name="dob"
+            required>
+        <br><br>
+
+        <!-- Pattern Validation -->
+        <label for="phone">Phone Number:</label>
+        <input
+            type="tel"
+            id="phone"
+            name="phone"
+            placeholder="Enter 10-digit number"
+            pattern="[0-9]{10}"
+            required>
+        <br><br>
+
+        <!-- Checkbox Validation -->
+        <input
+            type="checkbox"
+            id="terms"
+            name="terms"
+            required>
+
+        <label for="terms">
+            I agree to the terms and conditions
+        </label>
+
+        <br><br>
+
+        <input type="submit" value="Register">
+        <input type="reset" value="Reset">
+
+    </form>
+
+</body>
+</html>

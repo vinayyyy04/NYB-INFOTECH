@@ -1,0 +1,325 @@
+1. Form
+
+Definition:
+The <form> element is used to collect user input and submit it to a server.
+
+Basic Syntax:
+
+<form>
+    <!-- Form elements -->
+</form>
+2. Input
+
+Definition:
+The <input> element is used to create different types of input fields.
+
+Basic Syntax:
+
+<input type="type">
+3. Text
+
+Definition:
+type="text" creates a single-line text input field.
+
+Basic Syntax:
+
+<input type="text">
+4. Email
+
+Definition:
+type="email" creates an input field for email addresses and provides basic email validation.
+
+Basic Syntax:
+
+<input type="email">
+5. Password
+
+Definition:
+type="password" creates a field where entered characters are hidden.
+
+Basic Syntax:
+
+<input type="password">
+6. Number
+
+Definition:
+type="number" creates an input field for numerical values.
+
+Basic Syntax:
+
+<input type="number">
+7. Date
+
+Definition:
+type="date" creates a field for selecting a date.
+
+Basic Syntax:
+
+<input type="date">
+8. File
+
+Definition:
+type="file" allows the user to select a file from their device.
+
+Basic Syntax:
+
+<input type="file">
+9. Radio
+
+Definition:
+type="radio" creates a radio button where a user can select one option from a group.
+
+Basic Syntax:
+
+<input type="radio" name="group">
+10. Checkbox
+
+Definition:
+type="checkbox" creates a checkbox that can be selected or unselected.
+
+Basic Syntax:
+
+<input type="checkbox">
+11. Submit
+
+Definition:
+type="submit" creates a button used to submit the form.
+
+Basic Syntax:
+
+<input type="submit">
+12. Reset
+
+Definition:
+type="reset" creates a button that resets form fields to their initial values.
+
+Basic Syntax:
+
+<input type="reset">
+13. Button
+
+Definition:
+type="button" creates a normal button that does not automatically submit or reset the form.
+
+Basic Syntax:
+
+<input type="button" value="Button">
+14. Textarea
+
+Definition:
+<textarea> creates a multi-line text input field.
+
+Basic Syntax:
+
+<textarea></textarea>
+15. Select
+
+Definition:
+<select> creates a drop-down list.
+
+Basic Syntax:
+
+<select>
+    <!-- options -->
+</select>
+16. Option
+
+Definition:
+<option> defines an individual option inside a <select> element.
+
+Basic Syntax:
+
+<option value="value">Text</option>
+Form Attributes
+17. action
+
+Definition:
+The action attribute specifies where the form data should be sent after submission.
+
+Basic Syntax:
+
+<form action="URL">
+18. method
+
+Definition:
+The method attribute specifies how form data is sent to the server.
+
+Basic Syntax:
+
+<form method="get">
+
+or
+
+<form method="post">
+19. name
+
+Definition:
+The name attribute gives an element a name that can be used to identify its submitted data.
+
+Basic Syntax:
+
+<input name="fieldName">
+20. value
+
+Definition:
+The value attribute specifies the value associated with an input element.
+
+Basic Syntax:
+
+<input value="value">
+21. placeholder
+
+Definition:
+The placeholder attribute displays temporary hint text inside an input field.
+
+Basic Syntax:
+
+<input placeholder="Hint text">
+22. required
+
+Definition:
+The required attribute makes a form field mandatory.
+
+Basic Syntax:
+
+<input required>
+23. readonly
+
+Definition:
+The readonly attribute prevents the user from editing the field while allowing its value to be submitted.
+
+Basic Syntax:
+
+<input readonly>
+24. disabled
+
+Definition:
+The disabled attribute makes a form control inactive and prevents its value from being submitted.
+
+Basic Syntax:
+
+<input disabled>
+25. min
+
+Definition:
+The min attribute specifies the minimum allowed value.
+
+Basic Syntax:
+
+<input type="number" min="value">
+26. max
+
+Definition:
+The max attribute specifies the maximum allowed value.
+
+Basic Syntax:
+
+<input type="number" max="value">
+27. maxlength
+
+Definition:
+The maxlength attribute specifies the maximum number of characters allowed.
+
+Basic Syntax:
+
+<input maxlength="number">
+28. pattern
+
+Definition:
+The pattern attribute specifies a regular expression that the input value must match.
+
+Basic Syntax:
+
+<input pattern="regular-expression">
+Advanced HTML
+29. Form Validation
+
+Definition:
+Form validation checks whether the data entered by the user meets specified requirements before submission.
+
+Basic Syntax:
+
+<form>
+    <input required>
+    <input type="email">
+    <input pattern="regular-expression">
+</form>
+30. Label
+
+Definition:
+<label> provides a descriptive name for a form control and improves accessibility.
+
+Basic Syntax:
+
+<label for="id">Label Text</label>
+31. Fieldset
+
+Definition:
+<fieldset> groups related form controls together.
+
+Basic Syntax:
+
+<fieldset>
+    <!-- Related form controls -->
+</fieldset>
+32. Legend
+
+Definition:
+<legend> provides a caption or title for a <fieldset>.
+
+Basic Syntax:
+
+<fieldset>
+    <legend>Title</legend>
+</fieldset>
+33. Iframe
+
+Definition:
+<iframe> embeds another webpage or external document inside the current webpage.
+
+Basic Syntax:
+
+<iframe src="URL"></iframe>
+HTML5 Semantic Elements
+34. <figure>
+
+Definition:
+<figure> represents self-contained content such as an image, diagram, illustration, or other media.
+
+Basic Syntax:
+
+<figure>
+    <!-- Figure content -->
+</figure>
+35. <figcaption>
+
+Definition:
+<figcaption> provides a caption or description for the content inside a <figure>.
+
+Basic Syntax:
+
+<figure>
+    <!-- Figure content -->
+    <figcaption>Caption</figcaption>
+</figure>
+36. <details>
+
+Definition:
+<details> creates a disclosure section whose content can be shown or hidden by the user.
+
+Basic Syntax:
+
+<details>
+    <!-- Hidden/revealable content -->
+</details>
+37. <summary>
+
+Definition:
+<summary> defines the visible heading that the user clicks to open or close a <details> element.
+
+Basic Syntax:
+
+<details>
+    <summary>Title</summary>
+    <!-- Content -->
+</details>

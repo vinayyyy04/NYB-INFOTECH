@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Form</title>
+</head>
+
+<body>
+
+    <h1>Job Application Form</h1>
+
+    <form action="/submit" method="post" enctype="multipart/form-data">
+
+        <!-- Personal Details -->
+        <fieldset>
+            <legend>Personal Details</legend>
+
+            <label for="fullname">Full Name:</label>
+            <input
+                type="text"
+                id="fullname"
+                name="fullname"
+                placeholder="Enter your full name"
+                required
+                pattern="[A-Za-z ]+"
+                maxlength="50">
+            <br><br>
+
+            <label for="dob">Date of Birth:</label>
+            <input
+                type="date"
+                id="dob"
+                name="dob"
+                required>
+        </fieldset>
+
+        <br>
+
+        <!-- Contact Details -->
+        <fieldset>
+            <legend>Contact Details</legend>
+
+            <label for="email">Email:</label>
+            <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter your email"
+                required>
+            <br><br>
+
+            <label for="phone">Phone Number:</label>
+            <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="Enter 10-digit number"
+                pattern="[0-9]{10}"
+                required>
+        </fieldset>
+
+        <br>
+
+        <!-- Education -->
+        <fieldset>
+            <legend>Education</legend>
+
+            <label for="qualification">Highest Qualification:</label>
+
+            <select id="qualification" name="qualification" required>
+                <option value="">Select Qualification</option>
+                <option value="10th">10th</option>
+                <option value="12th">12th</option>
+                <option value="diploma">Diploma</option>
+                <option value="btech">B.Tech</option>
+                <option value="degree">Degree</option>
+                <option value="mtech">M.Tech</option>
+                <option value="masters">Masters</option>
+            </select>
+        </fieldset>
+
+        <br>
+
+        <!-- Skills -->
+        <fieldset>
+            <legend>Skills</legend>
+
+            <input type="checkbox" id="html" name="skills" value="html">
+            <label for="html">HTML</label>
+
+            <input type="checkbox" id="css" name="skills" value="css">
+            <label for="css">CSS</label>
+
+            <input type="checkbox" id="javascript" name="skills" value="javascript">
+            <label for="javascript">JavaScript</label>
+
+            <input type="checkbox" id="java" name="skills" value="java">
+            <label for="java">Java</label>
+
+            <input type="checkbox" id="python" name="skills" value="python">
+            <label for="python">Python</label>
+        </fieldset>
+
+        <br>
+
+        <!-- Resume Upload -->
+        <fieldset>
+            <legend>Resume Upload</legend>
+
+            <label for="resume">Upload Resume:</label>
+            <input
+                type="file"
+                id="resume"
+                name="resume"
+                accept=".pdf,.doc,.docx"
+                required>
+        </fieldset>
+
+        <br>
+
+        <!-- Experience -->
+        <fieldset>
+            <legend>Experience</legend>
+
+            <label for="experience">Years of Experience:</label>
+            <input
+                type="number"
+                id="experience"
+                name="experience"
+                min="0"
+                max="40"
+                required>
+        </fieldset>
+
+        <br>
+
+        <!-- Gender -->
+        <fieldset>
+            <legend>Gender</legend>
+
+            <input type="radio" id="male" name="gender" value="male" required>
+            <label for="male">Male</label>
+
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label>
+
+            <input type="radio" id="other" name="gender" value="other">
+            <label for="other">Other</label>
+        </fieldset>
+
+        <br>
+
+        <!-- Location -->
+        <fieldset>
+            <legend>Location</legend>
+
+            <label for="location">Preferred Location:</label>
+
+            <select id="location" name="location" required>
+                <option value="">Select Location</option>
+                <option value="hyderabad">Hyderabad</option>
+                <option value="bangalore">Bangalore</option>
+                <option value="chennai">Chennai</option>
+                <option value="pune">Pune</option>
+                <option value="delhi">Delhi</option>
+                <option value="remote">Remote</option>
+            </select>
+        </fieldset>
+
+        <br>
+
+        <!-- Terms and Conditions -->
+        <fieldset>
+            <legend>Terms and Conditions</legend>
+
+            <input
+                type="checkbox"
+                id="terms"
+                name="terms"
+                required>
+
+            <label for="terms">
+                I agree to the terms and conditions.
+            </label>
+        </fieldset>
+
+        <br>
+
+        <!-- Buttons -->
+        <input type="submit" value="Submit Application">
+        <input type="reset" value="Reset Form">
+
+    </form>
+
+</body>
+</html>
