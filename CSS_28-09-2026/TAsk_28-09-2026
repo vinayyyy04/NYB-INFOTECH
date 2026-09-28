@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NYB Infotech - CSS Practice</title>
+
+    <style>
+
+        /* =========================
+           CSS VARIABLES
+        ========================= */
+        :root {
+            --primary: #2563eb;
+            --secondary: #1e293b;
+            --accent: #f59e0b;
+            --light: #f1f5f9;
+            --white: #ffffff;
+            --text: #334155;
+            --border: #cbd5e1;
+            --radius: 10px;
+            --space: 20px;
+        }
+
+
+        /* =========================
+           CSS SELECTORS
+        ========================= */
+
+        /* Universal Selector */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Element Selector */
+        body {
+            font-family: Arial, sans-serif;
+            color: var(--text);
+            background-color: var(--light);
+            line-height: 1.6;
+        }
+
+        /* Grouping Selector */
+        h1, h2, h3 {
+            color: var(--secondary);
+        }
+
+        /* Class Selector */
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        /* ID Selector */
+        #special-text {
+            color: var(--accent);
+        }
+
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        header {
+            background-color: var(--secondary);
+            color: var(--white);
+            padding: 20px;
+        }
+
+        header h1 {
+            color: var(--white);
+        }
+
+
+        /* =========================
+           NAVIGATION
+        ========================= */
+
+        nav {
+            margin-top: 15px;
+        }
+
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            margin-right: 20px;
+        }
+
+        /* Pseudo-class :hover */
+        nav a:hover {
+            color: var(--accent);
+        }
+
+        /* Pseudo-class :visited */
+        nav a:visited {
+            color: #c4b5fd;
+        }
+
+
+        /* =========================
+           HERO SECTION
+        ========================= */
+
+        .hero {
+            background: linear-gradient(
+                135deg,
+                #2563eb,
+                #7c3aed
+            );
+
+            color: var(--white);
+            text-align: center;
+            padding: 70px 20px;
+        }
+
+        .hero h2 {
+            color: var(--white);
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            color: var(--white);
+        }
+
+
+        /* =========================
+           DESCENDANT SELECTOR
+        ========================= */
+
+        .about p {
+            margin-top: 10px;
+        }
+
+
+        /* =========================
+           CHILD SELECTOR
+        ========================= */
+
+        .services > h2 {
+            margin-bottom: 20px;
+        }
+
+
+        /* =========================
+           SIBLING SELECTORS
+        ========================= */
+
+        /* Adjacent Sibling */
+        .services h2 + p {
+            margin-bottom: 20px;
+        }
+
+        /* General Sibling */
+        .services h2 ~ ul {
+            margin-top: 15px;
+        }
+
+
+        /* =========================
+           SECTIONS
+        ========================= */
+
+        section {
+            padding: 50px 0;
+        }
+
+
+        /* =========================
+           CARDS - FLEXBOX
+        ========================= */
+
+        .cards {
+            display: flex;
+            gap: var(--space);
+            flex-wrap: wrap;
+        }
+
+        .card {
+            position: relative;
+            flex: 1;
+            min-width: 250px;
+
+            background-color: var(--white);
+            border: 2px solid var(--border);
+            border-radius: var(--radius);
+
+            padding: 25px;
+            margin: 5px;
+
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+
+            overflow: hidden;
+        }
+
+        /* Pseudo-element ::before */
+        .card::before {
+            content: "";
+            position: absolute;
+
+            width: 60px;
+            height: 60px;
+
+            background-color: #dbeafe;
+            border-radius: 50%;
+
+            top: -20px;
+            right: -20px;
+        }
+
+        /* Pseudo-element ::after */
+        .card::after {
+            content: "NYB";
+
+            position: absolute;
+            bottom: 10px;
+            right: 15px;
+
+            font-size: 12px;
+            font-weight: bold;
+            color: var(--primary);
+        }
+
+        /* Pseudo-class :hover */
+        .card:hover {
+            border-color: var(--primary);
+            transform: translateY(-5px);
+        }
+
+        /* First child */
+        .card:first-child {
+            border-top: 4px solid var(--primary);
+        }
+
+        /* Last child */
+        .card:last-child {
+            border-bottom: 4px solid var(--accent);
+        }
+
+        /* nth-child */
+        .card:nth-child(2) {
+            background-color: #eff6ff;
+        }
+
+
+        /* =========================
+           PSEUDO-ELEMENTS
+        ========================= */
+
+        .about h2::before {
+            content: "★ ";
+            color: var(--accent);
+        }
+
+        .about p::first-letter {
+            font-size: 30px;
+            font-weight: bold;
+            color: var(--primary);
+        }
+
+        .about p::first-line {
+            font-weight: bold;
+        }
+
+
+        /* =========================
+           SPECIFICITY
+        ========================= */
+
+        p {
+            color: blue;
+        }
+
+        .description {
+            color: green;
+        }
+
+        #special-text {
+            color: red;
+        }
+
+
+        /* =========================
+           ATTRIBUTE SELECTOR
+        ========================= */
+
+        input[type="email"] {
+            border: 2px solid var(--primary);
+        }
+
+
+        /* =========================
+           FORM
+        ========================= */
+
+        .contact-form {
+            background-color: var(--white);
+
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+
+            padding: 30px;
+            max-width: 600px;
+            margin: auto;
+        }
+
+        .contact-form label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+
+            margin-top: 5px;
+
+            border: 1px solid var(--border);
+            border-radius: 6px;
+        }
+
+
+        /* :focus */
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            outline: 2px solid var(--primary);
+            border-color: var(--primary);
+        }
+
+
+        /* :active */
+        .btn:active {
+            transform: scale(0.95);
+        }
+
+        .btn {
+            margin-top: 20px;
+
+            padding: 12px 25px;
+
+            background-color: var(--primary);
+            color: var(--white);
+
+            border: none;
+            border-radius: 6px;
+
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #1d4ed8;
+        }
+
+
+        /* =========================
+           BOX MODEL
+        ========================= */
+
+        .box-model {
+            width: 300px;
+            height: 150px;
+
+            padding: 25px;
+            margin: 30px auto;
+
+            border: 5px solid var(--primary);
+
+            background-color: #dbeafe;
+
+            text-align: center;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background-color: var(--secondary);
+            color: var(--white);
+
+            text-align: center;
+            padding: 25px;
+        }
+
+        footer p {
+            color: var(--white);
+        }
+
+
+        /* =========================
+           RESPONSIVE DESIGN
+        ========================= */
+
+        @media (max-width: 700px) {
+
+            .cards {
+                flex-direction: column;
+            }
+
+            nav a {
+                display: block;
+                margin: 8px 0;
+            }
+
+            .hero h2 {
+                font-size: 30px;
+            }
+
+            .box-model {
+                width: 90%;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+
+    <!-- HEADER -->
+    <header>
+        <div class="container">
+
+            <h1>NYB Infotech</h1>
+
+            <!-- Sibling / Navigation Example -->
+            <nav>
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+
+        <div class="container">
+
+            <h2>Welcome to NYB Infotech</h2>
+
+            <p>
+                We build modern and responsive digital solutions.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+    <section class="about" id="about">
+
+        <div class="container">
+
+            <h2>About NYB Infotech</h2>
+
+            <p class="description">
+                NYB Infotech is a technology company focused on
+                creating modern software and web solutions.
+            </p>
+
+            <p id="special-text">
+                We focus on quality, innovation, and customer satisfaction.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- SERVICES -->
+    <section class="services" id="services">
+
+        <div class="container">
+
+            <h2>Our Services</h2>
+
+            <p>
+                NYB Infotech provides the following technology services:
+            </p>
+
+            <ul>
+                <li>Web Development</li>
+                <li>Software Development</li>
+                <li>Mobile App Development</li>
+            </ul>
+
+
+            <br>
+
+
+            <!-- FLEXBOX CARDS -->
+            <div class="cards">
+
+                <div class="card">
+                    <h3>Web Development</h3>
+                    <p>
+                        We create responsive and user-friendly websites.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>Software Development</h3>
+                    <p>
+                        We develop useful and scalable software applications.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>Mobile Development</h3>
+                    <p>
+                        We build modern mobile applications.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- BOX MODEL -->
+    <section>
+
+        <div class="container">
+
+            <h2>CSS Box Model</h2>
+
+            <div class="box-model">
+                Content Area
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT FORM -->
+    <section id="contact">
+
+        <div class="container">
+
+            <h2 style="text-align: center;">
+                Contact NYB Infotech
+            </h2>
+
+            <br>
+
+            <form class="contact-form">
+
+                <label for="name">Name</label>
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Enter your name"
+                    required
+                >
+
+                <label for="email">Email</label>
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Enter your email"
+                    required
+                >
+
+                <label for="message">Message</label>
+                <textarea
+                    id="message"
+                    rows="5"
+                    placeholder="Enter your message"
+                ></textarea>
+
+                <button class="btn" type="submit">
+                    Send Message
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <p>
+            © 2026 NYB Infotech. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+</body>
+</html>

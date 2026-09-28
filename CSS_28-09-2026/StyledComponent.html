@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Styled Card Component</title>
+
+    <style>
+
+        /* =========================
+           CSS VARIABLES
+        ========================== */
+
+        :root {
+            --primary: #2563eb;
+            --secondary: #0f172a;
+            --accent: #f59e0b;
+            --text: #334155;
+            --light: #f8fafc;
+            --white: #ffffff;
+            --border: #dbeafe;
+
+            --radius: 15px;
+            --shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+        }
+
+
+        /* =========================
+           RESET
+        ========================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        /* =========================
+           BODY
+        ========================== */
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: var(--light);
+            color: var(--text);
+
+            min-height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            padding: 30px;
+        }
+
+
+        /* =========================
+           CARD
+        ========================== */
+
+        .card {
+            position: relative;
+
+            width: 350px;
+
+            background-color: var(--white);
+
+            border: 2px solid var(--border);
+            border-radius: var(--radius);
+
+            padding: 30px;
+
+            box-shadow: var(--shadow);
+
+            overflow: hidden;
+
+            transition: 0.3s;
+        }
+
+
+        /* Pseudo-element decorative shape */
+
+        .card::before {
+            content: "";
+
+            position: absolute;
+
+            width: 100px;
+            height: 100px;
+
+            background-color: var(--primary);
+
+            border-radius: 50%;
+
+            top: -50px;
+            right: -50px;
+
+            opacity: 0.15;
+        }
+
+
+        /* Bottom decorative line */
+
+        .card::after {
+            content: "";
+
+            position: absolute;
+
+            width: 70%;
+            height: 4px;
+
+            background-color: var(--primary);
+
+            bottom: 0;
+            left: 15%;
+
+            border-radius: 10px;
+        }
+
+
+        /* =========================
+           CARD HOVER
+        ========================== */
+
+        .card:hover {
+            transform: translateY(-8px);
+
+            border-color: var(--primary);
+
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+        }
+
+
+        /* =========================
+           BADGE
+        ========================== */
+
+        .badge {
+            display: inline-block;
+
+            background-color: #dcfce7;
+            color: #15803d;
+
+            padding: 6px 12px;
+
+            border-radius: 20px;
+
+            font-size: 13px;
+            font-weight: bold;
+
+            margin-bottom: 15px;
+        }
+
+
+        /* =========================
+           HEADING
+        ========================== */
+
+        .card h2 {
+            color: var(--secondary);
+
+            margin-bottom: 10px;
+
+            position: relative;
+        }
+
+
+        /* Decorative heading line */
+
+        .card h2::after {
+            content: "";
+
+            display: block;
+
+            width: 50px;
+            height: 3px;
+
+            background-color: var(--accent);
+
+            margin-top: 8px;
+
+            border-radius: 5px;
+        }
+
+
+        /* =========================
+           DESCRIPTION
+        ========================== */
+
+        .card p {
+            color: var(--text);
+
+            line-height: 1.6;
+
+            margin-bottom: 20px;
+        }
+
+
+        /* =========================
+           FEATURES
+        ========================== */
+
+        .features {
+            list-style: none;
+
+            display: flex;
+            flex-direction: column;
+
+            gap: 10px;
+
+            margin-bottom: 25px;
+        }
+
+        .features li {
+            background-color: #f1f5f9;
+
+            padding: 10px;
+
+            border-left: 4px solid var(--primary);
+
+            border-radius: 5px;
+        }
+
+
+        /* First and last child */
+
+        .features li:first-child {
+            font-weight: bold;
+        }
+
+        .features li:last-child {
+            border-left-color: var(--accent);
+        }
+
+
+        /* =========================
+           BUTTON
+        ========================== */
+
+        .btn {
+            display: block;
+
+            width: 100%;
+
+            padding: 12px;
+
+            background-color: var(--primary);
+
+            color: var(--white);
+
+            border: 2px solid var(--primary);
+
+            border-radius: 8px;
+
+            text-align: center;
+
+            font-weight: bold;
+
+            cursor: pointer;
+
+            transition: 0.3s;
+        }
+
+
+        .btn:hover {
+            background-color: var(--secondary);
+            border-color: var(--secondary);
+        }
+
+
+        .btn:active {
+            transform: scale(0.97);
+        }
+
+
+        /* =========================
+           SPECIFICITY
+        ========================== */
+
+        p {
+            color: red;
+        }
+
+        .card p {
+            color: var(--text);
+        }
+
+        /* More specific rule wins */
+
+
+        /* =========================
+           RESPONSIVE
+        ========================== */
+
+        @media (max-width: 480px) {
+
+            body {
+                padding: 15px;
+            }
+
+            .card {
+                width: 100%;
+                padding: 22px;
+            }
+
+            .card h2 {
+                font-size: 24px;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <article class="card">
+
+        <span class="badge">
+            Available
+        </span>
+
+        <h2>
+            Web Development
+        </h2>
+
+        <p>
+            Build modern, responsive and user-friendly
+            websites using the latest web technologies.
+        </p>
+
+        <ul class="features">
+
+            <li>Responsive Design</li>
+
+            <li>Modern UI</li>
+
+            <li>Mobile Friendly</li>
+
+            <li>Technical Support</li>
+
+        </ul>
+
+        <a href="#" class="btn">
+            Get Started
+        </a>
+
+    </article>
+
+</body>
+</html>

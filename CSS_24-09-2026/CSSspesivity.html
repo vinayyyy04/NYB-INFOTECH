@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Specificity Practice</title>
+
+    <style>
+        /* Element selector */
+        p {
+            color: blue;
+        }
+
+        /* Class selector */
+        .text {
+            color: green;
+        }
+
+        /* ID selector */
+        #message {
+            color: red;
+        }
+
+        /* Multiple selectors */
+        p.text {
+            color: purple;
+        }
+
+        /* Inline style has the highest priority */
+    </style>
+</head>
+
+<body>
+
+    <p>This paragraph uses element selector.</p>
+
+    <p class="text">
+        This paragraph uses class selector.
+    </p>
+
+    <p id="message" class="text">
+        This paragraph uses ID selector.
+    </p>
+
+    <p class="text" style="color: orange;">
+        This paragraph uses inline CSS.
+    </p>
+
+</body>
+</html>

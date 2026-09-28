@@ -1,0 +1,497 @@
+1. CSS Selectors – Complete Revision
+
+Definition:
+CSS selectors are used to select HTML elements that you want to style.
+
+Basic Syntax:
+
+selector {
+    property: value;
+}
+Common CSS Selectors
+Selector	Definition	Syntax
+Universal Selector	Selects all HTML elements	* { }
+Element Selector	Selects elements by tag name	p { }
+Class Selector	Selects elements with a specific class	.className { }
+ID Selector	Selects an element with a specific ID	#idName { }
+Grouping Selector	Selects multiple elements together	h1, p { }
+2. Attribute Selectors
+
+Definition:
+Attribute selectors select HTML elements based on their attributes or attribute values.
+
+Basic Syntax:
+
+[attribute] {
+    property: value;
+}
+
+With a specific value:
+
+[attribute="value"] {
+    property: value;
+}
+3. Descendant Selectors
+
+Definition:
+A descendant selector selects an element that is inside another element, at any level.
+
+Basic Syntax:
+
+parent child {
+    property: value;
+}
+
+The space between the selectors represents the descendant relationship.
+
+4. Child Selectors
+
+Definition:
+A child selector selects an element that is a direct child of another element.
+
+Basic Syntax:
+
+parent > child {
+    property: value;
+}
+
+The > symbol represents a direct child relationship.
+
+5. Sibling Selectors
+
+Sibling selectors select elements that have the same parent.
+
+Adjacent Sibling Selector
+
+Definition:
+Selects the element that comes immediately after another element.
+
+Basic Syntax:
+
+element1 + element2 {
+    property: value;
+}
+General Sibling Selector
+
+Definition:
+Selects all matching siblings that appear after another element.
+
+Basic Syntax:
+
+element1 ~ element2 {
+    property: value;
+}
+6. Pseudo-Classes
+
+Definition:
+Pseudo-classes are used to select an element based on its state, position, or user interaction.
+
+Basic Syntax:
+
+selector:pseudo-class {
+    property: value;
+}
+:hover
+
+Definition:
+Selects an element when the mouse pointer is over it.
+
+Syntax:
+
+selector:hover {
+    property: value;
+}
+:focus
+
+Definition:
+Selects an element when it receives focus, usually through user interaction.
+
+Syntax:
+
+selector:focus {
+    property: value;
+}
+:active
+
+Definition:
+Selects an element while it is being activated or clicked.
+
+Syntax:
+
+selector:active {
+    property: value;
+}
+:visited
+
+Definition:
+Selects a link that the user has already visited.
+
+Syntax:
+
+a:visited {
+    property: value;
+}
+:first-child
+
+Definition:
+Selects an element that is the first child of its parent.
+
+Syntax:
+
+selector:first-child {
+    property: value;
+}
+:last-child
+
+Definition:
+Selects an element that is the last child of its parent.
+
+Syntax:
+
+selector:last-child {
+    property: value;
+}
+:nth-child()
+
+Definition:
+Selects an element based on its position among its siblings.
+
+Syntax:
+
+selector:nth-child(number) {
+    property: value;
+}
+7. Pseudo-Elements
+
+Definition:
+Pseudo-elements are used to style a specific part of an HTML element or insert generated content.
+
+Basic Syntax:
+
+selector::pseudo-element {
+    property: value;
+}
+::before
+
+Definition:
+Creates a pseudo-element before the content of the selected element.
+
+Syntax:
+
+selector::before {
+    content: "";
+    property: value;
+}
+::after
+
+Definition:
+Creates a pseudo-element after the content of the selected element.
+
+Syntax:
+
+selector::after {
+    content: "";
+    property: value;
+}
+::first-letter
+
+Definition:
+Selects and styles the first letter of the text.
+
+Syntax:
+
+selector::first-letter {
+    property: value;
+}
+::first-line
+
+Definition:
+Selects and styles the first line of text.
+
+Syntax:
+
+selector::first-line {
+    property: value;
+}
+8. CSS Specificity
+
+Definition:
+CSS specificity determines which CSS rule has higher priority when multiple rules target the same element.
+
+General Priority:
+
+Inline Styles
+      ↓
+ID Selectors
+      ↓
+Class / Attribute / Pseudo-class
+      ↓
+Element / Pseudo-element
+      ↓
+Universal Selector
+
+Basic Syntax:
+
+selector {
+    property: value;
+}
+
+Specificity is generally compared using four components:
+
+Inline → ID → Class/Attribute/Pseudo-class → Element/Pseudo-element
+9. CSS Inheritance
+
+Definition:
+CSS inheritance means some CSS properties are passed from a parent element to its child elements.
+
+Basic Syntax:
+
+parent {
+    property: value;
+}
+
+A property can also be explicitly inherited using:
+
+selector {
+    property: inherit;
+}
+
+Other inheritance-related values include:
+
+property: initial;
+property: unset;
+property: revert;
+10. CSS Variables
+
+Definition:
+CSS variables are custom properties used to store reusable CSS values.
+
+They are commonly defined using --.
+
+Declaration Syntax:
+
+:root {
+    --variable-name: value;
+}
+
+Using a Variable:
+
+selector {
+    property: var(--variable-name);
+}
+
+Fallback Syntax:
+
+property: var(--variable-name, fallback-value);
+11. Colors and Backgrounds
+Colors
+
+Definition:
+The color property controls the text color of an element.
+
+Syntax:
+
+selector {
+    color: value;
+}
+
+CSS colors can be specified using:
+
+Color Name
+HEX
+RGB
+RGBA
+HSL
+HSLA
+Background Color
+
+Definition:
+background-color sets the background color of an element.
+
+Syntax:
+
+selector {
+    background-color: value;
+}
+Background Image
+
+Definition:
+background-image adds an image to the background of an element.
+
+Syntax:
+
+selector {
+    background-image: url("image-path");
+}
+Background Size
+
+Definition:
+Controls the size of the background image.
+
+Syntax:
+
+selector {
+    background-size: value;
+}
+Background Position
+
+Definition:
+Controls the position of the background image.
+
+Syntax:
+
+selector {
+    background-position: value;
+}
+Background Repeat
+
+Definition:
+Controls whether the background image repeats.
+
+Syntax:
+
+selector {
+    background-repeat: value;
+}
+Background Shorthand
+
+Definition:
+The background property combines multiple background properties into a single declaration.
+
+Syntax:
+
+selector {
+    background: value;
+}
+12. Borders
+
+Definition:
+Borders create a visible boundary around an element.
+
+Border
+
+Syntax:
+
+selector {
+    border: width style color;
+}
+Border Width
+
+Syntax:
+
+selector {
+    border-width: value;
+}
+Border Style
+
+Syntax:
+
+selector {
+    border-style: value;
+}
+Border Color
+
+Syntax:
+
+selector {
+    border-color: value;
+}
+Individual Borders
+
+Syntax:
+
+selector {
+    border-top: value;
+    border-right: value;
+    border-bottom: value;
+    border-left: value;
+}
+Border Radius
+
+Definition:
+border-radius controls the rounding of an element's corners.
+
+Syntax:
+
+selector {
+    border-radius: value;
+}
+13. CSS Box Model
+
+Definition:
+The CSS Box Model describes how every HTML element is represented as a rectangular box.
+
+It consists of four main parts:
+
+Content
+   ↓
+Padding
+   ↓
+Border
+   ↓
+Margin
+Content
+
+Definition:
+The actual text, image, or other content inside the element.
+
+Syntax:
+
+selector {
+    width: value;
+    height: value;
+}
+Padding
+
+Definition:
+Padding is the space between the content and the border.
+
+Syntax:
+
+selector {
+    padding: value;
+}
+
+Individual sides:
+
+padding-top: value;
+padding-right: value;
+padding-bottom: value;
+padding-left: value;
+Border
+
+Definition:
+The border is the boundary surrounding the padding and content.
+
+Syntax:
+
+selector {
+    border: value;
+}
+Margin
+
+Definition:
+Margin is the space outside the border of an element.
+
+Syntax:
+
+selector {
+    margin: value;
+}
+
+Individual sides:
+
+margin-top: value;
+margin-right: value;
+margin-bottom: value;
+margin-left: value;
+box-sizing
+
+Definition:
+box-sizing controls how the width and height of an element are calculated.
+
+Syntax:
+
+selector {
+    box-sizing: value;
+}

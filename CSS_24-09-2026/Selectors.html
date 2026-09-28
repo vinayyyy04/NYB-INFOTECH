@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Selectors</title>
+
+    <style>
+        /* Universal Selector */
+        * {
+            font-family: Arial;
+        }
+
+        /* Element Selector */
+        p {
+            color: blue;
+        }
+
+        /* Class Selector */
+        .heading {
+            color: green;
+        }
+
+        /* ID Selector */
+        #special {
+            color: red;
+        }
+
+        /* Grouping Selector */
+        h2, h3 {
+            text-align: center;
+        }
+
+        /* Descendant Selector */
+        div p {
+            background-color: lightyellow;
+        }
+
+        /* Child Selector */
+        div > span {
+            color: purple;
+        }
+
+        /* Attribute Selector */
+        input[type="text"] {
+            border: 2px solid blue;
+        }
+
+        /* Pseudo-class Selector */
+        button:hover {
+            background-color: green;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 class="heading">CSS Selectors</h1>
+
+    <h2>Different Selectors</h2>
+
+    <p>This uses the element selector.</p>
+
+    <p id="special">This uses the ID selector.</p>
+
+    <div>
+        <p>This uses the descendant selector.</p>
+        <span>This uses the child selector.</span>
+    </div>
+
+    <input type="text" placeholder="Enter your name">
+
+    <br><br>
+
+    <button>Hover Me</button>
+
+</body>
+</html>

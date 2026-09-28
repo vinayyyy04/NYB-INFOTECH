@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Specificity and Inheritance</title>
+
+    <style>
+
+        /* =========================
+           CSS SPECIFICITY
+        ========================== */
+
+        /* 1. Element Selector */
+        p {
+            color: blue;
+        }
+
+        /* 2. Class Selector */
+       .message {
+            color: green;
+        }
+
+        /* 3. Element + Class */
+        p.message {
+            color: purple;
+        }
+
+        /* 4. ID Selector */
+        #special-message {
+            color: red;
+        }
+
+        /* 5. !important */
+        .important-message {
+            color: orange !important;
+        }
+
+
+        /* =========================
+           CSS INHERITANCE
+        ========================== */
+
+        .company {
+            color: #2563eb;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        .company p {
+            /* Overrides inherited color */
+            color: #333;
+        }
+
+        .company h2 {
+            /* Explicitly inherits color */
+            color: inherit;
+        }
+
+        .company button {
+            /* Button normally does not inherit all styles
+               automatically, so inheritance is specified */
+            color: inherit;
+            font-family: inherit;
+        }
+
+    </style>
+</head>
+
+<body>
+
+
+    <!-- =========================
+         SPECIFICITY
+    ========================== -->
+
+    <section>
+
+        <h1>CSS Specificity</h1>
+
+        <!-- Element selector -->
+        <p>
+            Element selector
+        </p>
+
+        <!-- Class selector -->
+        <p class="message">
+            Class selector
+        </p>
+
+        <!-- Element + Class -->
+        <p class="message">
+            Element + Class selector
+        </p>
+
+        <!-- ID selector -->
+        <p
+            id="special-message"
+            class="message"
+        >
+            ID selector
+        </p>
+
+        <!-- !important -->
+        <p class="important-message">
+            Important rule
+        </p>
+
+    </section>
+
+
+    <!-- =========================
+         INHERITANCE
+    ========================== -->
+
+    <section class="company">
+
+        <h1>TechNova Solutions</h1>
+
+        <h2>
+            About Our Company
+        </h2>
+
+        <p>
+            We create modern digital solutions.
+        </p>
+
+        <button>
+            Learn More
+        </button>
+
+    </section>
+
+</body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Advanced CSS Selectors</title>
+
+    <style>
+
+        /* 1. Attribute Selector */
+        input[type="text"] {
+            border: 2px solid blue;
+        }
+
+        /* 2. Attribute Selector with value */
+        input[placeholder="Email"] {
+            background-color: #e0f2fe;
+        }
+
+        /* 3. Descendant Selector */
+        .about p {
+            color: green;
+        }
+
+        /* 4. Child Selector */
+        .services > p {
+            color: purple;
+        }
+
+        /* 5. Adjacent Sibling Selector */
+        h2 + p {
+            font-weight: bold;
+        }
+
+        /* 6. General Sibling Selector */
+        h2 ~ ul {
+            border: 2px solid orange;
+            padding: 15px;
+        }
+
+        /* 7. :hover */
+        button:hover {
+            background-color: black;
+            color: white;
+        }
+
+        /* 8. :focus */
+        input:focus {
+            outline: 3px solid lightgreen;
+        }
+
+        /* 9. :first-child */
+        li:first-child {
+            color: red;
+        }
+
+        /* 10. :last-child */
+        li:last-child {
+            color: blue;
+        }
+
+        /* 11. :nth-child() */
+        li:nth-child(2) {
+            background-color: #fef3c7;
+        }
+
+        /* 12. :not() */
+        .services p:not(.special) {
+            font-size: 18px;
+        }
+
+        /* 13. ::before */
+        .title::before {
+            content: "★ ";
+            color: orange;
+        }
+
+        /* 14. ::after */
+        .title::after {
+            content: " ★";
+            color: orange;
+        }
+
+        /* 15. ::first-letter */
+        .description::first-letter {
+            font-size: 35px;
+            font-weight: bold;
+            color: red;
+        }
+
+        /* 16. ::first-line */
+        .description::first-line {
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h1 class="title">TechNova Solutions</h1>
+
+
+    <!-- Attribute Selectors -->
+
+    <section class="contact">
+
+        <h2>Contact</h2>
+
+        <input
+            type="text"
+            placeholder="Name"
+        >
+
+        <input
+            type="email"
+            placeholder="Email"
+        >
+
+        <button>Submit</button>
+
+    </section>
+
+
+    <!-- Descendant Selector -->
+
+    <section class="about">
+
+        <h2>About Us</h2>
+
+        <div>
+            <p>
+                We provide modern technology solutions.
+            </p>
+        </div>
+
+    </section>
+
+
+    <!-- Child Selector -->
+
+    <section class="services">
+
+        <h2>Services</h2>
+
+        <p>Web Development</p>
+
+        <div>
+            <p class="special">
+                This paragraph is inside a div.
+            </p>
+        </div>
+
+        <p>App Development</p>
+
+        <!-- Sibling Selectors -->
+
+        <ul>
+            <li>Web Development</li>
+            <li>App Development</li>
+            <li>Cloud Solutions</li>
+            <li>UI/UX Design</li>
+        </ul>
+
+    </section>
+
+
+    <!-- Pseudo-Elements -->
+
+    <section>
+
+        <h2 class="title">Company Description</h2>
+
+        <p class="description">
+            TechNova creates reliable and modern digital
+            solutions for businesses around the world.
+        </p>
+
+    </section>
+
+</body>
+</html>

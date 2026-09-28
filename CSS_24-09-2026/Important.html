@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS !important</title>
+
+    <style>
+        p {
+            color: blue;
+        }
+
+        .message {
+            color: green !important;
+        }
+
+        #text {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <p>This text is blue.</p>
+
+    <p class="message">
+        This text is green because of !important.
+    </p>
+
+    <p id="text" class="message">
+        This text is also green because !important overrides
+        the normal ID rule.
+    </p>
+
+</body>
+</html>

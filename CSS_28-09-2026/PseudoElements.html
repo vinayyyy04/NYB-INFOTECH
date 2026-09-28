@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pseudo-Elements UI</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f1f5f9;
+            padding: 50px;
+        }
+
+        /* =========================
+           CARD
+        ========================== */
+
+        .card {
+            position: relative;
+            width: 320px;
+            margin: auto;
+            padding: 30px;
+
+            background: white;
+            border-radius: 12px;
+
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+
+            overflow: hidden;
+        }
+
+        /* Decorative shape at the top */
+
+        .card::before {
+            content: "";
+            position: absolute;
+
+            width: 100px;
+            height: 100px;
+
+            background: #2563eb;
+            border-radius: 50%;
+
+            top: -50px;
+            right: -50px;
+        }
+
+        /* Decorative line at the bottom */
+
+        .card::after {
+            content: "";
+            position: absolute;
+
+            width: 60%;
+            height: 4px;
+
+            background: #2563eb;
+
+            bottom: 0;
+            left: 20%;
+
+            border-radius: 10px;
+        }
+
+
+        /* =========================
+           HEADING
+        ========================== */
+
+        .title {
+            position: relative;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        /* Line before heading */
+
+        .title::before {
+            content: "";
+            display: inline-block;
+
+            width: 40px;
+            height: 3px;
+
+            background: #2563eb;
+
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        /* Line after heading */
+
+        .title::after {
+            content: "";
+            display: inline-block;
+
+            width: 40px;
+            height: 3px;
+
+            background: #2563eb;
+
+            margin-left: 10px;
+            vertical-align: middle;
+        }
+
+
+        /* =========================
+           BADGE
+        ========================== */
+
+        .badge {
+            position: relative;
+
+            display: inline-block;
+
+            background: #16a34a;
+            color: white;
+
+            padding: 8px 15px;
+            border-radius: 20px;
+
+            margin-bottom: 20px;
+        }
+
+        /* Decorative dot */
+
+        .badge::before {
+            content: "";
+
+            display: inline-block;
+
+            width: 8px;
+            height: 8px;
+
+            background: white;
+            border-radius: 50%;
+
+            margin-right: 7px;
+        }
+
+
+        /* =========================
+           QUOTE
+        ========================== */
+
+        .quote {
+            position: relative;
+
+            padding: 20px 25px;
+            margin-top: 20px;
+
+            background: #eff6ff;
+            border-left: 4px solid #2563eb;
+        }
+
+        /* Opening quote */
+
+        .quote::before {
+            content: "“";
+
+            position: absolute;
+
+            left: 5px;
+            top: -5px;
+
+            font-size: 40px;
+            color: #2563eb;
+        }
+
+        /* Closing quote */
+
+        .quote::after {
+            content: "”";
+
+            font-size: 40px;
+            color: #2563eb;
+        }
+
+
+        /* =========================
+           BUTTON
+        ========================== */
+
+        .btn {
+            position: relative;
+
+            display: block;
+
+            width: 100%;
+
+            margin-top: 25px;
+            padding: 12px;
+
+            background: #2563eb;
+            color: white;
+
+            border: none;
+            border-radius: 6px;
+
+            cursor: pointer;
+        }
+
+        /* Decorative arrow */
+
+        .btn::after {
+            content: " →";
+
+            font-size: 18px;
+        }
+
+        .btn:hover {
+            background: #1d4ed8;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="card">
+
+        <h1 class="title">
+            TechNova
+        </h1>
+
+        <span class="badge">
+            Available
+        </span>
+
+        <h2>
+            Web Development
+        </h2>
+
+        <p>
+            We create modern and responsive websites
+            for businesses.
+        </p>
+
+        <div class="quote">
+            Build better. Build smarter.
+        </div>
+
+        <button class="btn">
+            Get Started
+        </button>
+
+    </div>
+
+</body>
+</html>

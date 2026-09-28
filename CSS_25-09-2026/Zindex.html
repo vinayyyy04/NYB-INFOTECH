@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS z-index</title>
+
+    <style>
+        .container {
+            position: relative;
+            width: 500px;
+            height: 350px;
+            margin: 50px auto;
+        }
+
+        .box1 {
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            width: 200px;
+            height: 150px;
+            background-color: lightblue;
+            z-index: 1;
+        }
+
+        .box2 {
+            position: absolute;
+            top: 100px;
+            left: 150px;
+            width: 200px;
+            height: 150px;
+            background-color: lightgreen;
+            z-index: 2;
+        }
+
+        .box3 {
+            position: absolute;
+            top: 150px;
+            left: 250px;
+            width: 200px;
+            height: 150px;
+            background-color: lightcoral;
+            z-index: 3;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>z-index Overlapping Example</h1>
+
+    <div class="container">
+
+        <div class="box1">Box 1 - z-index: 1</div>
+
+        <div class="box2">Box 2 - z-index: 2</div>
+
+        <div class="box3">Box 3 - z-index: 3</div>
+
+    </div>
+
+</body>
+</html>

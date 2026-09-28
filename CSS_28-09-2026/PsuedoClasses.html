@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pseudo-Classes Practice</title>
+
+    <style>
+
+        /* =========================
+           BUTTON PSEUDO-CLASSES
+        ========================== */
+
+        .btn {
+            padding: 12px 25px;
+            border: none;
+            background-color: #2563eb;
+            color: white;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        /* Mouse over button */
+        .btn:hover {
+            background-color: #1d4ed8;
+        }
+
+        /* Button while clicking */
+        .btn:active {
+            background-color: #dc2626;
+            transform: scale(0.95);
+        }
+
+
+        /* =========================
+           LINK PSEUDO-CLASSES
+        ========================== */
+
+        .links a {
+            margin-right: 20px;
+            color: #2563eb;
+        }
+
+        /* Link when mouse is over it */
+        .links a:hover {
+            color: red;
+        }
+
+        /* Link when keyboard focuses it */
+        .links a:focus {
+            outline: 2px solid orange;
+        }
+
+        /* Link that has already been visited */
+        .links a:visited {
+            color: purple;
+        }
+
+
+        /* =========================
+           CARD PSEUDO-CLASSES
+        ========================== */
+
+        .cards {
+            display: flex;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .card {
+            width: 200px;
+            padding: 25px;
+            background-color: #f1f5f9;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+        }
+
+        /* Card on mouse hover */
+        .card:hover {
+            background-color: #dbeafe;
+            border-color: #2563eb;
+            transform: translateY(-5px);
+        }
+
+        /* First card */
+        .card:first-child {
+            border-top: 5px solid green;
+        }
+
+        /* Last card */
+        .card:last-child {
+            border-bottom: 5px solid red;
+        }
+
+        /* Second card */
+        .card:nth-child(2) {
+            background-color: #fef3c7;
+        }
+
+
+        /* =========================
+           FORM PSEUDO-CLASSES
+        ========================== */
+
+        form {
+            max-width: 400px;
+            margin-top: 30px;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+        }
+
+        /* Input when focused */
+        input:focus,
+        select:focus,
+        textarea:focus {
+            border-color: #2563eb;
+            outline: none;
+        }
+
+        /* Required input */
+        input:required {
+            background-color: #f8fafc;
+        }
+
+        /* Valid email */
+        input:valid {
+            border-color: green;
+        }
+
+        /* Invalid email */
+        input:invalid {
+            border-color: red;
+        }
+
+        /* Checked checkbox */
+        input[type="checkbox"]:checked {
+            accent-color: green;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h1>Pseudo-Classes Practice</h1>
+
+
+    <!-- =========================
+         BUTTON
+    ========================== -->
+
+    <h2>Buttons</h2>
+
+    <button class="btn">
+        Submit
+    </button>
+
+
+    <!-- =========================
+         LINKS
+    ========================== -->
+
+    <h2>Links</h2>
+
+    <div class="links">
+
+        <a href="https://www.google.com">
+            Google
+        </a>
+
+        <a href="https://www.github.com">
+            GitHub
+        </a>
+
+    </div>
+
+
+    <!-- =========================
+         CARDS
+    ========================== -->
+
+    <h2>Services</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Web Development</h3>
+            <p>Build modern websites.</p>
+        </div>
+
+        <div class="card">
+            <h3>App Development</h3>
+            <p>Create mobile applications.</p>
+        </div>
+
+        <div class="card">
+            <h3>Cloud Services</h3>
+            <p>Manage cloud solutions.</p>
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         FORM
+    ========================== -->
+
+    <h2>Contact Form</h2>
+
+    <form>
+
+        <input
+            type="text"
+            placeholder="Enter your name"
+            required
+        >
+
+        <input
+            type="email"
+            placeholder="Enter your email"
+            required
+        >
+
+        <select required>
+
+            <option value="">
+                Select Service
+            </option>
+
+            <option value="web">
+                Web Development
+            </option>
+
+            <option value="app">
+                App Development
+            </option>
+
+        </select>
+
+        <textarea
+            placeholder="Enter your message"
+            required
+        ></textarea>
+
+        <label>
+            <input type="checkbox">
+            Accept Terms
+        </label>
+
+        <br><br>
+
+        <button class="btn" type="submit">
+            Send
+        </button>
+
+    </form>
+
+</body>
+</html>

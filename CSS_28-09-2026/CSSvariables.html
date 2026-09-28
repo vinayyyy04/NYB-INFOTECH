@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CSS Variables</title>
+
+    <style>
+
+        /* =========================
+           CSS VARIABLES
+        ========================== */
+
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #0f172a;
+            --accent-color: #f59e0b;
+
+            --text-color: #222;
+            --light-color: #f8fafc;
+            --white-color: #ffffff;
+
+            --border-color: #d1d5db;
+
+            --small-radius: 5px;
+            --large-radius: 12px;
+
+            --small-space: 10px;
+            --medium-space: 20px;
+            --large-space: 30px;
+
+            --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+
+        /* =========================
+           GLOBAL STYLES
+        ========================== */
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: var(--light-color);
+            color: var(--text-color);
+        }
+
+
+        /* =========================
+           HEADER
+        ========================== */
+
+        header {
+            background-color: var(--secondary-color);
+            color: var(--white-color);
+
+            padding: var(--medium-space);
+            text-align: center;
+        }
+
+
+        /* =========================
+           CARD
+        ========================== */
+
+        .container {
+            max-width: 900px;
+            margin: var(--large-space) auto;
+
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--medium-space);
+
+            padding: var(--medium-space);
+        }
+
+        .card {
+            background-color: var(--white-color);
+
+            padding: var(--large-space);
+
+            border: 2px solid var(--border-color);
+            border-radius: var(--large-radius);
+
+            box-shadow: var(--shadow);
+        }
+
+        .card h2 {
+            color: var(--primary-color);
+            margin-bottom: var(--small-space);
+        }
+
+
+        /* =========================
+           BUTTON
+        ========================== */
+
+        .btn {
+            display: inline-block;
+
+            margin-top: var(--medium-space);
+            padding: var(--small-space) var(--medium-space);
+
+            background-color: var(--primary-color);
+            color: var(--white-color);
+
+            border: none;
+            border-radius: var(--small-radius);
+
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: var(--accent-color);
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================== */
+
+        footer {
+            background-color: var(--secondary-color);
+            color: var(--white-color);
+
+            padding: var(--medium-space);
+            text-align: center;
+        }
+
+
+        /* =========================
+           RESPONSIVE
+        ========================== */
+
+        @media (max-width: 700px) {
+
+            .container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>TechNova Solutions</h1>
+    </header>
+
+
+    <main class="container">
+
+        <div class="card">
+            <h2>Web Development</h2>
+            <p>
+                Build responsive and modern websites.
+            </p>
+
+            <button class="btn">
+                Learn More
+            </button>
+        </div>
+
+
+        <div class="card">
+            <h2>App Development</h2>
+            <p>
+                Create modern mobile applications.
+            </p>
+
+            <button class="btn">
+                Learn More
+            </button>
+        </div>
+
+
+        <div class="card">
+            <h2>Cloud Solutions</h2>
+            <p>
+                Build scalable cloud-based solutions.
+            </p>
+
+            <button class="btn">
+                Learn More
+            </button>
+        </div>
+
+    </main>
+
+
+    <footer>
+        <p>© 2026 TechNova Solutions</p>
+    </footer>
+
+</body>
+</html>
