@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Dashboard</title>
+</head>
+
+<body style="margin:0; font-family:Arial, sans-serif; background:#f4f6f8;">
+
+    <!-- Header -->
+    <header style="
+        background:#1e293b;
+        color:white;
+        padding:20px;
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        flex-wrap:wrap;
+    ">
+        <h2 style="margin:0;">NYB Infotech</h2>
+        <span>Admin Dashboard</span>
+    </header>
+
+    <!-- Dashboard Layout -->
+    <div style="
+        display:grid;
+        grid-template-columns:220px 1fr;
+        min-height:calc(100vh - 130px);
+    ">
+
+        <!-- Sidebar -->
+        <aside style="
+            background:#334155;
+            color:white;
+            padding:20px;
+        ">
+            <h3>Menu</h3>
+
+            <div style="padding:12px 0;">🏠 Dashboard</div>
+            <div style="padding:12px 0;">👤 Users</div>
+            <div style="padding:12px 0;">📊 Reports</div>
+            <div style="padding:12px 0;">⚙️ Settings</div>
+        </aside>
+
+        <!-- Main Content -->
+        <main style="padding:25px;">
+
+            <h1 style="margin-top:0;">Dashboard</h1>
+
+            <!-- Cards -->
+            <section style="
+                display:flex;
+                gap:20px;
+                flex-wrap:wrap;
+                margin-bottom:30px;
+            ">
+
+                <div style="
+                    background:white;
+                    padding:20px;
+                    flex:1;
+                    min-width:180px;
+                    border-radius:10px;
+                    box-shadow:0 2px 8px #ddd;
+                ">
+                    <h3>Total Users</h3>
+                    <h2>1,250</h2>
+                </div>
+
+                <div style="
+                    background:white;
+                    padding:20px;
+                    flex:1;
+                    min-width:180px;
+                    border-radius:10px;
+                    box-shadow:0 2px 8px #ddd;
+                ">
+                    <h3>Orders</h3>
+                    <h2>850</h2>
+                </div>
+
+                <div style="
+                    background:white;
+                    padding:20px;
+                    flex:1;
+                    min-width:180px;
+                    border-radius:10px;
+                    box-shadow:0 2px 8px #ddd;
+                ">
+                    <h3>Revenue</h3>
+                    <h2>₹75,000</h2>
+                </div>
+            </section>
+
+            <!-- Main Content + List -->
+            <section style="
+                display:grid;
+                grid-template-columns:2fr 1fr;
+                gap:20px;
+            ">
+
+                <!-- Table -->
+                <div style="
+                    background:white;
+                    padding:20px;
+                    border-radius:10px;
+                    overflow-x:auto;
+                ">
+                    <h2>Recent Users</h2>
+
+                    <table style="
+                        width:100%;
+                        border-collapse:collapse;
+                        min-width:500px;
+                    ">
+                        <tr style="background:#e2e8f0;">
+                            <th style="padding:12px; text-align:left;">Name</th>
+                            <th style="padding:12px; text-align:left;">Email</th>
+                            <th style="padding:12px; text-align:left;">Status</th>
+                        </tr>
+
+                        <tr>
+                            <td style="padding:12px; border-bottom:1px solid #ddd;">Rahul</td>
+                            <td style="padding:12px; border-bottom:1px solid #ddd;">rahul@example.com</td>
+                            <td style="padding:12px; border-bottom:1px solid #ddd;">Active</td>
+                        </tr>
+
+                        <tr>
+                            <td style="padding:12px; border-bottom:1px solid #ddd;">Priya</td>
+                            <td style="padding:12px; border-bottom:1px solid #ddd;">priya@example.com</td>
+                            <td style="padding:12px; border-bottom:1px solid #ddd;">Active</td>
+                        </tr>
+
+                        <tr>
+                            <td style="padding:12px;">Arjun</td>
+                            <td style="padding:12px;">arjun@example.com</td>
+                            <td style="padding:12px;">Inactive</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <!-- Activity List -->
+                <div style="
+                    background:white;
+                    padding:20px;
+                    border-radius:10px;
+                ">
+                    <h2>Recent Activity</h2>
+
+                    <ul style="padding-left:20px; line-height:2;">
+                        <li>New user registered</li>
+                        <li>Order completed</li>
+                        <li>Profile updated</li>
+                        <li>New report generated</li>
+                    </ul>
+                </div>
+
+            </section>
+
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer style="
+        background:#1e293b;
+        color:white;
+        padding:20px;
+        text-align:center;
+    ">
+        <p style="margin:0;">© 2026 NYB Infotech. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Responsive Design -->
+    <style>
+        @media (max-width: 768px) {
+
+            body > div {
+                grid-template-columns: 1fr !important;
+            }
+
+            aside {
+                text-align:center;
+            }
+
+            main section:last-child {
+                grid-template-columns:1fr !important;
+            }
+        }
+    </style>
+
+</body>
+</html>

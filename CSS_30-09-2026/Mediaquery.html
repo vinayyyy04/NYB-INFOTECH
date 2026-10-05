@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Query Breakpoints</title>
+
+    <style>
+        /* Base - Mobile */
+        .container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+            padding: 15px;
+        }
+
+        .card {
+            background: #e2e8f0;
+            padding: 25px;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        /* Small Tablet - 480px */
+        @media (min-width: 480px) {
+            .container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Tablet - 768px */
+        @media (min-width: 768px) {
+            .container {
+                grid-template-columns: repeat(3, 1fr);
+                padding: 25px;
+            }
+        }
+
+        /* Laptop - 1024px */
+        @media (min-width: 1024px) {
+            .container {
+                grid-template-columns: repeat(4, 1fr);
+                padding: 35px;
+            }
+        }
+
+        /* Large Desktop - 1200px */
+        @media (min-width: 1200px) {
+            .container {
+                grid-template-columns: repeat(5, 1fr);
+                padding: 50px;
+            }
+        }
+    </style>
+</head>
+
+<body style="margin:0; font-family:Arial, sans-serif;">
+
+    <header style="
+        background:#1e293b;
+        color:white;
+        padding:20px;
+        text-align:center;
+    ">
+        <h1>NYB Infotech</h1>
+        <p>Responsive Media Query Practice</p>
+    </header>
+
+    <main class="container">
+
+        <div class="card">
+            <h2>HTML</h2>
+            <p>Web Structure</p>
+        </div>
+
+        <div class="card">
+            <h2>CSS</h2>
+            <p>Web Styling</p>
+        </div>
+
+        <div class="card">
+            <h2>JavaScript</h2>
+            <p>Web Logic</p>
+        </div>
+
+        <div class="card">
+            <h2>React</h2>
+            <p>UI Development</p>
+        </div>
+
+        <div class="card">
+            <h2>Node.js</h2>
+            <p>Backend Development</p>
+        </div>
+
+    </main>
+
+</body>
+</html>

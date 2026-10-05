@@ -1,0 +1,222 @@
+1. Introduction to React
+
+Definition:
+React is a JavaScript library used to build user interfaces, especially single-page applications (SPAs). It allows developers to create reusable UI components.
+
+Basic Syntax:
+
+import React from "react";
+2. Why React is Used
+
+Definition:
+React is used to build fast, interactive, scalable, and reusable user interfaces. It simplifies the development of complex web applications by dividing the UI into smaller components.
+
+Basic Syntax:
+
+const App = () => {
+    return (...);
+};
+3. React Features
+
+Definition:
+React provides several features that make UI development easier and more efficient.
+
+Main Features:
+
+Component-based architecture
+Reusable components
+JSX
+Virtual DOM
+One-way data flow
+Declarative UI
+Fast rendering
+State management
+Event handling
+Support for large applications
+
+Basic Syntax:
+
+function Component() {
+    return (...);
+}
+4. React Project Structure
+
+Definition:
+React project structure organizes the application's source code, components, assets, configuration files, and dependencies.
+
+Basic Structure:
+
+project/
+│
+├── node_modules/
+├── public/
+├── src/
+│   ├── assets/
+│   ├── components/
+│   ├── App.jsx
+│   ├── main.jsx
+│   └── index.css
+│
+├── package.json
+├── package-lock.json
+└── vite.config.js
+5. React Application Setup
+
+Definition:
+React application setup is the process of creating and configuring a React project with the required dependencies and development environment.
+
+Basic Syntax:
+
+npm create vite@latest project-name
+cd project-name
+npm install
+npm run dev
+6. Components
+
+Definition:
+Components are independent and reusable building blocks of a React application. Each component represents a part of the user interface.
+
+Basic Syntax:
+
+function ComponentName() {
+    return (...);
+}
+
+export default ComponentName;
+7. Functional Components
+
+Definition:
+A functional component is a JavaScript function that returns JSX to describe a part of the user interface.
+
+Basic Syntax:
+
+function ComponentName() {
+    return (...);
+}
+
+Arrow Function Syntax:
+
+const ComponentName = () => {
+    return (...);
+};
+8. JSX
+
+Definition:
+JSX stands for JavaScript XML. It is a syntax extension for JavaScript that allows developers to write HTML-like structures inside JavaScript code.
+
+Basic Syntax:
+
+const element = (
+    <tag>
+        Content
+    </tag>
+);
+9. JSX Rules
+
+Definition:
+JSX follows specific rules that must be followed for the JSX code to be valid.
+
+Basic Rules:
+
+JSX must return a single parent element.
+All tags must be properly closed.
+HTML attributes use JSX naming conventions.
+JavaScript expressions are written inside {}.
+class is written as className.
+Inline styles are represented using JavaScript objects.
+Component names must start with an uppercase letter.
+JavaScript reserved words cannot be directly used as JSX attribute names.
+
+Basic Syntax:
+
+return (
+    <Parent>
+        <Child />
+    </Parent>
+);
+10. Valid and Invalid JSX
+
+Definition:
+Valid JSX follows JSX syntax and React rules, while invalid JSX contains syntax or structural violations.
+
+Basic Valid Syntax:
+
+return (
+    <div>
+        <h1>...</h1>
+        <p>...</p>
+    </div>
+);
+
+Basic Invalid Syntax:
+
+return (
+    <div>
+        <h1>...</h1>
+        <p>...</p>
+    </div>
+    <section>...</section>
+);
+11. Fragments
+
+Definition:
+Fragments allow multiple JSX elements to be grouped together without adding an unnecessary HTML element to the DOM.
+
+Basic Syntax:
+
+<React.Fragment>
+    ...
+</React.Fragment>
+
+Short Syntax:
+
+<>
+    ...
+</>
+12. Strict Mode
+
+Definition:
+StrictMode is a React development feature that helps identify potential problems and unsafe practices in an application.
+
+Basic Syntax:
+
+import { StrictMode } from "react";
+
+<StrictMode>
+    <App />
+</StrictMode>
+13. Rendering Components
+
+Definition:
+Rendering a component means displaying a React component inside the application's DOM.
+
+Basic Syntax:
+
+import { createRoot } from "react-dom/client";
+
+createRoot(document.getElementById("root")).render(
+    <App />
+);
+14. Calling Functions in Components
+
+Definition:
+Functions can be defined and called inside React components to perform operations or generate dynamic values.
+
+Basic Syntax:
+
+function Component() {
+
+    function functionName() {
+        // statements
+    }
+
+    functionName();
+
+    return (...);
+}
+
+Function expression syntax:
+
+const functionName = () => {
+    // statements
+};

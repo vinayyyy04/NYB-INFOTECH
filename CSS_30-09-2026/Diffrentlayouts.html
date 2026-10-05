@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Layout</title>
+
+    <style>
+        /* Mobile - Default */
+        .container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+            padding: 15px;
+        }
+
+        .card {
+            background: #e2e8f0;
+            padding: 25px;
+            text-align: center;
+        }
+
+        .nav {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        /* Tablet */
+        @media (min-width: 600px) {
+            .container {
+                grid-template-columns: repeat(2, 1fr);
+                padding: 25px;
+            }
+
+            .nav {
+                flex-direction: row;
+                justify-content: center;
+            }
+        }
+
+        /* Desktop */
+        @media (min-width: 1024px) {
+            .container {
+                grid-template-columns: repeat(4, 1fr);
+                padding: 40px;
+            }
+
+            .nav {
+                justify-content: flex-end;
+            }
+        }
+    </style>
+</head>
+
+<body style="margin:0; font-family:Arial, sans-serif;">
+
+    <!-- Header -->
+    <header style="
+        background:#1e293b;
+        color:white;
+        padding:20px;
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        flex-wrap:wrap;
+    ">
+        <h2 style="margin:0;">NYB Infotech</h2>
+
+        <nav class="nav">
+            <a href="#" style="color:white; text-decoration:none;">Home</a>
+            <a href="#" style="color:white; text-decoration:none;">About</a>
+            <a href="#" style="color:white; text-decoration:none;">Services</a>
+            <a href="#" style="color:white; text-decoration:none;">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Responsive Cards -->
+    <main class="container">
+
+        <div class="card">
+            <h2>HTML</h2>
+            <p>Structure of webpages</p>
+        </div>
+
+        <div class="card">
+            <h2>CSS</h2>
+            <p>Styling of webpages</p>
+        </div>
+
+        <div class="card">
+            <h2>JavaScript</h2>
+            <p>Webpage functionality</p>
+        </div>
+
+        <div class="card">
+            <h2>React</h2>
+            <p>Frontend development</p>
+        </div>
+
+    </main>
+
+    <footer style="
+        background:#1e293b;
+        color:white;
+        padding:20px;
+        text-align:center;
+    ">
+        © 2026 NYB Infotech
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive NYB Infotech</title>
+
+    <style>
+        /* Desktop Layout */
+        .layout {
+            display: grid;
+            grid-template-columns: 220px 1fr;
+            min-height: 500px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .navigation {
+            display: flex;
+            gap: 25px;
+        }
+
+        /* Tablet */
+        @media (max-width: 900px) {
+            .layout {
+                grid-template-columns: 160px 1fr;
+            }
+
+            .cards {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .navigation {
+                gap: 15px;
+            }
+        }
+
+        /* Mobile */
+        @media (max-width: 600px) {
+            .layout {
+                grid-template-columns: 1fr;
+            }
+
+            .sidebar {
+                text-align: center;
+            }
+
+            .navigation {
+                width: 100%;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .main {
+                padding: 15px !important;
+            }
+        }
+    </style>
+</head>
+
+<body style="margin:0; font-family:Arial, sans-serif;">
+
+    <!-- Header -->
+    <header style="
+        background:#1e293b;
+        color:white;
+        padding:20px;
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        flex-wrap:wrap;
+    ">
+        <h2 style="margin:0;">NYB Infotech</h2>
+
+        <nav class="navigation">
+            <a href="#" style="color:white; text-decoration:none;">Home</a>
+            <a href="#" style="color:white; text-decoration:none;">About</a>
+            <a href="#" style="color:white; text-decoration:none;">Services</a>
+            <a href="#" style="color:white; text-decoration:none;">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Layout -->
+    <div class="layout">
+
+        <!-- Sidebar -->
+        <aside class="sidebar" style="
+            background:#334155;
+            color:white;
+            padding:20px;
+        ">
+            <h3>Dashboard</h3>
+            <p>Home</p>
+            <p>Users</p>
+            <p>Reports</p>
+            <p>Settings</p>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main" style="padding:30px; background:#f1f5f9;">
+
+            <h1>Dashboard</h1>
+
+            <!-- Cards -->
+            <div class="cards">
+
+                <div style="
+                    background:white;
+                    padding:25px;
+                    border-radius:10px;
+                    text-align:center;
+                ">
+                    <h2>150</h2>
+                    <p>Users</p>
+                </div>
+
+                <div style="
+                    background:white;
+                    padding:25px;
+                    border-radius:10px;
+                    text-align:center;
+                ">
+                    <h2>80</h2>
+                    <p>Orders</p>
+                </div>
+
+                <div style="
+                    background:white;
+                    padding:25px;
+                    border-radius:10px;
+                    text-align:center;
+                ">
+                    <h2>₹50K</h2>
+                    <p>Revenue</p>
+                </div>
+
+            </div>
+
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer style="
+        background:#1e293b;
+        color:white;
+        padding:20px;
+        text-align:center;
+    ">
+        © 2026 NYB Infotech
+    </footer>
+
+</body>
+</html>

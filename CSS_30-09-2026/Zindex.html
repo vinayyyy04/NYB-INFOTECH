@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positioning and Z-Index</title>
+
+    <style>
+        .container {
+            position: relative;
+            width: 500px;
+            height: 350px;
+            margin: 50px auto;
+            background: #e2e8f0;
+            border: 2px solid #334155;
+        }
+
+        /* Relative Position */
+        .relative-box {
+            position: relative;
+            left: 30px;
+            top: 20px;
+            width: 120px;
+            padding: 20px;
+            background: #2563eb;
+            color: white;
+        }
+
+        /* Absolute Position */
+        .absolute-box {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            width: 120px;
+            padding: 20px;
+            background: #16a34a;
+            color: white;
+        }
+
+        /* Z-Index */
+        .box-one {
+            position: absolute;
+            left: 100px;
+            top: 150px;
+            width: 150px;
+            height: 100px;
+            background: #f97316;
+            z-index: 1;
+        }
+
+        .box-two {
+            position: absolute;
+            left: 160px;
+            top: 190px;
+            width: 150px;
+            height: 100px;
+            background: #dc2626;
+            z-index: 2;
+        }
+
+        /* Fixed Position */
+        .fixed-button {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            padding: 15px 20px;
+            background: #7c3aed;
+            color: white;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body style="
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#f8fafc;
+">
+
+    <h1 style="text-align:center;">
+        NYB Infotech
+    </h1>
+
+    <div class="container">
+
+        <div class="relative-box">
+            Relative
+        </div>
+
+        <div class="absolute-box">
+            Absolute
+        </div>
+
+        <div class="box-one">
+            Z-Index 1
+        </div>
+
+        <div class="box-two">
+            Z-Index 2
+        </div>
+
+    </div>
+
+    <div class="fixed-button">
+        Fixed Button
+    </div>
+
+</body>
+</html>

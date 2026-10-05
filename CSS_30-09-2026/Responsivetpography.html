@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Typography</title>
+
+    <style>
+        /* Mobile */
+        h1 {
+            font-size: 28px;
+        }
+
+        h2 {
+            font-size: 22px;
+        }
+
+        p {
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        /* Tablet */
+        @media (min-width: 768px) {
+            h1 {
+                font-size: 40px;
+            }
+
+            h2 {
+                font-size: 28px;
+            }
+
+            p {
+                font-size: 16px;
+                line-height: 1.7;
+            }
+        }
+
+        /* Desktop */
+        @media (min-width: 1024px) {
+            h1 {
+                font-size: 52px;
+            }
+
+            h2 {
+                font-size: 32px;
+            }
+
+            p {
+                font-size: 18px;
+                line-height: 1.8;
+            }
+        }
+    </style>
+</head>
+
+<body style="
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#f1f5f9;
+">
+
+    <section style="
+        max-width:1000px;
+        margin:auto;
+        padding:40px 20px;
+        text-align:center;
+    ">
+
+        <h1>NYB Infotech</h1>
+
+        <h2>Responsive Web Development</h2>
+
+        <p>
+            Responsive typography automatically adjusts text size and
+            spacing according to the screen size. This makes the website
+            easier to read on mobile, tablet, and desktop devices.
+        </p>
+
+        <p>
+            HTML provides the structure, CSS provides the styling,
+            and responsive design makes the content accessible across
+            different screen sizes.
+        </p>
+
+    </section>
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Keyframe Animation</title>
+
+    <style>
+        /* Define Animation */
+        @keyframes moveBox {
+            0% {
+                transform: translateX(0);
+            }
+
+            50% {
+                transform: translateX(300px);
+            }
+
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        .box {
+            width: 120px;
+            height: 120px;
+            background: #2563eb;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+
+            /* Apply Animation */
+            animation: moveBox 3s ease-in-out infinite;
+        }
+    </style>
+</head>
+
+<body style="
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#f1f5f9;
+">
+
+    <h1 style="text-align:center; padding:30px;">
+        NYB Infotech
+    </h1>
+
+    <div style="
+        padding:50px;
+        overflow:hidden;
+    ">
+        <div class="box">
+            Animate
+        </div>
+    </div>
+
+</body>
+</html>

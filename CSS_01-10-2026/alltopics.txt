@@ -1,0 +1,463 @@
+1. HTML Structure
+
+Definition: HTML structure is the basic layout of an HTML document. It contains html, head, and body sections.
+
+Basic Syntax:
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Title</title>
+</head>
+<body>
+    Content goes here
+</body>
+</html>
+2. Semantic HTML
+
+Definition: Semantic HTML uses meaningful tags that clearly describe the purpose of their content.
+
+Basic Syntax:
+
+<header>...</header>
+<nav>...</nav>
+<main>...</main>
+<section>...</section>
+<article>...</article>
+<aside>...</aside>
+<footer>...</footer>
+3. Headings and Paragraphs
+
+Definition: Headings define titles or section headings, while paragraphs define blocks of text.
+
+Basic Syntax:
+
+<h1>Heading</h1>
+<h2>Heading</h2>
+<h3>Heading</h3>
+
+<p>Paragraph text.</p>
+
+HTML provides headings from <h1> to <h6>.
+
+4. Links
+
+Definition: Links are used to navigate from one page or location to another.
+
+Basic Syntax:
+
+<a href="URL">Link Text</a>
+5. Images
+
+Definition: The <img> element is used to display an image on a webpage.
+
+Basic Syntax:
+
+<img src="image.jpg" alt="Image description">
+6. Lists
+
+Definition: Lists are used to display related items in an ordered or unordered format.
+
+Basic Syntax:
+
+<ul>
+    <li>Item</li>
+    <li>Item</li>
+</ul>
+
+<ol>
+    <li>Item</li>
+    <li>Item</li>
+</ol>
+<ul> → Unordered list
+<ol> → Ordered list
+<li> → List item
+7. Tables
+
+Definition: Tables are used to organize data into rows and columns.
+
+Basic Syntax:
+
+<table>
+    <tr>
+        <th>Heading</th>
+        <th>Heading</th>
+    </tr>
+    <tr>
+        <td>Data</td>
+        <td>Data</td>
+    </tr>
+</table>
+<table> → Table
+<tr> → Table row
+<th> → Table heading
+<td> → Table data
+8. Forms
+
+Definition: Forms are used to collect information from users.
+
+Basic Syntax:
+
+<form action="URL" method="post">
+    <label>Name:</label>
+    <input type="text" name="name">
+
+    <input type="submit" value="Submit">
+</form>
+9. Multimedia
+
+Definition: Multimedia elements are used to add audio and video content to a webpage.
+
+Basic Syntax:
+
+<audio controls>
+    <source src="audio.mp3" type="audio/mpeg">
+</audio>
+
+<video controls>
+    <source src="video.mp4" type="video/mp4">
+</video>
+10. Iframes
+
+Definition: An iframe is used to embed another webpage or external content inside the current webpage.
+
+Basic Syntax:
+
+<iframe src="URL" width="600" height="400"></iframe>
+11. HTML Entities
+
+Definition: HTML entities are special codes used to display reserved characters, symbols, or characters that may have special meaning in HTML.
+
+Basic Syntax:
+
+&entity_name;
+
+or
+
+&#entity_number;
+CSS
+12. CSS Selectors
+
+Definition: CSS selectors are used to select HTML elements that you want to style.
+
+Basic Syntax:
+
+selector {
+    property: value;
+}
+
+Common selectors:
+
+/* Element */
+p {
+    property: value;
+}
+
+/* Class */
+.box {
+    property: value;
+}
+
+/* ID */
+#header {
+    property: value;
+}
+
+/* Universal */
+* {
+    property: value;
+}
+13. Specificity
+
+Definition: Specificity determines which CSS rule is applied when multiple rules target the same element.
+
+Basic Priority:
+
+!important
+Inline style
+ID
+Class / Attribute / Pseudo-class
+Element / Pseudo-element
+Universal selector
+
+Basic Syntax:
+
+#id {
+    property: value;
+}
+
+.class {
+    property: value;
+}
+
+p {
+    property: value;
+}
+14. CSS Variables
+
+Definition: CSS variables are reusable values that can be defined once and used throughout a stylesheet.
+
+Basic Syntax:
+
+:root {
+    --main-color: value;
+    --spacing: value;
+}
+
+.element {
+    color: var(--main-color);
+    margin: var(--spacing);
+}
+15. Colors
+
+Definition: CSS colors are used to set the color of text, backgrounds, borders, and other elements.
+
+Basic Syntax:
+
+selector {
+    color: red;
+    background-color: blue;
+}
+
+Common color formats:
+
+color: red;
+color: #ff0000;
+color: rgb(255, 0, 0);
+color: rgba(255, 0, 0, 0.5);
+16. Backgrounds
+
+Definition: Background properties control the background color and images of elements.
+
+Basic Syntax:
+
+selector {
+    background-color: value;
+    background-image: url("image.jpg");
+    background-repeat: value;
+    background-position: value;
+    background-size: value;
+}
+17. Borders
+
+Definition: Borders are used to create visible boundaries around HTML elements.
+
+Basic Syntax:
+
+selector {
+    border: 1px solid black;
+}
+
+Individual properties:
+
+border-width: value;
+border-style: value;
+border-color: value;
+border-radius: value;
+18. Margins
+
+Definition: Margin is the space outside an element's border.
+
+Basic Syntax:
+
+selector {
+    margin: 20px;
+}
+
+Individual sides:
+
+margin-top: value;
+margin-right: value;
+margin-bottom: value;
+margin-left: value;
+19. Padding
+
+Definition: Padding is the space inside an element, between its content and border.
+
+Basic Syntax:
+
+selector {
+    padding: 20px;
+}
+
+Individual sides:
+
+padding-top: value;
+padding-right: value;
+padding-bottom: value;
+padding-left: value;
+20. Box Model
+
+Definition: The CSS box model describes how the size of an element is calculated using content, padding, border, and margin.
+
+Basic Structure:
+
+Margin
+ └── Border
+      └── Padding
+           └── Content
+
+Basic Syntax:
+
+selector {
+    width: 200px;
+    padding: 20px;
+    border: 2px solid black;
+    margin: 20px;
+    box-sizing: border-box;
+}
+21. Positioning
+
+Definition: CSS positioning controls how an element is placed on a webpage.
+
+Basic Syntax:
+
+selector {
+    position: relative;
+    top: 10px;
+    left: 20px;
+}
+
+Common values:
+
+position: static;
+position: relative;
+position: absolute;
+position: fixed;
+position: sticky;
+22. Z-Index
+
+Definition: z-index controls the stacking order of overlapping elements. An element with a higher z-index generally appears above one with a lower value.
+
+Basic Syntax:
+
+selector {
+    position: relative;
+    z-index: 10;
+}
+23. Flexbox
+
+Definition: Flexbox is a one-dimensional layout system used to arrange elements in a row or column.
+
+Basic Syntax:
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+Important properties:
+
+display: flex;
+flex-direction: value;
+justify-content: value;
+align-items: value;
+flex-wrap: value;
+gap: value;
+24. CSS Grid
+
+Definition: CSS Grid is a two-dimensional layout system used to arrange elements into rows and columns.
+
+Basic Syntax:
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+Important properties:
+
+display: grid;
+grid-template-columns: value;
+grid-template-rows: value;
+grid-template-areas: value;
+gap: value;
+25. Responsive Design
+
+Definition: Responsive design makes a webpage adapt to different screen sizes such as desktops, tablets, and mobile devices.
+
+Basic Syntax:
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+}
+
+A responsive layout commonly uses:
+
+width: 100%;
+max-width: value;
+flex-wrap: wrap;
+26. Media Queries
+
+Definition: Media queries apply different CSS rules based on screen size or device characteristics.
+
+Basic Syntax:
+
+@media (max-width: 768px) {
+    selector {
+        property: value;
+    }
+}
+27. Transitions
+
+Definition: CSS transitions create a smooth change between one property value and another.
+
+Basic Syntax:
+
+selector {
+    transition: property duration timing-function;
+}
+
+Example syntax:
+
+selector {
+    transition: all 0.3s ease;
+}
+28. Transforms
+
+Definition: CSS transforms change the position, size, rotation, or shape of an element without changing the normal document flow.
+
+Basic Syntax:
+
+selector {
+    transform: function(value);
+}
+
+Common transform functions:
+
+transform: scale(1.2);
+transform: rotate(45deg);
+transform: translate(20px, 10px);
+29. Animations
+
+Definition: CSS animations allow an element to change from one style to another automatically over a specified period.
+
+Basic Syntax:
+
+@keyframes animation-name {
+    from {
+        property: value;
+    }
+
+    to {
+        property: value;
+    }
+}
+
+selector {
+    animation: animation-name 2s ease;
+}
+
+Main animation properties:
+
+animation-name;
+animation-duration;
+animation-delay;
+animation-iteration-count;
+animation-direction;
+animation-timing-function;
