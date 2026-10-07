@@ -1,0 +1,211 @@
+1. Props
+
+Definition:
+Props (Properties) are used to pass data from one component to another component,
+usually from a parent component to a child component.
+
+Basic Syntax:
+
+function Component(props) {
+    return <h1>{props.value}</h1>;
+}
+
+Using destructuring:
+
+function Component({ value }) {
+    return <h1>{value}</h1>;
+}
+
+2. State
+
+Definition:
+State is data managed inside a component that can change over time.
+When state changes, React re-renders the component.
+
+Basic Syntax:
+
+const [state, setState] = useState(initialValue);
+state → current value
+setState → function used to update the state
+initialValue → starting value
+
+3. useState
+
+Definition:
+useState is a React Hook used to create and manage state inside functional components.
+
+Basic Syntax:
+
+import { useState } from "react";
+
+const [value, setValue] = useState(initialValue);
+
+Updating State:
+
+setValue(newValue);
+
+4. Parent and Child Components
+
+Definition:
+A parent component is a component that contains or renders another component.
+
+A child component is a component rendered inside a parent component.
+
+Basic Syntax:
+
+function Parent() {
+    return <Child />;
+}
+
+function Child() {
+    return <div>...</div>;
+}
+
+5. Sending Data from Parent to Child
+
+Definition:
+Data is sent from a parent component to a child component using props.
+
+Basic Syntax:
+
+<Child data={value} />
+
+Child receives the data:
+
+function Child(props) {
+    return ...;
+}
+
+Or:
+
+function Child({ data }) {
+    return ...;
+}
+
+Direction:
+
+Parent → Child
+
+6. Sending Data from Child to Parent
+
+Definition:
+React does not directly send data from child to parent through props.
+Instead, the parent passes a function to the child, 
+and the child calls that function with the required data.
+
+Basic Syntax:
+
+Parent:
+
+function Parent() {
+    function handleData(data) {
+        // handle data
+    }
+
+    return <Child onData={handleData} />;
+}
+
+Child:
+
+function Child({ onData }) {
+    onData(data);
+}
+
+Direction:
+
+Child → Parent
+       ↑
+   Callback Function
+
+7. Component Hierarchy
+
+Definition:
+Component hierarchy represents the parent-child structure of React components in an application.
+
+Basic Structure:
+
+App
+├── Header
+├── Main
+│   ├── Profile
+│   └── Content
+└── Footer
+
+It shows how components are nested and related to each other.
+
+8. Passing Functions as Props
+
+Definition:
+A function can be passed from a parent component to a child component as a prop. This allows the child to execute functionality defined by the parent.
+
+Basic Syntax:
+
+Parent:
+
+<Child handleAction={functionName} />
+
+Child:
+
+function Child({ handleAction }) {
+    handleAction();
+}
+
+Purpose:
+
+Parent Function
+      ↓
+    Props
+      ↓
+Child Component
+
+9. Sharing Data Between Components
+
+Definition:
+Sharing data between components means making the same data available to multiple components.
+
+When sibling components need to share data, the common approach is to move the state to their nearest common parent. This is called lifting state up.
+
+Basic Structure:
+
+       Parent
+      /      \
+   Child A  Child B
+
+State is maintained in the parent:
+
+const [data, setData] = useState(initialValue);
+
+Then passed to the required components using props:
+
+<ChildA data={data} />
+<ChildB data={data} />
+
+10. Conditional Rendering
+
+Definition:
+Conditional rendering means displaying different UI elements based on a condition.
+
+React commonly uses:
+
+if
+Ternary operator ? :
+Logical AND &&
+Logical OR ||
+
+Basic Syntax — if:
+
+if (condition) {
+    return ...;
+}
+
+Basic Syntax — Ternary:
+
+condition ? expression1 : expression2
+
+Basic Syntax — Logical AND:
+
+condition && expression
+
+Basic Syntax — Logical OR:
+
+condition || expression

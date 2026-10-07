@@ -1,0 +1,151 @@
+1. Event Handling
+
+Definition:
+Event Handling is the process of responding to user actions such as clicking, typing, submitting, changing, or hovering in a React component.
+
+Basic Syntax:
+
+function handleEvent() {
+    // event logic
+}
+
+<button onClick={handleEvent}>Click</button>
+2. Form Handling
+
+Definition:
+Form Handling is the process of managing form inputs, user-entered data, submission, and validation in React.
+
+Basic Syntax:
+
+<form onSubmit={handleSubmit}>
+    <input />
+    <button type="submit">Submit</button>
+</form>
+3. Controlled Components
+
+Definition:
+A Controlled Component is a form element whose value is controlled by React state.
+
+Basic Syntax:
+
+const [value, setValue] = useState("");
+
+<input
+    value={value}
+    onChange={(e) => setValue(e.target.value)}
+/>
+4. Input Handling
+
+Definition:
+Input Handling means capturing and managing the values entered by the user in input fields.
+
+Basic Syntax:
+
+const [inputValue, setInputValue] = useState("");
+
+<input
+    value={inputValue}
+    onChange={(e) => setInputValue(e.target.value)}
+/>
+5. Dynamic Forms
+
+Definition:
+Dynamic Forms are forms where fields or field values can be added, removed, or changed dynamically based on user interaction or application state.
+
+Basic Syntax:
+
+const [fields, setFields] = useState([]);
+
+setFields([...fields, newField]);
+6. List Rendering
+
+Definition:
+List Rendering is the process of displaying multiple data items as React elements, usually by using map().
+
+Basic Syntax:
+
+items.map((item) => (
+    <Element>{item}</Element>
+))
+7. map()
+
+Definition:
+map() is a JavaScript array method used in React to transform each item of an array into a React element.
+
+Basic Syntax:
+
+array.map((item, index) => {
+    return <Element key={index}>{item}</Element>;
+});
+8. Keys
+
+Definition:
+Keys are unique identifiers assigned to elements when rendering a list. They help React identify which items have changed, been added, or removed.
+
+Basic Syntax:
+
+items.map((item) => (
+    <Element key={item.id}>
+        ...
+    </Element>
+))
+9. Conditional Rendering
+
+Definition:
+Conditional Rendering means displaying different UI elements based on a condition.
+
+Basic Syntax:
+
+{condition && <Component />}
+
+Using ternary operator:
+
+{condition ? <ComponentA /> : <ComponentB />}
+10. useEffect
+
+Definition:
+useEffect is a React Hook used to perform side effects in a component, such as data fetching, subscriptions, timers, or updating external systems.
+
+Basic Syntax:
+
+useEffect(() => {
+    // side effect logic
+}, []);
+11. Component Lifecycle Concept
+
+Definition:
+Component Lifecycle describes the different stages a React component goes through during its existence.
+
+The main stages are:
+
+Mounting — Component is created and added to the UI.
+Updating — Component re-renders when its state or props change.
+Unmounting — Component is removed from the UI.
+
+Basic Syntax using useEffect:
+
+useEffect(() => {
+    // mounting/update logic
+
+    return () => {
+        // cleanup logic
+    };
+}, []);
+12. Dependency Array
+
+Definition:
+A Dependency Array is the second argument of useEffect. It controls when the effect should execute again.
+
+Basic Syntax:
+
+Empty dependency array:
+
+useEffect(() => {
+    // runs after initial render
+}, []);
+
+With dependencies:
+
+useEffect(() => {
+    // runs when dependency changes
+}, [dependency]);
