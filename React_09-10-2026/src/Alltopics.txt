@@ -1,0 +1,424 @@
+1. Context API
+1. Creating Context
+
+Definition: Creating Context means creating a shared storage space that allows multiple components to access the same data without passing props through every intermediate component.
+
+Basic syntax:
+
+import { createContext } from "react";
+
+const MyContext = createContext();
+2. Provider
+
+Definition: A Provider supplies data to the components inside its scope. It makes the context value available to child components.
+
+Basic syntax:
+
+<MyContext.Provider value={data}>
+  <ChildComponent />
+</MyContext.Provider>
+3. Consumer
+
+Definition: A Consumer is a way to access context data inside a component. The modern approach is usually to use the useContext Hook.
+
+Basic syntax:
+
+<MyContext.Consumer>
+  {(value) => {
+    return /* UI based on value */;
+  }}
+</MyContext.Consumer>
+4. useContext
+
+Definition: useContext is a React Hook used to read data from a Context without manually passing props through multiple component levels.
+
+Basic syntax:
+
+import { useContext } from "react";
+
+const value = useContext(MyContext);
+5. Sharing Global Data
+
+Definition: Sharing global data means making commonly used data available to multiple components, such as a theme, logged-in user information, or language settings.
+
+Basic syntax:
+
+const AppContext = createContext();
+
+function App() {
+  return (
+    <AppContext.Provider value={sharedData}>
+      <ChildComponent />
+    </AppContext.Provider>
+  );
+}
+6. Context vs Props
+
+Definition: Props and Context are both used to provide data to components, but they work differently.
+
+Props
+
+	
+
+Context
+
+
+
+
+Pass data from a parent to a child.
+
+	
+
+Share data with components throughout a provider's scope.
+
+
+
+
+Data is passed explicitly.
+
+	
+
+Data is read from the Context.
+
+
+
+
+Suitable for component-specific data.
+
+	
+
+Suitable for data shared by many components.
+
+
+
+
+Can require passing props through intermediate components.
+
+	
+
+Helps avoid unnecessary prop drilling.
+
+2. Custom Hooks
+7. What Are Custom Hooks?
+
+Definition: Custom Hooks are JavaScript functions that reuse stateful logic or other React Hook logic across multiple components.
+
+Their names must start with use.
+
+They can call other Hooks.
+
+They help keep components clean and reusable.
+
+8. Creating Custom Hooks
+
+Definition: Creating a Custom Hook means writing a reusable function that contains React Hook logic and returns the values or functions needed by components.
+
+Basic syntax:
+
+import { useState } from "react";
+
+function useCustomHook() {
+  const [value, setValue] = useState("");
+
+  return { value, setValue };
+}
+9. Reusing Logic
+
+Definition: Reusing logic means writing a piece of functionality once and using it in multiple components instead of repeating the same code.
+
+Basic syntax:
+
+function useCustomHook() {
+  // Reusable logic
+  return result;
+}
+
+// Inside a component
+const result = useCustomHook();
+10. Custom Hook with API Calls
+
+Definition: A Custom Hook with API calls encapsulates data fetching, loading states, and error handling so that multiple components can reuse the same API-related logic.
+
+Basic syntax:
+
+import { useEffect, useState } from "react";
+
+function useFetch(url) {
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        setLoading(true);
+        const response = await fetch(url);
+
+        if (!response.ok) {
+          throw new Error("Failed to fetch data");
+        }
+
+        const result = await response.json();
+        setData(result);
+      } catch (err) {
+        setError(err);
+      } finally {
+        setLoading(false);
+      }
+    }
+
+    fetchData();
+  }, [url]);
+
+  return { data, loading, error };
+}
+3. Additional React Revision
+11. Components
+
+Definition: Components are independent, reusable building blocks of a React user interface.
+
+Basic syntax:
+
+function Welcome() {
+  return <h1>Welcome</h1>;
+}
+
+export default Welcome;
+12. JSX
+
+Definition: JSX stands for JavaScript XML. It is a syntax extension that lets developers write HTML-like markup inside JavaScript.
+
+Basic syntax:
+
+const element = <h1>Hello React</h1>;
+13. Props
+
+Definition: Props are read-only inputs used to pass data from a parent component to a child component.
+
+Basic syntax:
+
+function Student({ name }) {
+  return <h2>{name}</h2>;
+}
+14. State
+
+Definition: State is data managed by a component that can change over time and cause the UI to update when React processes the change.
+
+Basic syntax:
+
+const [state, setState] = useState(initialValue);
+15. useState
+
+Definition: useState is a React Hook used to create and update state in functional components.
+
+Basic syntax:
+
+import { useState } from "react";
+
+const [count, setCount] = useState(0);
+16. useEffect
+
+Definition: useEffect is a React Hook used to synchronize a component with external systems, such as APIs, timers, subscriptions, or browser events.
+
+Basic syntax:
+
+import { useEffect } from "react";
+
+useEffect(() => {
+  // Effect logic
+
+  return () => {
+    // Optional cleanup
+  };
+}, [dependencies]);
+
+No dependency array: the Effect runs after every committed render.
+
+Empty array []: the Effect runs when the component mounts, with an additional development setup/cleanup cycle possible in Strict Mode.
+
+[value]: the Effect reruns when value changes.
+
+17. Event Handling
+
+Definition: Event handling means responding to user actions, such as clicking a button, typing into an input, or submitting a form.
+
+Basic syntax:
+
+function handleClick() {
+  // Handle the event
+}
+
+<button onClick={handleClick}>Click</button>
+18. Forms
+
+Definition: Forms collect user input and allow an application to process or validate the entered information. React commonly uses controlled components to manage form values through state.
+
+Basic syntax:
+
+const [name, setName] = useState("");
+
+<input
+  value={name}
+  onChange={(event) => setName(event.target.value)}
+/>
+19. List Rendering
+
+Definition: List rendering means displaying multiple items dynamically by using JavaScript array methods such as map(). Each rendered item should have a stable, unique key where possible.
+
+Basic syntax:
+
+{items.map((item) => (
+  <p key={item.id}>{item.name}</p>
+))}
+20. API Calls
+
+Definition: API calls allow a React application to communicate with a server to retrieve or send data. The Fetch API is commonly used with async/await.
+
+Basic syntax:
+
+async function fetchData() {
+  const response = await fetch("https://api.example.com/data");
+
+  if (!response.ok) {
+    throw new Error("API request failed");
+  }
+
+  const data = await response.json();
+  return data;
+}
+21. Conditional Rendering
+
+Definition: Conditional rendering means displaying different UI elements based on a condition, such as whether data exists, a user is logged in, or an API request is loading.
+
+Basic syntax using a ternary operator:
+
+{isLoading ? <p>Loading...</p> : <p>Content loaded</p>}
+
+Basic syntax using logical AND:
+
+{isLoggedIn && <p>Welcome back!</p>}
+
+
+
+
+
+
+Context API vs Props in React
+
+Props: Props are used to pass data from a parent component to a child component.
+
+Context API: Context API is used to share data across multiple components without passing props through every intermediate component.
+
+Feature
+
+	
+
+Props
+
+	
+
+Context API
+
+
+
+
+Purpose
+
+	
+
+Pass data between components
+
+	
+
+Share data across multiple components
+
+
+
+
+Data flow
+
+	
+
+Parent to child
+
+	
+
+Any descendant within the Provider's scope
+
+
+
+
+Prop drilling
+
+	
+
+May require prop drilling
+
+	
+
+Helps avoid prop drilling
+
+
+
+
+Setup
+
+	
+
+Pass props directly
+
+	
+
+Requires Context and a Provider
+
+
+
+
+Best used for
+
+	
+
+Component-specific data
+
+	
+
+Shared data, such as themes or user details
+
+
+
+
+Data access
+
+	
+
+Through component parameters
+
+	
+
+Through useContext()
+
+
+
+
+Complexity
+
+	
+
+Simple for small component trees
+
+	
+
+Useful for deeply nested component trees
+
+
+
+
+State management
+
+	
+
+Props themselves are read-only inputs
+
+	
+
+Context can share state managed with useState or other mechanisms

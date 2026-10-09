@@ -1,0 +1,184 @@
+1. API Calls in React
+
+Definition:
+API calls are requests made from a React application to a server to send, receive, update, or delete data.
+
+Basic Syntax:
+
+fetch(url)
+  .then(response => response.json())
+  .then(data => {
+    // handle data
+  });
+2. Fetch API / Axios
+
+Definition:
+
+Fetch API is a built-in JavaScript API used to make HTTP requests.
+Axios is a third-party library used to make HTTP requests with additional features.
+
+Fetch Syntax:
+
+fetch(url, options);
+
+Axios Syntax:
+
+axios.get(url);
+axios.post(url, data);
+axios.put(url, data);
+axios.patch(url, data);
+axios.delete(url);
+3. GET Request
+
+Definition:
+A GET request is used to retrieve or read data from a server.
+
+Basic Syntax:
+
+fetch(url, {
+  method: "GET"
+});
+4. POST Request
+
+Definition:
+A POST request is used to send or create new data on the server.
+
+Basic Syntax:
+
+fetch(url, {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json"
+  },
+  body: JSON.stringify(data)
+});
+5. PUT / PATCH Request
+
+Definition:
+Both are used to update existing data on the server.
+
+PUT → generally replaces the complete resource.
+PATCH → generally updates only specific fields.
+
+PUT Syntax:
+
+fetch(url, {
+  method: "PUT",
+  headers: {
+    "Content-Type": "application/json"
+  },
+  body: JSON.stringify(data)
+});
+
+PATCH Syntax:
+
+fetch(url, {
+  method: "PATCH",
+  headers: {
+    "Content-Type": "application/json"
+  },
+  body: JSON.stringify(data)
+});
+6. DELETE Request
+
+Definition:
+A DELETE request is used to remove data from the server.
+
+Basic Syntax:
+
+fetch(url, {
+  method: "DELETE"
+});
+7. Async/Await
+
+Definition:
+async/await is a JavaScript syntax used to handle asynchronous operations in a cleaner and easier-to-read way.
+
+Basic Syntax:
+
+async function functionName() {
+  const response = await fetch(url);
+}
+8. Loading State
+
+Definition:
+Loading state represents the period when the application is waiting for an API response.
+
+Basic Syntax:
+
+const [loading, setLoading] = useState(false);
+
+Typical state flow:
+
+Start Request → loading = true
+Response Received → loading = false
+9. Error State
+
+Definition:
+Error state is used to store and display information when an API request fails.
+
+Basic Syntax:
+
+const [error, setError] = useState(null);
+
+Usually handled using:
+
+try {
+  // API request
+} catch (error) {
+  setError(error);
+}
+10. Empty State
+
+Definition:
+Empty state is displayed when the API request succeeds but there is no data to display.
+
+Basic Syntax:
+
+if (data.length === 0) {
+  // show empty state
+}
+11. API Response Handling
+
+Definition:
+API response handling means processing the response received from the server, including success, failure, status codes, and response data.
+
+Basic Syntax:
+
+const response = await fetch(url);
+
+if (!response.ok) {
+  throw new Error("Request failed");
+}
+
+const data = await response.json();
+12. Dynamic Rendering
+
+Definition:
+Dynamic rendering means displaying UI elements based on API data, state, or user actions.
+
+Basic Syntax:
+
+{data.map(item => (
+  <Component key={item.id} />
+))}
+
+Conditional dynamic rendering:
+
+{loading ? <Loading /> : <Content />}
+13. Search and Filtering
+
+Definition:
+Search finds items based on user-entered text, while filtering displays only items that satisfy a particular condition.
+
+Basic Syntax:
+
+const filteredData = data.filter(item =>
+  item.name.includes(searchTerm)
+);
+
+For case-insensitive searching:
+
+const filteredData = data.filter(item =>
+  item.name.toLowerCase().includes(searchTerm.toLowerCase())
+);    
